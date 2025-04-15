@@ -1,6 +1,5 @@
-# Konfigurasi utama untuk Jekyll dan GitHub Pages
 title: Home
-baseurl: ""
+baseurl: ""  
 url: "https://m-zakifahrezi.github.io/"
 
 sass:
