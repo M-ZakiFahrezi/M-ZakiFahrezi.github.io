@@ -1,0 +1,4 @@
+favicon: /assets/favicon.ico
+permalink: /:year/:month/:day/:title
+sass:
+  sass_dir: assets
