@@ -6,6 +6,10 @@
     <title>Layout dan Navigasi</title>
     <link
       rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
       href="/assets/css/styles.css"
     />
   </head>
@@ -37,43 +41,150 @@
 
 <main class="blog-container"><p>Materi tentang Layout dan Navigasi</p>
 
-<h2 id="materi-layout-dan-navigasi">Materi: Layout dan Navigasi</h2>
+<p>Panduan dasar tentang layout dan navigasi dalam pengembangan web.</p>
 
-<p>Pada pertemuan ini, kami mulai memahami konsep <strong>layouting</strong> di Jekyll, yaitu bagaimana menyusun kerangka tampilan website agar konsisten di setiap halaman.</p>
+<h1 id="-belajar-layout--navigasi-web">🧭 Belajar Layout &amp; Navigasi Web</h1>
 
-<h3 id="hal-yang-dipelajari">Hal yang dipelajari:</h3>
+<h2 id="-apa-itu-layout">🧱 Apa Itu Layout?</h2>
+
+<p><strong>Layout</strong> adalah cara menyusun elemen-elemen di halaman web agar tampilannya rapi, terstruktur, dan mudah dibaca oleh pengguna.</p>
+
+<p>Layout penting untuk:</p>
 <ul>
-  <li>Struktur folder <code class="language-plaintext highlighter-rouge">_layouts/</code> dan penggunaan layout <code class="language-plaintext highlighter-rouge">default.html</code></li>
-  <li>Menambahkan navigasi antar halaman menggunakan file data <code class="language-plaintext highlighter-rouge">site.data.navigation</code></li>
-  <li>
-    <p>Menggunakan Liquid tag seperti:</p>
-
-    <ul>
-      <li><code class="language-plaintext highlighter-rouge">{% include %}</code></li>
-      <li><code class="language-plaintext highlighter-rouge">{{ page.title }}</code></li>
-    </ul>
-  </li>
-  <li>Membuat navigasi responsif sederhana dengan HTML dan CSS</li>
+  <li>Meningkatkan pengalaman pengguna (UX)</li>
+  <li>Menyampaikan informasi dengan jelas</li>
+  <li>Menyesuaikan tampilan di berbagai perangkat (responsif)</li>
 </ul>
 
-<h3 id="tujuan">Tujuan:</h3>
-<p>Agar setiap halaman pada website kami memiliki tampilan yang seragam dan navigasi yang mudah, tanpa harus menyalin ulang kode yang sama. Dengan layout dan navigasi, kami bisa mengelola tampilan dengan lebih efisien dan terstruktur.</p>
+<h3 id="-contoh-struktur-layout-umum">📐 Contoh Struktur Layout Umum</h3>
+
+<header>
+  <nav>Menu Navigasi</nav>
+</header>
+
+<main>
+  <section>Konten Utama</section>
+  <aside>Sidebar</aside>
+</main>
+
+<footer>
+  Hak Cipta &copy; 2025
+</footer>
+
+<hr />
+
+<h2 id="-jenis-layout-populer">📑 Jenis Layout Populer</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Jenis Layout</th>
+      <th>Keterangan</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Single Column</strong></td>
+      <td>Umum untuk blog dan mobile</td>
+    </tr>
+    <tr>
+      <td><strong>Two Column</strong></td>
+      <td>Konten dan sidebar</td>
+    </tr>
+    <tr>
+      <td><strong>Three Column</strong></td>
+      <td>Navigasi, konten, dan sidebar</td>
+    </tr>
+    <tr>
+      <td><strong>Grid Layout</strong></td>
+      <td>Digunakan untuk galeri dan aplikasi modern</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="-apa-itu-navigasi">🔗 Apa Itu Navigasi?</h2>
+
+<p><strong>Navigasi</strong> adalah cara pengguna berpindah dari satu halaman atau bagian ke bagian lain dalam situs web.</p>
+
+<p>Navigasi yang baik memudahkan pengguna menemukan informasi dengan cepat.</p>
+
+<h3 id="-contoh-navigasi-sederhana">📌 Contoh Navigasi Sederhana</h3>
+
+<nav>
+  <ul>
+    <li><a href="/">Beranda</a></li>
+    <li><a href="/tentang">Tentang</a></li>
+    <li><a href="/kontak">Kontak</a></li>
+  </ul>
+</nav>
+
+<hr />
+
+<h2 id="-tips-membuat-navigasi-yang-efektif">🎯 Tips Membuat Navigasi yang Efektif</h2>
+
+<ul>
+  <li>Gunakan menu horizontal di bagian atas</li>
+  <li>Tambahkan menu di bagian footer sebagai alternatif</li>
+  <li>Gunakan warna atau gaya untuk menandai halaman aktif</li>
+  <li>Navigasi harus konsisten di semua halaman</li>
+  <li>Responsif: bisa diakses di perangkat mobile</li>
+</ul>
+
+<hr />
+
+<h2 id="-tools--css-terkait">🧰 Tools &amp; CSS Terkait</h2>
+
+<ul>
+  <li>Gunakan <strong>Flexbox</strong> atau <strong>CSS Grid</strong> untuk layout modern:</li>
+</ul>
+
+<p>/* Contoh layout dua kolom dengan Flexbox */
+.container {
+  display: flex;
+}</p>
+
+<p>aside {
+  width: 30%;
+}</p>
+
+<p>section {
+  width: 70%;
+}</p>
+
+<hr />
+
+<h2 id="-kesimpulan">✅ Kesimpulan</h2>
+
+<ul>
+  <li><strong>Layout</strong> adalah kerangka visual dari halaman web, membantu menyusun konten agar mudah dipahami dan enak dilihat.</li>
+  <li><strong>Navigasi</strong> adalah peta situs web, memandu pengguna menjelajahi isi situs dengan mudah dan efisien.</li>
+  <li>Tata letak dan navigasi yang baik akan meningkatkan kenyamanan dan pengalaman pengguna.</li>
+  <li>Gunakan teknik seperti <strong>Flexbox</strong> atau <strong>Grid CSS</strong> untuk menciptakan layout modern dan responsif.</li>
+  <li>Selalu utamakan <strong>kesederhanaan dan konsistensi</strong> dalam desain navigasi dan layout.</li>
+</ul>
+
+<blockquote>
+  <p>💡 Layout membentuk struktur, navigasi menggerakkan pengguna — keduanya kunci dari web yang baik!</p>
+</blockquote>
 </main>
  <div class="footer">
-      <p>
-        © 2025, Created <i class="fas fa-heart"></i> by <span>OnlyJack </span>
-        <a
-          href="https://www.instagram.com/zkyy.frezy?igsh=MXB3N21zbm44ZjdwNw=="
-          class="social-icon"
-          ><i class="fab fa-instagram"></i
-        ></a>
-        <a href="https://www.tiktok.com/@c.classsy" class="social-icon"
-          ><i class="fab fa-tiktok"></i
-        ></a>
-        <a href="https://github.com/M-ZakiFahrezi" class="social-icon"
-          ><i class="fab fa-github"></i
-        ></a>
-      </p>
-    </div>
+  <p>
+    © 2025, Created <i class="fas fa-heart"></i> by <span>OnlyJack </span>
+    <a
+      href="https://www.instagram.com/zkyy.frezy?igsh=MXB3N21zbm44ZjdwNw=="
+      class="social-icon"
+      ><i class="fab fa-instagram"></i
+    ></a>
+    <a href="https://www.tiktok.com/@c.classsy" class="social-icon"
+      ><i class="fab fa-tiktok"></i
+    ></a>
+    <a href="https://github.com/M-ZakiFahrezi" class="social-icon"
+      ><i class="fab fa-github"></i
+    ></a>
+  </p>
+</div>
+
   </body>
 </html>
