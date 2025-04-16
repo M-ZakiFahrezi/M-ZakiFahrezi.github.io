@@ -3,7 +3,7 @@ layout: default
 title: Friends
 ---
 
-<div class="container">
+<div class="friends-container">
   <h1>Friends Page</h1>
   <p>Berikut teman-teman saya di kelas:</p>
   <ul class="friend-list">
