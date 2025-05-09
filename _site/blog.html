@@ -6,16 +6,45 @@
     <title>blog</title>
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
+
+    <!-- stylesheet -->
     <link rel="stylesheet" href="/assets/css/styles.css" />
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="/assets/images/favicon.ico" />
+
+    <!-- JavaScript -->
+    <script src="/assets/js/script.js" defer></script>
+
+    <!-- plugins -->
+    <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Home" /> <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>blog | Home</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="blog" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="http://localhost:4000/blog.html" />
+<meta property="og:url" content="http://localhost:4000/blog.html" />
+<meta property="og:site_name" content="Home" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="blog" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","headline":"blog","url":"http://localhost:4000/blog.html"}</script>
+<!-- End Jekyll SEO tag -->
+
   </head>
   <body>
     <nav class="navbar">
   <div class="nav-container">
+    <!-- Logo -->
+    <div class="logo">
+      <img src="/assets/images/shp-clear.png" alt="SHP" class="logo-img">
+      <span>OnlyJack</span>
+    </div>
 
-    <div class="logo">Workshop Web Dasar</div>
-
+    <!-- Navigasi -->
     <div class="nav-links">
       
         <a href="/" >
@@ -31,64 +60,123 @@
         </a>
       
     </div>
+
+    <!-- Ikon -->
+    <div class="nav-icons">
+      <i class="fa fa-search" onclick="openSearch()"></i>
+      <i id="theme-toggle" class="fa fa-water"></i>
+      <i class="fa-solid fa-clock" onclick="openSidebar()"></i>
+
+
+      
+    </div>
   </div>
 </nav>
  <div class="blog-container">
   <h1>Blog</h1>
+  <h2 align="center">Selamat datang di blog saya, mari belajar bersama!!</h2>
+
+  <div class="search-container">
+    <input
+      type="text"
+      id="searchBox"
+      class="search-input"
+      placeholder="Cari blog..."
+    />
+    <button class="search-button" onclick="searchBlog()">Cari</button>
+  </div>
+
   <ul class="blog-list">
     
     <li class="blog-item">
       <div class="blog-header">
         <span class="blog-icon">📝</span>
-        <a href="/2025/04/17/config-yml.html">Config YML</a>
+        <a href="/2025/05/07/SASS-dan-SCSS.html" class="blog-title">SASS dan SCSS</a>
+      </div>
+      <span class="blog-date">07 May 2025</span>
+      <p class="blog-excerpt"><p>Materi mengenai SASS dan SCSS</p>
+</p>
+    </li>
+    
+    <li class="blog-item">
+      <div class="blog-header">
+        <span class="blog-icon">📝</span>
+        <a href="/2025/04/24/plugins.html" class="blog-title">Plugins</a>
+      </div>
+      <span class="blog-date">24 Apr 2025</span>
+      <p class="blog-excerpt"><p>Materi mengenai Plugins dalam jekyll</p>
+</p>
+    </li>
+    
+    <li class="blog-item">
+      <div class="blog-header">
+        <span class="blog-icon">📝</span>
+        <a href="/2025/04/17/config-yml.html" class="blog-title">Config YML</a>
       </div>
       <span class="blog-date">17 Apr 2025</span>
       <p class="blog-excerpt"><p>Materi tentang link dan lists pada HTML</p>
-</p>    
+</p>
     </li>
     
     <li class="blog-item">
       <div class="blog-header">
         <span class="blog-icon">📝</span>
-        <a href="/2025/03/20/html-link-dan-list.html">HTML: Link dan List</a>
+        <a href="/2025/03/20/html-link-dan-list.html" class="blog-title">HTML: Link dan List</a>
       </div>
       <span class="blog-date">20 Mar 2025</span>
       <p class="blog-excerpt"><p>Materi tentang link dan lists pada HTML</p>
-</p>    
+</p>
     </li>
     
     <li class="blog-item">
       <div class="blog-header">
         <span class="blog-icon">📝</span>
-        <a href="/2025/03/13/layout-dan-navigation.html">Layout dan Navigasi</a>
+        <a href="/2025/03/13/layout-dan-navigation.html" class="blog-title">Layout dan Navigasi</a>
       </div>
       <span class="blog-date">13 Mar 2025</span>
       <p class="blog-excerpt"><p>Materi tentang Layout dan Navigasi</p>
-</p>    
+</p>
     </li>
     
     <li class="blog-item">
       <div class="blog-header">
         <span class="blog-icon">📝</span>
-        <a href="/2025/03/06/markdown-html.html">Belajar Markdown & HTML</a>
+        <a href="/2025/03/06/markdown-html.html" class="blog-title">Belajar Markdown & HTML</a>
       </div>
       <span class="blog-date">06 Mar 2025</span>
       <p class="blog-excerpt"><p>Materi tentang Markdown dan HTML</p>
-</p>    
+</p>
     </li>
     
     <li class="blog-item">
       <div class="blog-header">
         <span class="blog-icon">📝</span>
-        <a href="/2025/02/20/installasi-ruby-dan-jekyll.html">Instalasi Ruby dan Jekyll</a>
+        <a href="/2025/02/20/installasi-ruby-dan-jekyll.html" class="blog-title">Instalasi Ruby dan Jekyll</a>
       </div>
       <span class="blog-date">20 Feb 2025</span>
       <p class="blog-excerpt"><p>Materi tentang Instalasi Ruby dan Jekyll</p>
-</p>    
+</p>
     </li>
     
   </ul>
 </div>
+
+<!-- fungsi pencarian judul blog -->
+<script>
+  function searchBlog() {
+    const keyword = document.getElementById("searchBox").value.toLowerCase();
+    const blogItems = document.querySelectorAll(".blog-item");
+
+    blogItems.forEach((item) => {
+      const title = item.querySelector(".blog-title").textContent.toLowerCase();
+      const excerpt = item
+        .querySelector(".blog-excerpt")
+        .textContent.toLowerCase();
+      const matches = title.includes(keyword) || excerpt.includes(keyword);
+      item.style.display = matches ? "block" : "none";
+    });
+  }
+</script>
  <div class="footer">
   <p>
     © 2025, Created <i class="fas fa-heart"></i> by <span>OnlyJack </span>
@@ -106,5 +194,26 @@
   </p>
 </div>
 
+
+    <!-- Search Overlay -->
+    <div id="searchOverlay" class="search-overlay">
+      <div class="search-box">
+        <input type="text" placeholder="Search..." />
+        <button onclick="closeSearch()">Close</button>
+        <p>Maaf, fitur ini masih dalam tahap pengembangan</p>
+      </div>
+    </div>
+
+    <!-- Sidebar Overlay -->
+    <!-- Sidebar Overlay -->
+    <div id="sidebarOverlay" class="sidebar-overlay">
+      <div class="sidebar-content">
+        <button class="close-btn" onclick="closeSidebar()">×</button>
+        <div class="datetime">
+          <div id="clock">--:--:--</div>
+          <div id="date">--, -- -- ----</div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

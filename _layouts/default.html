@@ -6,11 +6,43 @@
     <title>{{ page.title }}</title>
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
+
+    <!-- stylesheet -->
     <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/styles.css" />
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="/assets/images/favicon.ico" />
+
+    <!-- JavaScript -->
+    <script src="{{ site.baseurl }}/assets/js/script.js" defer></script>
+
+    <!-- plugins -->
+    {% feed_meta %} {% seo %}
   </head>
   <body>
     {% include navigation.html %} {{ content }} {% include footer.html %}
+
+    <!-- Search Overlay -->
+    <div id="searchOverlay" class="search-overlay">
+      <div class="search-box">
+        <input type="text" placeholder="Search..." />
+        <button onclick="closeSearch()">Close</button>
+        <p>Maaf, fitur ini masih dalam tahap pengembangan</p>
+      </div>
+    </div>
+
+    <!-- Sidebar Overlay -->
+    <!-- Sidebar Overlay -->
+    <div id="sidebarOverlay" class="sidebar-overlay">
+      <div class="sidebar-content">
+        <button class="close-btn" onclick="closeSidebar()">×</button>
+        <div class="datetime">
+          <div id="clock">--:--:--</div>
+          <div id="date">--, -- -- ----</div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

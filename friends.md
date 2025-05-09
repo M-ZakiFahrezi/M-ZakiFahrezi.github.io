@@ -30,7 +30,7 @@ title: Friends
     <li><a href="https://m-zakifahrezi.github.io/">Muhammad Zaki Fahrezi</a></li>
     <li><a href="https://mudaabrar.github.io/">Mohd. Muda Abrar</a></li>
     <li><a href="https://mutyaraassyifa.github.io/">Mutyara Assyifa</a></li>
-    <li><a href="https://najwaal1fajra.github.io/">Najwa Alfajra</a></li>
+    <li><a href="https://najwaal-fajra.github.io/">Najwa Alfajra</a></li>
     <li><a href="https://nursitaaa.github.io/">Nursita</a></li>
     <li><a href="https://rafi-i-habibi.github.io/">Rafi'i Habibi</a></li>
     <li><a href="https://syahanalfatih.github.io/">Syahan Alfatih</a></li>

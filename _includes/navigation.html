@@ -1,14 +1,28 @@
 <nav class="navbar">
   <div class="nav-container">
+    <!-- Logo -->
+    <div class="logo">
+      <img src="/assets/images/shp-clear.png" alt="SHP" class="logo-img">
+      <span>OnlyJack</span>
+    </div>
 
-    <div class="logo">Workshop Web Dasar</div>
-
+    <!-- Navigasi -->
     <div class="nav-links">
       {% for item in site.data.navigation %}
         <a href="{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}>
           {{ item.name }}
         </a>
       {% endfor %}
+    </div>
+
+    <!-- Ikon -->
+    <div class="nav-icons">
+      <i class="fa fa-search" onclick="openSearch()"></i>
+      <i id="theme-toggle" class="fa fa-water"></i>
+      <i class="fa-solid fa-clock" onclick="openSidebar()"></i>
+
+
+      
     </div>
   </div>
 </nav>

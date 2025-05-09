@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SASS dan SCSS</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="/assets/images/favicon.ico" />
+
+    <!-- JavaScript -->
+    <script src="/assets/js/script.js" defer></script>
+
+    <!-- plugins -->
+    <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Home" /> <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>SASS dan SCSS | Home</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="SASS dan SCSS" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Materi mengenai SASS dan SCSS" />
+<meta property="og:description" content="Materi mengenai SASS dan SCSS" />
+<link rel="canonical" href="http://localhost:4000/2025/05/07/SASS-dan-SCSS.html" />
+<meta property="og:url" content="http://localhost:4000/2025/05/07/SASS-dan-SCSS.html" />
+<meta property="og:site_name" content="Home" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-05-07T00:00:00+07:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="SASS dan SCSS" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-05-07T00:00:00+07:00","datePublished":"2025-05-07T00:00:00+07:00","description":"Materi mengenai SASS dan SCSS","headline":"SASS dan SCSS","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2025/05/07/SASS-dan-SCSS.html"},"url":"http://localhost:4000/2025/05/07/SASS-dan-SCSS.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+  <body>
+    <nav class="navbar">
+  <div class="nav-container">
+    <!-- Logo -->
+    <div class="logo">
+      <img src="/assets/images/shp-clear.png" alt="SHP" class="logo-img">
+      <span>OnlyJack</span>
+    </div>
+
+    <!-- Navigasi -->
+    <div class="nav-links">
+      
+        <a href="/" >
+          Home
+        </a>
+      
+        <a href="/friends.html" >
+          Friends
+        </a>
+      
+        <a href="/blog.html" >
+          Blog
+        </a>
+      
+    </div>
+
+    <!-- Ikon -->
+    <div class="nav-icons">
+      <i class="fa fa-search" onclick="openSearch()"></i>
+      <i id="theme-toggle" class="fa fa-water"></i>
+      <i class="fa-solid fa-clock" onclick="openSidebar()"></i>
+
+
+      
+    </div>
+  </div>
+</nav>
+ <h1>SASS dan SCSS</h1>
+<p>07 May 2025 </p>
+
+<main class="blog-container"><p>Materi mengenai SASS dan SCSS</p>
+
+<h1 id="-membuat-layout-menggunakan-sassscss">🧩 Membuat Layout Menggunakan SASS/SCSS</h1>
+
+<p>SASS dan SCSS adalah dua sintaks dari preprocessor SASS (Syntactically Awesome Stylesheets). Keduanya meningkatkan kemampuan CSS tradisional dengan fitur seperti <strong>variabel</strong>, <strong>nesting (penyusunan bertingkat)</strong>, dan <strong>mixin</strong>. Walaupun memiliki fitur yang sama, perbedaan terletak pada gaya penulisannya yang disesuaikan dengan preferensi developer.</p>
+
+<hr />
+
+<h2 id="-apa-itu-scss">🔍 Apa itu SCSS?</h2>
+
+<p><strong>SCSS (Sassy CSS)</strong> adalah salah satu sintaks dari SASS yang sangat mirip dengan CSS biasa. Karena itu, SCSS lebih mudah dipahami oleh developer yang sudah terbiasa dengan CSS.</p>
+
+<h3 id="fitur-utama">Fitur Utama:</h3>
+<ul>
+  <li><strong>Variabel</strong>: Menyimpan nilai yang dapat digunakan ulang (seperti warna atau font).</li>
+  <li><strong>Nesting</strong>: Menyusun selector secara hierarkis.</li>
+  <li><strong>Mixin</strong>: Blok gaya yang dapat digunakan kembali untuk menghindari duplikasi.</li>
+  <li><strong>Inheritance</strong>: Berbagi gaya antar selector dengan <code class="language-plaintext highlighter-rouge">@extend</code>.</li>
+  <li><strong>Partial &amp; Import</strong>: Memecah kode ke dalam bagian-bagian kecil dan modular dengan <code class="language-plaintext highlighter-rouge">@import</code>.</li>
+</ul>
+
+<p><strong>Contoh Output SCSS:</strong></p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">body</span> <span class="p">{</span>
+  <span class="nl">background-color</span><span class="p">:</span> <span class="no">blue</span><span class="p">;</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="no">red</span><span class="p">;</span>
+  <span class="nl">font-size</span><span class="p">:</span> <span class="m">25px</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="c">/* Ini akan diterapkan pada HTML hasil */</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="-apa-itu-sass">🧵 Apa itu SASS?</h2>
+
+<p><strong>SASS</strong> adalah sintaks asli dari preprocessor SASS. Berbeda dengan SCSS, SASS menggunakan indentasi (spasi) alih-alih tanda kurung kurawal <code class="language-plaintext highlighter-rouge">{}</code> dan titik koma <code class="language-plaintext highlighter-rouge">;</code>.</p>
+
+<h3 id="fitur-utama-1">Fitur Utama:</h3>
+<ul>
+  <li><strong>Variabel</strong>: Menyimpan nilai yang dapat digunakan ulang.</li>
+  <li><strong>Nesting</strong>: Menyusun CSS dengan cara yang lebih bersih.</li>
+  <li><strong>Partials</strong>: Membagi gaya ke dalam file kecil.</li>
+  <li><strong>Mixin</strong>: Menggunakan ulang blok kode antar selector.</li>
+  <li><strong>Inheritance</strong>: Menggunakan <code class="language-plaintext highlighter-rouge">@extend</code> untuk berbagi gaya.</li>
+</ul>
+
+<p><strong>Contoh Output SASS:</strong></p>
+
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">body</span> <span class="p">{</span>
+  <span class="nl">background-color</span><span class="p">:</span> <span class="no">blue</span><span class="p">;</span>
+  <span class="nl">color</span><span class="p">:</span> <span class="no">red</span><span class="p">;</span>
+  <span class="nl">font-size</span><span class="p">:</span> <span class="m">25px</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="c">/* Ini akan diterapkan pada HTML hasil */</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="️-perbedaan-scss-dan-sass">⚖️ Perbedaan SCSS dan SASS</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Fitur</th>
+      <th>SCSS</th>
+      <th>SASS</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Sintaks</td>
+      <td>Mirip CSS (menggunakan <code class="language-plaintext highlighter-rouge">{}</code> dan <code class="language-plaintext highlighter-rouge">;</code>)</td>
+      <td>Berdasarkan indentasi (tanpa <code class="language-plaintext highlighter-rouge">{}</code> dan <code class="language-plaintext highlighter-rouge">;</code>)</td>
+    </tr>
+    <tr>
+      <td>Ekstensi File</td>
+      <td><code class="language-plaintext highlighter-rouge">.scss</code></td>
+      <td><code class="language-plaintext highlighter-rouge">.sass</code></td>
+    </tr>
+    <tr>
+      <td>Kompatibilitas</td>
+      <td>Sepenuhnya kompatibel dengan CSS</td>
+      <td>Tidak langsung kompatibel dengan CSS</td>
+    </tr>
+    <tr>
+      <td>Fleksibilitas</td>
+      <td>Familiar bagi pengguna CSS</td>
+      <td>Lebih ringkas dan bersih</td>
+    </tr>
+    <tr>
+      <td>Penggunaan</td>
+      <td>Cocok bagi yang transisi dari CSS</td>
+      <td>Cocok bagi yang suka penulisan minimal</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="-kapan-menggunakan-scss">✅ Kapan Menggunakan SCSS?</h2>
+
+<p>SCSS cocok digunakan ketika:</p>
+<ul>
+  <li>Kamu sudah terbiasa menulis CSS</li>
+  <li>Membuat proyek berskala besar dan butuh struktur jelas</li>
+  <li>Ingin kompatibilitas penuh dengan CSS standar</li>
+</ul>
+
+<hr />
+
+<h2 id="-kapan-menggunakan-sass">✅ Kapan Menggunakan SASS?</h2>
+
+<p>SASS cocok digunakan ketika:</p>
+<ul>
+  <li>Kamu menyukai sintaks yang lebih ringkas dan minimal</li>
+  <li>Proyek kamu kecil atau sedang</li>
+  <li>Kamu tidak terlalu bergantung pada penulisan CSS standar</li>
+</ul>
+
+<hr />
+
+<h2 id="-gunakan-scss-untuk-styling-layout">🎨 Gunakan SCSS untuk Styling Layout</h2>
+
+<p>Pada sesi lab kali ini, kamu akan menyusun ulang layout website menggunakan SCSS agar tampil lebih rapi dan menarik.</p>
+
+<h3 id="langkah-langkah">Langkah-langkah:</h3>
+<ol>
+  <li>Perbarui file <code class="language-plaintext highlighter-rouge">navigation.html</code> yang ada di folder <code class="language-plaintext highlighter-rouge">_includes</code>.</li>
+  <li>Tambahkan atau ubah kode SCSS di file <code class="language-plaintext highlighter-rouge">main.scss</code>.</li>
+  <li>Sesuaikan file <code class="language-plaintext highlighter-rouge">default.html</code> di folder <code class="language-plaintext highlighter-rouge">_layouts</code> untuk mengintegrasikan gaya layout baru.</li>
+</ol>
+
+<p>Pastikan semua perubahan sesuai dengan struktur SCSS agar mudah dipelihara dan dibaca.</p>
+
+<hr />
+
+<h2 id="-kesimpulan">📝 Kesimpulan</h2>
+
+<p>SCSS dan SASS sama-sama menawarkan fitur canggih yang memperluas kemampuan CSS, seperti <strong>variabel, mixin, nesting</strong>, dan <strong>struktur modular</strong>. Pilihan antara SCSS atau SASS tergantung pada kenyamanan kamu terhadap sintaks:</p>
+
+<ul>
+  <li>Gunakan <strong>SCSS</strong> jika kamu lebih terbiasa dengan penulisan CSS.</li>
+  <li>Gunakan <strong>SASS</strong> jika kamu ingin penulisan yang lebih minimal dan bersih.</li>
+</ul>
+
+<p>Keduanya dapat meningkatkan pengalaman dan efisiensi dalam menulis stylesheet modern.</p>
+
+<blockquote>
+  <p>🔗 Sumber: GeeksforGeeks — What is the difference between SCSS and SASS</p>
+</blockquote>
+
+</main>
+ <div class="footer">
+  <p>
+    © 2025, Created <i class="fas fa-heart"></i> by <span>OnlyJack </span>
+    <a
+      href="https://www.instagram.com/zkyy.frezy?igsh=MXB3N21zbm44ZjdwNw=="
+      class="social-icon"
+      ><i class="fab fa-instagram"></i
+    ></a>
+    <a href="https://www.tiktok.com/@c.classsy" class="social-icon"
+      ><i class="fab fa-tiktok"></i
+    ></a>
+    <a href="https://github.com/M-ZakiFahrezi" class="social-icon"
+      ><i class="fab fa-github"></i
+    ></a>
+  </p>
+</div>
+
+
+    <!-- Search Overlay -->
+    <div id="searchOverlay" class="search-overlay">
+      <div class="search-box">
+        <input type="text" placeholder="Search..." />
+        <button onclick="closeSearch()">Close</button>
+        <p>Maaf, fitur ini masih dalam tahap pengembangan</p>
+      </div>
+    </div>
+
+    <!-- Sidebar Overlay -->
+    <!-- Sidebar Overlay -->
+    <div id="sidebarOverlay" class="sidebar-overlay">
+      <div class="sidebar-content">
+        <button class="close-btn" onclick="closeSidebar()">×</button>
+        <div class="datetime">
+          <div id="clock">--:--:--</div>
+          <div id="date">--, -- -- ----</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
