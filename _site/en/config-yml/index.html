@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Config YML</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="/assets/images/favicon.ico" />
+
+    <!-- JavaScript -->
+    <script src="/assets/js/script.js" defer></script>
+   
+    <!-- language -->
+    <script src="/assets/js/lang.js"></script>
+
+    <!-- plugins -->
+    <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Home" /> <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Config YML | Home</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Config YML" />
+<meta property="og:locale" content="en" />
+<meta name="description" content="Materi tentang link dan lists pada HTML" />
+<meta property="og:description" content="Materi tentang link dan lists pada HTML" />
+<link rel="canonical" href="http://localhost:4000/en/config-yml/" />
+<meta property="og:url" content="http://localhost:4000/en/config-yml/" />
+<meta property="og:site_name" content="Home" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-04-17T00:00:00+07:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Config YML" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-04-17T00:00:00+07:00","datePublished":"2025-04-17T00:00:00+07:00","description":"Materi tentang link dan lists pada HTML","headline":"Config YML","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/en/config-yml/"},"url":"http://localhost:4000/en/config-yml/"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+  <body>
+    <nav class="navbar">
+  <div class="nav-container">
+    <!-- Logo -->
+    <div class="logo">
+      <img src="/assets/images/shp-clear.png" alt="SHP" class="logo-img">
+      <span>OnlyJack</span>
+    </div>
+
+    <!-- Navigasi -->
+    <div class="nav-links">
+      
+        <a href="/" >
+          Home
+        </a>
+      
+        <a href="/friends.html" >
+          Friends
+        </a>
+      
+        <a href="/blog.html" >
+          Blog
+        </a>
+      
+    </div>
+
+    <!-- Ikon + Language Selector -->
+    <div class="nav-icons">
+      <i class="fa fa-search" onclick="openSearch()"></i>
+      <i id="theme-toggle" class="fa fa-water"></i>
+      <i class="fa-solid fa-clock" onclick="openSidebar()"></i>
+
+      <!-- Language Switcher -->
+      <div class="language-switcher">
+        <select id="languageSelect" onchange="switchLanguage()">
+          <option value="id">ID</option>
+          <option value="en">EN</option>
+        </select>
+      </div>
+    </div>
+  </div>
+</nav>
+ <h1>Config YML</h1>
+<p>17 Apr 2025 </p>
+
+<main class="blog-container"><p>Materi tentang link dan lists pada HTML</p>
+
+<p>Materi pengenalan tentang file konfigurasi <code class="language-plaintext highlighter-rouge">.yml</code> (YAML), sering digunakan dalam proyek web seperti Jekyll, GitHub Actions, dan banyak tools lainnya.</p>
+
+<h1 id="️-apa-itu-file-yml">⚙️ Apa Itu File YML?</h1>
+
+<p><strong>YML (atau YAML)</strong> adalah singkatan dari <strong>YAML Ain’t Markup Language</strong>, yaitu format file konfigurasi yang digunakan untuk menyimpan data dengan struktur yang rapi dan mudah dibaca manusia.</p>
+
+<p>Biasanya digunakan untuk mengatur <strong>setting</strong>, <strong>data konfigurasi</strong>, atau <strong>pipeline deployment</strong> di berbagai aplikasi dan framework.</p>
+
+<hr />
+
+<h2 id="-ciri-khas-format-yml">🧩 Ciri Khas Format YML</h2>
+
+<ul>
+  <li>Berbasis indentasi (menggunakan spasi, <strong>bukan tab</strong>)</li>
+  <li>Tidak menggunakan tanda kurung <code class="language-plaintext highlighter-rouge">{}</code> atau <code class="language-plaintext highlighter-rouge">[]</code></li>
+  <li>Menggunakan tanda <code class="language-plaintext highlighter-rouge">:</code> untuk memisahkan key dan value</li>
+  <li>Mendukung struktur <strong>array</strong>, <strong>object</strong>, dan <strong>nested data</strong></li>
+</ul>
+
+<hr />
+
+<h2 id="-contoh-dasar-config-yml">📘 Contoh Dasar Config <code class="language-plaintext highlighter-rouge">.yml</code></h2>
+
+<p>title: My Blog
+description: Belajar Web Development
+author: Zaki
+theme: minima</p>
+
+<p>Pada contoh di atas:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">title</code>, <code class="language-plaintext highlighter-rouge">description</code>, <code class="language-plaintext highlighter-rouge">author</code>, dan <code class="language-plaintext highlighter-rouge">theme</code> adalah <strong>key</strong></li>
+  <li>Setelah tanda <code class="language-plaintext highlighter-rouge">:</code> adalah <strong>value</strong></li>
+</ul>
+
+<hr />
+
+<h2 id="-nested-data-bertingkat">🧱 Nested (Data Bertingkat)</h2>
+
+<p>user:
+  name: Zaki
+  email: zaki@example.com</p>
+
+<p>Struktur ini artinya ada object <code class="language-plaintext highlighter-rouge">user</code> yang punya 2 properti: <code class="language-plaintext highlighter-rouge">name</code> dan <code class="language-plaintext highlighter-rouge">email</code>.</p>
+
+<hr />
+
+<h2 id="-contoh-arraylist-dalam-yml">📚 Contoh Array/List dalam YML</h2>
+
+<p>skills:</p>
+<ul>
+  <li>HTML</li>
+  <li>CSS</li>
+  <li>JavaScript</li>
+  <li>Python</li>
+</ul>
+
+<p>List ini berisi beberapa item dalam satu key <code class="language-plaintext highlighter-rouge">skills</code>.</p>
+
+<hr />
+
+<h2 id="-contoh-pada-_configyml-jekyll">🔧 Contoh pada <code class="language-plaintext highlighter-rouge">_config.yml</code> Jekyll</h2>
+
+<p>Dalam proyek Jekyll (seperti website portofolio), file <code class="language-plaintext highlighter-rouge">config.yml</code> biasanya berisi pengaturan berikut:</p>
+
+<p>title: Home
+baseurl: “”<br />
+url: “https://m-zakifahrezi.github.io/”</p>
+
+<p>sass:
+  sass_dir: _sass
+  style: compressed</p>
+
+<p>theme: null</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">baseurl</code> biasanya dibiarkan <code class="language-plaintext highlighter-rouge">/</code> jika di-root.</li>
+  <li><code class="language-plaintext highlighter-rouge">url</code> adalah alamat web GitHub Pages-mu.</li>
+  <li><code class="language-plaintext highlighter-rouge">plugins</code> bisa ditambahkan sesuai fitur yang ingin kamu aktifkan.</li>
+</ul>
+
+<hr />
+
+<h2 id="️-tips-penting-menggunakan-yml">⚠️ Tips Penting Menggunakan YML</h2>
+
+<ul>
+  <li>Gunakan <strong>spasi 2</strong> atau <strong>4</strong> secara konsisten untuk indentasi.</li>
+  <li>Hindari tab, karena bisa menyebabkan error parsing.</li>
+  <li>Periksa ulang posisi key dan value, karena satu kesalahan kecil bisa bikin konfigurasi gagal terbaca.</li>
+</ul>
+
+<hr />
+
+<h2 id="-kesimpulan">✅ Kesimpulan</h2>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">.yml</code> adalah file konfigurasi penting yang digunakan di banyak proyek modern.</li>
+  <li>Strukturnya mudah dibaca dan ditulis, tapi sangat sensitif terhadap indentasi.</li>
+  <li>Memahami YML akan sangat membantu saat bekerja dengan Jekyll, GitHub Actions, Netlify, dan tools lainnya.</li>
+</ul>
+
+<blockquote>
+  <p>💡 Pastikan kamu memahami cara menulis key-value, array, dan nested structure dalam YML agar konfigurasi website-mu berjalan lancar!</p>
+</blockquote>
+</main>
+ <div class="footer">
+  <p>
+    © 2025, Created <i class="fas fa-heart"></i> by <span>OnlyJack </span>
+    <a
+      href="https://www.instagram.com/zkyy.frezy?igsh=MXB3N21zbm44ZjdwNw=="
+      class="social-icon"
+      ><i class="fab fa-instagram"></i
+    ></a>
+    <a href="https://www.tiktok.com/@c.classsy" class="social-icon"
+      ><i class="fab fa-tiktok"></i
+    ></a>
+    <a href="https://github.com/M-ZakiFahrezi" class="social-icon"
+      ><i class="fab fa-github"></i
+    ></a>
+  </p>
+</div>
+
+
+    <!-- Search Overlay -->
+    <div id="searchOverlay" class="search-overlay">
+      <div class="search-box">
+        <input type="text" placeholder="Search..." />
+        <button onclick="closeSearch()">Close</button>
+        <p>Maaf, fitur ini masih dalam tahap pengembangan</p>
+      </div>
+    </div>
+
+    <!-- Sidebar Overlay -->
+    <!-- Sidebar Overlay -->
+    <div id="sidebarOverlay" class="sidebar-overlay">
+      <div class="sidebar-content">
+        <button class="close-btn" onclick="closeSidebar()">×</button>
+        <div class="datetime">
+          <div id="clock">--:--:--</div>
+          <div id="date">--, -- -- ----</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

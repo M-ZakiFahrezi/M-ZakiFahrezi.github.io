@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>blog</title>
+    <title>Blog</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
@@ -17,21 +17,24 @@
 
     <!-- JavaScript -->
     <script src="/assets/js/script.js" defer></script>
+   
+    <!-- language -->
+    <script src="/assets/js/lang.js"></script>
 
     <!-- plugins -->
     <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Home" /> <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>blog | Home</title>
+<title>Blog | Home</title>
 <meta name="generator" content="Jekyll v4.4.1" />
-<meta property="og:title" content="blog" />
+<meta property="og:title" content="Blog" />
 <meta property="og:locale" content="en_US" />
 <link rel="canonical" href="http://localhost:4000/blog.html" />
 <meta property="og:url" content="http://localhost:4000/blog.html" />
 <meta property="og:site_name" content="Home" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="blog" />
+<meta property="twitter:title" content="Blog" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","headline":"blog","url":"http://localhost:4000/blog.html"}</script>
+{"@context":"https://schema.org","@type":"WebPage","headline":"Blog","url":"http://localhost:4000/blog.html"}</script>
 <!-- End Jekyll SEO tag -->
 
   </head>
@@ -61,119 +64,251 @@
       
     </div>
 
-    <!-- Ikon -->
+    <!-- Ikon + Language Selector -->
     <div class="nav-icons">
       <i class="fa fa-search" onclick="openSearch()"></i>
       <i id="theme-toggle" class="fa fa-water"></i>
       <i class="fa-solid fa-clock" onclick="openSidebar()"></i>
 
-
-      
+      <!-- Language Switcher -->
+      <div class="language-switcher">
+        <select id="languageSelect" onchange="switchLanguage()">
+          <option value="id">ID</option>
+          <option value="en">EN</option>
+        </select>
+      </div>
     </div>
   </div>
 </nav>
  <div class="blog-container">
-  <h1>Blog</h1>
-  <h2 align="center">Selamat datang di blog saya, mari belajar bersama!!</h2>
+  <h1 data-i18n="blogTitle">Blog</h1>
+  <h2 align="center" data-i18n="blogWelcome">
+    Selamat datang di blog saya, mari belajar bersama!!
+  </h2>
 
+  <!-- Pencarian -->
   <div class="search-container">
     <input
       type="text"
       id="searchBox"
       class="search-input"
       placeholder="Cari blog..."
+      data-i18n="searchPlaceholder"
     />
-    <button class="search-button" onclick="searchBlog()">Cari</button>
+    <button
+      class="search-button"
+      data-i18n="searchButton"
+      onclick="searchBlog()"
+    >
+      Cari
+    </button>
   </div>
 
+  <!-- Daftar Postingan -->
   <ul class="blog-list">
     
-    <li class="blog-item">
-      <div class="blog-header">
-        <span class="blog-icon">📝</span>
-        <a href="/2025/05/07/SASS-dan-SCSS.html" class="blog-title">SASS dan SCSS</a>
-      </div>
-      <span class="blog-date">07 May 2025</span>
-      <p class="blog-excerpt"><p>Materi mengenai SASS dan SCSS</p>
-</p>
-    </li>
     
-    <li class="blog-item">
-      <div class="blog-header">
-        <span class="blog-icon">📝</span>
-        <a href="/2025/04/24/plugins.html" class="blog-title">Plugins</a>
-      </div>
-      <span class="blog-date">24 Apr 2025</span>
-      <p class="blog-excerpt"><p>Materi mengenai Plugins dalam jekyll</p>
-</p>
-    </li>
     
-    <li class="blog-item">
-      <div class="blog-header">
-        <span class="blog-icon">📝</span>
-        <a href="/2025/04/17/config-yml.html" class="blog-title">Config YML</a>
-      </div>
-      <span class="blog-date">17 Apr 2025</span>
-      <p class="blog-excerpt"><p>Materi tentang link dan lists pada HTML</p>
-</p>
-    </li>
     
-    <li class="blog-item">
-      <div class="blog-header">
-        <span class="blog-icon">📝</span>
-        <a href="/2025/03/20/html-link-dan-list.html" class="blog-title">HTML: Link dan List</a>
-      </div>
-      <span class="blog-date">20 Mar 2025</span>
-      <p class="blog-excerpt"><p>Materi tentang link dan lists pada HTML</p>
-</p>
-    </li>
-    
-    <li class="blog-item">
-      <div class="blog-header">
-        <span class="blog-icon">📝</span>
-        <a href="/2025/03/13/layout-dan-navigation.html" class="blog-title">Layout dan Navigasi</a>
-      </div>
-      <span class="blog-date">13 Mar 2025</span>
-      <p class="blog-excerpt"><p>Materi tentang Layout dan Navigasi</p>
-</p>
-    </li>
-    
-    <li class="blog-item">
-      <div class="blog-header">
-        <span class="blog-icon">📝</span>
-        <a href="/2025/03/06/markdown-html.html" class="blog-title">Belajar Markdown & HTML</a>
-      </div>
-      <span class="blog-date">06 Mar 2025</span>
-      <p class="blog-excerpt"><p>Materi tentang Markdown dan HTML</p>
-</p>
-    </li>
-    
-    <li class="blog-item">
-      <div class="blog-header">
-        <span class="blog-icon">📝</span>
-        <a href="/2025/02/20/installasi-ruby-dan-jekyll.html" class="blog-title">Instalasi Ruby dan Jekyll</a>
-      </div>
-      <span class="blog-date">20 Feb 2025</span>
-      <p class="blog-excerpt"><p>Materi tentang Instalasi Ruby dan Jekyll</p>
-</p>
-    </li>
+      
+        <li class="blog-item" data-lang="id">
+          <div class="blog-header">
+            <span class="blog-icon">📝</span>
+            <a href="/id/SASS-dan-SCSS/" class="blog-title">SASS dan SCSS</a>
+          </div>
+          <span class="blog-date">07 May 2025</span>
+          <p class="blog-excerpt">
+            Materi mengenai SASS dan SCSS
+
+          </p>
+        </li>
+      
+        <li class="blog-item" data-lang="en">
+          <div class="blog-header">
+            <span class="blog-icon">📝</span>
+            <a href="/en/SASS-and-SCSS/" class="blog-title">SASS and SCSS</a>
+          </div>
+          <span class="blog-date">07 May 2025</span>
+          <p class="blog-excerpt">
+            Materi mengenai SASS dan SCSS
+
+          </p>
+        </li>
+      
+        <li class="blog-item" data-lang="en">
+          <div class="blog-header">
+            <span class="blog-icon">📝</span>
+            <a href="/en/plugins/" class="blog-title">Plugins</a>
+          </div>
+          <span class="blog-date">24 Apr 2025</span>
+          <p class="blog-excerpt">
+            Materi mengenai Plugins dalam jekyll
+
+          </p>
+        </li>
+      
+        <li class="blog-item" data-lang="id">
+          <div class="blog-header">
+            <span class="blog-icon">📝</span>
+            <a href="/id/plugins/" class="blog-title">Plugins</a>
+          </div>
+          <span class="blog-date">24 Apr 2025</span>
+          <p class="blog-excerpt">
+            Materi mengenai Plugins dalam jekyll
+
+          </p>
+        </li>
+      
+        <li class="blog-item" data-lang="en">
+          <div class="blog-header">
+            <span class="blog-icon">📝</span>
+            <a href="/en/config-yml/" class="blog-title">Config YML</a>
+          </div>
+          <span class="blog-date">17 Apr 2025</span>
+          <p class="blog-excerpt">
+            Materi tentang link dan lists pada HTML
+
+          </p>
+        </li>
+      
+        <li class="blog-item" data-lang="id">
+          <div class="blog-header">
+            <span class="blog-icon">📝</span>
+            <a href="/id/config-yml/" class="blog-title">Config YML</a>
+          </div>
+          <span class="blog-date">17 Apr 2025</span>
+          <p class="blog-excerpt">
+            Materi tentang link dan lists pada HTML
+
+          </p>
+        </li>
+      
+        <li class="blog-item" data-lang="id">
+          <div class="blog-header">
+            <span class="blog-icon">📝</span>
+            <a href="/id/html-link-dan-list/" class="blog-title">HTML: Link dan List</a>
+          </div>
+          <span class="blog-date">20 Mar 2025</span>
+          <p class="blog-excerpt">
+            Materi tentang link dan lists pada HTML
+
+          </p>
+        </li>
+      
+        <li class="blog-item" data-lang="en">
+          <div class="blog-header">
+            <span class="blog-icon">📝</span>
+            <a href="/en/html-link-and-list/" class="blog-title">HTML: Links and Lists</a>
+          </div>
+          <span class="blog-date">20 Mar 2025</span>
+          <p class="blog-excerpt">
+            Materi tentang link dan lists pada HTML
+
+          </p>
+        </li>
+      
+        <li class="blog-item" data-lang="en">
+          <div class="blog-header">
+            <span class="blog-icon">📝</span>
+            <a href="/en/layout-and-navigation/" class="blog-title">Layout and Navigation</a>
+          </div>
+          <span class="blog-date">13 Mar 2025</span>
+          <p class="blog-excerpt">
+            Materi tentang Layout dan Navigasi
+
+          </p>
+        </li>
+      
+        <li class="blog-item" data-lang="id">
+          <div class="blog-header">
+            <span class="blog-icon">📝</span>
+            <a href="/id/layout-dan-navigation/" class="blog-title">Layout dan Navigasi</a>
+          </div>
+          <span class="blog-date">13 Mar 2025</span>
+          <p class="blog-excerpt">
+            Materi tentang Layout dan Navigasi
+
+          </p>
+        </li>
+      
+        <li class="blog-item" data-lang="en">
+          <div class="blog-header">
+            <span class="blog-icon">📝</span>
+            <a href="/en/markdown-html/" class="blog-title">Learn Markdown & HTML</a>
+          </div>
+          <span class="blog-date">06 Mar 2025</span>
+          <p class="blog-excerpt">
+            Materi tentang Markdown dan HTML
+
+          </p>
+        </li>
+      
+        <li class="blog-item" data-lang="id">
+          <div class="blog-header">
+            <span class="blog-icon">📝</span>
+            <a href="/id/markdown-html/" class="blog-title">Belajar Markdown & HTML</a>
+          </div>
+          <span class="blog-date">06 Mar 2025</span>
+          <p class="blog-excerpt">
+            Materi tentang Markdown dan HTML
+
+          </p>
+        </li>
+      
+        <li class="blog-item" data-lang="en">
+          <div class="blog-header">
+            <span class="blog-icon">📝</span>
+            <a href="/en/ruby-and-jekyll-installation/" class="blog-title">Ruby and Jekyll installation</a>
+          </div>
+          <span class="blog-date">20 Feb 2025</span>
+          <p class="blog-excerpt">
+            Materi tentang Instalasi Ruby dan Jekyll
+
+          </p>
+        </li>
+      
+        <li class="blog-item" data-lang="id">
+          <div class="blog-header">
+            <span class="blog-icon">📝</span>
+            <a href="/id/installasi-ruby-dan-jekyll/" class="blog-title">Instalasi Ruby dan Jekyll</a>
+          </div>
+          <span class="blog-date">20 Feb 2025</span>
+          <p class="blog-excerpt">
+            Materi tentang Instalasi Ruby dan Jekyll
+
+          </p>
+        </li>
+      
     
   </ul>
 </div>
 
-<!-- fungsi pencarian judul blog -->
+<!-- Script -->
 <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const lang = localStorage.getItem("lang") || "id";
+    document.querySelectorAll(".blog-item").forEach((item) => {
+      const itemLang = item.getAttribute("data-lang");
+      item.style.display = itemLang === lang ? "block" : "none";
+    });
+
+    if (typeof setLanguage === "function") {
+      setLanguage(lang);
+    }
+  });
+
   function searchBlog() {
     const keyword = document.getElementById("searchBox").value.toLowerCase();
+    const lang = localStorage.getItem("lang") || "id";
     const blogItems = document.querySelectorAll(".blog-item");
 
     blogItems.forEach((item) => {
+      const itemLang = item.getAttribute("data-lang");
       const title = item.querySelector(".blog-title").textContent.toLowerCase();
-      const excerpt = item
-        .querySelector(".blog-excerpt")
-        .textContent.toLowerCase();
+      const excerpt = item.querySelector(".blog-excerpt").textContent.toLowerCase();
       const matches = title.includes(keyword) || excerpt.includes(keyword);
-      item.style.display = matches ? "block" : "none";
+
+      item.style.display = matches && itemLang === lang ? "block" : "none";
     });
   }
 </script>

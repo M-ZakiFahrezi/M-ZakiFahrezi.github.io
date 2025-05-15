@@ -15,14 +15,19 @@
       {% endfor %}
     </div>
 
-    <!-- Ikon -->
+    <!-- Ikon + Language Selector -->
     <div class="nav-icons">
       <i class="fa fa-search" onclick="openSearch()"></i>
       <i id="theme-toggle" class="fa fa-water"></i>
       <i class="fa-solid fa-clock" onclick="openSidebar()"></i>
 
-
-      
+      <!-- Language Switcher -->
+      <div class="language-switcher">
+        <select id="languageSelect" onchange="switchLanguage()">
+          <option value="id">ID</option>
+          <option value="en">EN</option>
+        </select>
+      </div>
     </div>
   </div>
 </nav>

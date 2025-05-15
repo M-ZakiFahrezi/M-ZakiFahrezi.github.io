@@ -158,6 +158,27 @@ body::after {
   gap: 15px;
 }
 
+.language-switcher {
+  margin-left: 10px;
+}
+
+.language-switcher select {
+  background: transparent;
+  border: 1px solid #00ffff;
+  color: white;
+  padding: 4px 6px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+}
+
+.language-switcher select option {
+  background-color: #0f172a;
+  color: white;
+}
+
+
 #theme-toggle {
   font-size: 20px;
   cursor: pointer;

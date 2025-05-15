@@ -17,6 +17,9 @@
 
     <!-- JavaScript -->
     <script src="/assets/js/script.js" defer></script>
+   
+    <!-- language -->
+    <script src="/assets/js/lang.js"></script>
 
     <!-- plugins -->
     <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Home" /> <!-- Begin Jekyll SEO tag v2.8.0 -->
@@ -61,20 +64,25 @@
       
     </div>
 
-    <!-- Ikon -->
+    <!-- Ikon + Language Selector -->
     <div class="nav-icons">
       <i class="fa fa-search" onclick="openSearch()"></i>
       <i id="theme-toggle" class="fa fa-water"></i>
       <i class="fa-solid fa-clock" onclick="openSidebar()"></i>
 
-
-      
+      <!-- Language Switcher -->
+      <div class="language-switcher">
+        <select id="languageSelect" onchange="switchLanguage()">
+          <option value="id">ID</option>
+          <option value="en">EN</option>
+        </select>
+      </div>
     </div>
   </div>
 </nav>
  <div class="friends-container">
-  <h1>Friends Page</h1>
-  <p>Berikut teman-teman saya di kelas:</p>
+  <h1 data-i18n="friendsTitle">Halaman teman</h1>
+  <p data-i18n="friendsDesc">Berikut teman-teman saya di kelas:</p>
   <ul class="friend-list">
     <li><a href="https://ahmadfayyadh.github.io/">Ahmad Fayyadh</a></li>
     <li><a href="https://alanisamaharani.github.io/">Al Anisa Maharani</a></li>

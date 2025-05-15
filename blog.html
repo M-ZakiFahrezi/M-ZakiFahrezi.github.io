@@ -1,49 +1,82 @@
 ---
 layout: default
-title: blog
+title: Blog
 ---
 
 <div class="blog-container">
-  <h1>Blog</h1>
-  <h2 align="center">Selamat datang di blog saya, mari belajar bersama!!</h2>
+  <h1 data-i18n="blogTitle">Blog</h1>
+  <h2 align="center" data-i18n="blogWelcome">
+    Selamat datang di blog saya, mari belajar bersama!!
+  </h2>
 
+  <!-- Pencarian -->
   <div class="search-container">
     <input
       type="text"
       id="searchBox"
       class="search-input"
       placeholder="Cari blog..."
+      data-i18n="searchPlaceholder"
     />
-    <button class="search-button" onclick="searchBlog()">Cari</button>
+    <button
+      class="search-button"
+      data-i18n="searchButton"
+      onclick="searchBlog()"
+    >
+      Cari
+    </button>
   </div>
 
+  <!-- Daftar Postingan -->
   <ul class="blog-list">
-    {% for post in site.posts %}
-    <li class="blog-item">
-      <div class="blog-header">
-        <span class="blog-icon">📝</span>
-        <a href="{{ post.url }}" class="blog-title">{{ post.title }}</a>
-      </div>
-      <span class="blog-date">{{ post.date | date: "%d %b %Y" }}</span>
-      <p class="blog-excerpt">{{ post.excerpt }}</p>
-    </li>
-    {% endfor %}
+    {% assign all_posts = site.id | concat: site.en %}
+    {% assign sorted_posts = all_posts | sort: 'date' | reverse %}
+    
+    {% if sorted_posts.size > 0 %}
+      {% for post in sorted_posts %}
+        <li class="blog-item" data-lang="{{ post.lang }}">
+          <div class="blog-header">
+            <span class="blog-icon">📝</span>
+            <a href="{{ post.url }}" class="blog-title">{{ post.title }}</a>
+          </div>
+          <span class="blog-date">{{ post.date | date: "%d %b %Y" }}</span>
+          <p class="blog-excerpt">
+            {{ post.excerpt | default: post.content | strip_html | truncatewords: 30 }}
+          </p>
+        </li>
+      {% endfor %}
+    {% else %}
+      <li><p data-i18n="noPostsFound">Tidak ada postingan yang ditemukan.</p></li>
+    {% endif %}
   </ul>
 </div>
 
-<!-- fungsi pencarian judul blog -->
+<!-- Script -->
 <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const lang = localStorage.getItem("lang") || "id";
+    document.querySelectorAll(".blog-item").forEach((item) => {
+      const itemLang = item.getAttribute("data-lang");
+      item.style.display = itemLang === lang ? "block" : "none";
+    });
+
+    if (typeof setLanguage === "function") {
+      setLanguage(lang);
+    }
+  });
+
   function searchBlog() {
     const keyword = document.getElementById("searchBox").value.toLowerCase();
+    const lang = localStorage.getItem("lang") || "id";
     const blogItems = document.querySelectorAll(".blog-item");
 
     blogItems.forEach((item) => {
+      const itemLang = item.getAttribute("data-lang");
       const title = item.querySelector(".blog-title").textContent.toLowerCase();
-      const excerpt = item
-        .querySelector(".blog-excerpt")
-        .textContent.toLowerCase();
+      const excerpt = item.querySelector(".blog-excerpt").textContent.toLowerCase();
       const matches = title.includes(keyword) || excerpt.includes(keyword);
-      item.style.display = matches ? "block" : "none";
+
+      item.style.display = matches && itemLang === lang ? "block" : "none";
     });
   }
 </script>
