@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SASS and SCSS</title>
+    <title>Layout with SASS and SCSS</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
@@ -17,39 +17,37 @@
 
     <!-- JavaScript -->
     <script src="/assets/js/script.js" defer></script>
-   
+
     <!-- language -->
     <script src="/assets/js/lang.js"></script>
 
     <!-- plugins -->
     <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Home" /> <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>SASS and SCSS | Home</title>
+<title>Layout with SASS and SCSS | Home</title>
 <meta name="generator" content="Jekyll v4.4.1" />
-<meta property="og:title" content="SASS and SCSS" />
+<meta property="og:title" content="Layout with SASS and SCSS" />
 <meta property="og:locale" content="en" />
-<meta name="description" content="Materi mengenai SASS dan SCSS" />
-<meta property="og:description" content="Materi mengenai SASS dan SCSS" />
+<meta name="description" content="Content about SASS and SCSS" />
+<meta property="og:description" content="Content about SASS and SCSS" />
 <link rel="canonical" href="http://localhost:4000/en/SASS-and-SCSS/" />
 <meta property="og:url" content="http://localhost:4000/en/SASS-and-SCSS/" />
 <meta property="og:site_name" content="Home" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2025-05-07T00:00:00+07:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="SASS and SCSS" />
+<meta property="twitter:title" content="Layout with SASS and SCSS" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-05-07T00:00:00+07:00","datePublished":"2025-05-07T00:00:00+07:00","description":"Materi mengenai SASS dan SCSS","headline":"SASS and SCSS","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/en/SASS-and-SCSS/"},"url":"http://localhost:4000/en/SASS-and-SCSS/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-05-07T00:00:00+07:00","datePublished":"2025-05-07T00:00:00+07:00","description":"Content about SASS and SCSS","headline":"Layout with SASS and SCSS","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/en/SASS-and-SCSS/"},"url":"http://localhost:4000/en/SASS-and-SCSS/"}</script>
 <!-- End Jekyll SEO tag -->
 
   </head>
   <body>
     <nav class="navbar">
   <div class="nav-container">
-    <!-- Logo -->
-    <div class="logo">
-      <img src="/assets/images/shp-clear.png" alt="SHP" class="logo-img">
-      <span>OnlyJack</span>
-    </div>
-
+    
+    <!-- Hamburger menu di ujung kiri -->
+    <i class="fas fa-bars hamburger" id="menu-toggle"></i>
+    
     <!-- Navigasi -->
     <div class="nav-links">
       
@@ -72,8 +70,6 @@
       <i class="fa fa-search" onclick="openSearch()"></i>
       <i id="theme-toggle" class="fa fa-water"></i>
       <i class="fa-solid fa-clock" onclick="openSidebar()"></i>
-
-      <!-- Language Switcher -->
       <div class="language-switcher">
         <select id="languageSelect" onchange="switchLanguage()">
           <option value="id">ID</option>
@@ -81,162 +77,162 @@
         </select>
       </div>
     </div>
+
   </div>
 </nav>
- <h1>SASS and SCSS</h1>
+ <h1>Layout with SASS and SCSS</h1>
 <p>07 May 2025 </p>
 
-<main class="blog-container"><p>Materi mengenai SASS dan SCSS</p>
+<main class="blog-container"><p>Content about SASS and SCSS</p>
 
-<h1 id="-membuat-layout-menggunakan-sassscss">🧩 Membuat Layout Menggunakan SASS/SCSS</h1>
+<h1 id="-creating-layouts-using-sassscss">🧩 Creating Layouts Using SASS/SCSS</h1>
 
-<p>SASS dan SCSS adalah dua sintaks dari preprocessor SASS (Syntactically Awesome Stylesheets). Keduanya meningkatkan kemampuan CSS tradisional dengan fitur seperti <strong>variabel</strong>, <strong>nesting (penyusunan bertingkat)</strong>, dan <strong>mixin</strong>. Walaupun memiliki fitur yang sama, perbedaan terletak pada gaya penulisannya yang disesuaikan dengan preferensi developer.</p>
+<p>SASS and SCSS are two syntaxes of the SASS (Syntactically Awesome Stylesheets) preprocessor. Both enhance traditional CSS with features like <strong>variables</strong>, <strong>nesting</strong>, and <strong>mixins</strong>. While they share the same features, the difference lies in their syntax style, which is based on developer preference.</p>
 
 <hr />
 
-<h2 id="-apa-itu-scss">🔍 Apa itu SCSS?</h2>
+<h2 id="-what-is-scss">🔍 What is SCSS?</h2>
 
-<p><strong>SCSS (Sassy CSS)</strong> adalah salah satu sintaks dari SASS yang sangat mirip dengan CSS biasa. Karena itu, SCSS lebih mudah dipahami oleh developer yang sudah terbiasa dengan CSS.</p>
+<p><strong>SCSS (Sassy CSS)</strong> is a syntax of SASS that closely resembles standard CSS. Because of this, SCSS is easier to understand for developers familiar with CSS.</p>
 
-<h3 id="fitur-utama">Fitur Utama:</h3>
+<h3 id="key-features">Key Features:</h3>
 <ul>
-  <li><strong>Variabel</strong>: Menyimpan nilai yang dapat digunakan ulang (seperti warna atau font).</li>
-  <li><strong>Nesting</strong>: Menyusun selector secara hierarkis.</li>
-  <li><strong>Mixin</strong>: Blok gaya yang dapat digunakan kembali untuk menghindari duplikasi.</li>
-  <li><strong>Inheritance</strong>: Berbagi gaya antar selector dengan <code class="language-plaintext highlighter-rouge">@extend</code>.</li>
-  <li><strong>Partial &amp; Import</strong>: Memecah kode ke dalam bagian-bagian kecil dan modular dengan <code class="language-plaintext highlighter-rouge">@import</code>.</li>
+  <li><strong>Variables</strong>: Store reusable values (like colors or fonts).</li>
+  <li><strong>Nesting</strong>: Organize selectors hierarchically.</li>
+  <li><strong>Mixins</strong>: Reusable blocks of styles to avoid duplication.</li>
+  <li><strong>Inheritance</strong>: Share styles across selectors using <code class="language-plaintext highlighter-rouge">@extend</code>.</li>
+  <li><strong>Partials &amp; Import</strong>: Break code into smaller, modular pieces using <code class="language-plaintext highlighter-rouge">@import</code>.</li>
 </ul>
 
-<p><strong>Contoh Output SCSS:</strong></p>
+<p><strong>SCSS Output Example:</strong></p>
 
 <div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">body</span> <span class="p">{</span>
   <span class="nl">background-color</span><span class="p">:</span> <span class="no">blue</span><span class="p">;</span>
   <span class="nl">color</span><span class="p">:</span> <span class="no">red</span><span class="p">;</span>
   <span class="nl">font-size</span><span class="p">:</span> <span class="m">25px</span><span class="p">;</span>
 <span class="p">}</span>
-<span class="c">/* Ini akan diterapkan pada HTML hasil */</span>
+<span class="c">/* This will be applied in the resulting HTML */</span>
 </code></pre></div></div>
 
 <hr />
 
-<h2 id="-apa-itu-sass">🧵 Apa itu SASS?</h2>
+<h2 id="-what-is-sass">🧵 What is SASS?</h2>
 
-<p><strong>SASS</strong> adalah sintaks asli dari preprocessor SASS. Berbeda dengan SCSS, SASS menggunakan indentasi (spasi) alih-alih tanda kurung kurawal <code class="language-plaintext highlighter-rouge">{}</code> dan titik koma <code class="language-plaintext highlighter-rouge">;</code>.</p>
+<p><strong>SASS</strong> is the original syntax of the SASS preprocessor. Unlike SCSS, SASS uses indentation instead of curly braces <code class="language-plaintext highlighter-rouge">{}</code> and semicolons <code class="language-plaintext highlighter-rouge">;</code>.</p>
 
-<h3 id="fitur-utama-1">Fitur Utama:</h3>
+<h3 id="key-features-1">Key Features:</h3>
 <ul>
-  <li><strong>Variabel</strong>: Menyimpan nilai yang dapat digunakan ulang.</li>
-  <li><strong>Nesting</strong>: Menyusun CSS dengan cara yang lebih bersih.</li>
-  <li><strong>Partials</strong>: Membagi gaya ke dalam file kecil.</li>
-  <li><strong>Mixin</strong>: Menggunakan ulang blok kode antar selector.</li>
-  <li><strong>Inheritance</strong>: Menggunakan <code class="language-plaintext highlighter-rouge">@extend</code> untuk berbagi gaya.</li>
+  <li><strong>Variables</strong>: Store reusable values.</li>
+  <li><strong>Nesting</strong>: Write cleaner CSS.</li>
+  <li><strong>Partials</strong>: Split styles into smaller files.</li>
+  <li><strong>Mixins</strong>: Reuse style blocks across selectors.</li>
+  <li><strong>Inheritance</strong>: Share styles using <code class="language-plaintext highlighter-rouge">@extend</code>.</li>
 </ul>
 
-<p><strong>Contoh Output SASS:</strong></p>
+<p><strong>SASS Output Example:</strong></p>
 
 <div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">body</span> <span class="p">{</span>
   <span class="nl">background-color</span><span class="p">:</span> <span class="no">blue</span><span class="p">;</span>
   <span class="nl">color</span><span class="p">:</span> <span class="no">red</span><span class="p">;</span>
   <span class="nl">font-size</span><span class="p">:</span> <span class="m">25px</span><span class="p">;</span>
 <span class="p">}</span>
-<span class="c">/* Ini akan diterapkan pada HTML hasil */</span>
+<span class="c">/* This will be applied in the resulting HTML */</span>
 </code></pre></div></div>
 
 <hr />
 
-<h2 id="️-perbedaan-scss-dan-sass">⚖️ Perbedaan SCSS dan SASS</h2>
+<h2 id="️-differences-between-scss-and-sass">⚖️ Differences Between SCSS and SASS</h2>
 
 <table>
   <thead>
     <tr>
-      <th>Fitur</th>
+      <th>Feature</th>
       <th>SCSS</th>
       <th>SASS</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>Sintaks</td>
-      <td>Mirip CSS (menggunakan <code class="language-plaintext highlighter-rouge">{}</code> dan <code class="language-plaintext highlighter-rouge">;</code>)</td>
-      <td>Berdasarkan indentasi (tanpa <code class="language-plaintext highlighter-rouge">{}</code> dan <code class="language-plaintext highlighter-rouge">;</code>)</td>
+      <td>Syntax</td>
+      <td>CSS-like (uses <code class="language-plaintext highlighter-rouge">{}</code> and <code class="language-plaintext highlighter-rouge">;</code>)</td>
+      <td>Indentation-based (no <code class="language-plaintext highlighter-rouge">{}</code> and <code class="language-plaintext highlighter-rouge">;</code>)</td>
     </tr>
     <tr>
-      <td>Ekstensi File</td>
+      <td>File Extension</td>
       <td><code class="language-plaintext highlighter-rouge">.scss</code></td>
       <td><code class="language-plaintext highlighter-rouge">.sass</code></td>
     </tr>
     <tr>
-      <td>Kompatibilitas</td>
-      <td>Sepenuhnya kompatibel dengan CSS</td>
-      <td>Tidak langsung kompatibel dengan CSS</td>
+      <td>Compatibility</td>
+      <td>Fully compatible with CSS</td>
+      <td>Not directly compatible with CSS</td>
     </tr>
     <tr>
-      <td>Fleksibilitas</td>
-      <td>Familiar bagi pengguna CSS</td>
-      <td>Lebih ringkas dan bersih</td>
+      <td>Flexibility</td>
+      <td>Familiar for CSS users</td>
+      <td>More concise and clean</td>
     </tr>
     <tr>
-      <td>Penggunaan</td>
-      <td>Cocok bagi yang transisi dari CSS</td>
-      <td>Cocok bagi yang suka penulisan minimal</td>
+      <td>Usage</td>
+      <td>Great for those transitioning from CSS</td>
+      <td>Great for those who prefer minimal syntax</td>
     </tr>
   </tbody>
 </table>
 
 <hr />
 
-<h2 id="-kapan-menggunakan-scss">✅ Kapan Menggunakan SCSS?</h2>
+<h2 id="-when-to-use-scss">✅ When to Use SCSS?</h2>
 
-<p>SCSS cocok digunakan ketika:</p>
+<p>SCSS is ideal when:</p>
 <ul>
-  <li>Kamu sudah terbiasa menulis CSS</li>
-  <li>Membuat proyek berskala besar dan butuh struktur jelas</li>
-  <li>Ingin kompatibilitas penuh dengan CSS standar</li>
+  <li>You’re already familiar with writing CSS</li>
+  <li>You’re working on a large-scale project that needs clear structure</li>
+  <li>You want full compatibility with standard CSS</li>
 </ul>
 
 <hr />
 
-<h2 id="-kapan-menggunakan-sass">✅ Kapan Menggunakan SASS?</h2>
+<h2 id="-when-to-use-sass">✅ When to Use SASS?</h2>
 
-<p>SASS cocok digunakan ketika:</p>
+<p>SASS is ideal when:</p>
 <ul>
-  <li>Kamu menyukai sintaks yang lebih ringkas dan minimal</li>
-  <li>Proyek kamu kecil atau sedang</li>
-  <li>Kamu tidak terlalu bergantung pada penulisan CSS standar</li>
+  <li>You prefer minimal and clean syntax</li>
+  <li>You’re working on small or medium-sized projects</li>
+  <li>You’re not heavily reliant on standard CSS writing</li>
 </ul>
 
 <hr />
 
-<h2 id="-gunakan-scss-untuk-styling-layout">🎨 Gunakan SCSS untuk Styling Layout</h2>
+<h2 id="-use-scss-for-layout-styling">🎨 Use SCSS for Layout Styling</h2>
 
-<p>Pada sesi lab kali ini, kamu akan menyusun ulang layout website menggunakan SCSS agar tampil lebih rapi dan menarik.</p>
+<p>In this lab session, you’ll restructure a website layout using SCSS for a cleaner and more appealing design.</p>
 
-<h3 id="langkah-langkah">Langkah-langkah:</h3>
+<h3 id="steps">Steps:</h3>
 <ol>
-  <li>Perbarui file <code class="language-plaintext highlighter-rouge">navigation.html</code> yang ada di folder <code class="language-plaintext highlighter-rouge">_includes</code>.</li>
-  <li>Tambahkan atau ubah kode SCSS di file <code class="language-plaintext highlighter-rouge">main.scss</code>.</li>
-  <li>Sesuaikan file <code class="language-plaintext highlighter-rouge">default.html</code> di folder <code class="language-plaintext highlighter-rouge">_layouts</code> untuk mengintegrasikan gaya layout baru.</li>
+  <li>Update the <code class="language-plaintext highlighter-rouge">navigation.html</code> file in the <code class="language-plaintext highlighter-rouge">_includes</code> folder.</li>
+  <li>Add or modify SCSS code in the <code class="language-plaintext highlighter-rouge">main.scss</code> file.</li>
+  <li>Adjust the <code class="language-plaintext highlighter-rouge">default.html</code> file in the <code class="language-plaintext highlighter-rouge">_layouts</code> folder to integrate the new layout styles.</li>
 </ol>
 
-<p>Pastikan semua perubahan sesuai dengan struktur SCSS agar mudah dipelihara dan dibaca.</p>
+<p>Ensure all changes follow SCSS structure for better readability and maintainability.</p>
 
 <hr />
 
-<h2 id="-kesimpulan">📝 Kesimpulan</h2>
+<h2 id="-conclusion">📝 Conclusion</h2>
 
-<p>SCSS dan SASS sama-sama menawarkan fitur canggih yang memperluas kemampuan CSS, seperti <strong>variabel, mixin, nesting</strong>, dan <strong>struktur modular</strong>. Pilihan antara SCSS atau SASS tergantung pada kenyamanan kamu terhadap sintaks:</p>
+<p>Both SCSS and SASS offer advanced features that enhance CSS, such as <strong>variables, mixins, nesting</strong>, and <strong>modular structure</strong>. The choice between SCSS and SASS depends on your syntax comfort:</p>
 
 <ul>
-  <li>Gunakan <strong>SCSS</strong> jika kamu lebih terbiasa dengan penulisan CSS.</li>
-  <li>Gunakan <strong>SASS</strong> jika kamu ingin penulisan yang lebih minimal dan bersih.</li>
+  <li>Use <strong>SCSS</strong> if you’re more comfortable with CSS-like syntax.</li>
+  <li>Use <strong>SASS</strong> if you prefer a cleaner, minimal style.</li>
 </ul>
 
-<p>Keduanya dapat meningkatkan pengalaman dan efisiensi dalam menulis stylesheet modern.</p>
+<p>Both improve the experience and efficiency of writing modern stylesheets.</p>
 
 <blockquote>
-  <p>🔗 Sumber: GeeksforGeeks — What is the difference between SCSS and SASS</p>
+  <p>🔗 Source: GeeksforGeeks — What is the difference between SCSS and SASS</p>
 </blockquote>
-
 </main>
  <div class="footer">
   <p>

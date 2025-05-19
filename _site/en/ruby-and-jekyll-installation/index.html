@@ -17,7 +17,7 @@
 
     <!-- JavaScript -->
     <script src="/assets/js/script.js" defer></script>
-   
+
     <!-- language -->
     <script src="/assets/js/lang.js"></script>
 
@@ -27,8 +27,8 @@
 <meta name="generator" content="Jekyll v4.4.1" />
 <meta property="og:title" content="Ruby and Jekyll installation" />
 <meta property="og:locale" content="en" />
-<meta name="description" content="Materi tentang Instalasi Ruby dan Jekyll" />
-<meta property="og:description" content="Materi tentang Instalasi Ruby dan Jekyll" />
+<meta name="description" content="A guide on installing Ruby and Jekyll" />
+<meta property="og:description" content="A guide on installing Ruby and Jekyll" />
 <link rel="canonical" href="http://localhost:4000/en/ruby-and-jekyll-installation/" />
 <meta property="og:url" content="http://localhost:4000/en/ruby-and-jekyll-installation/" />
 <meta property="og:site_name" content="Home" />
@@ -37,19 +37,17 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Ruby and Jekyll installation" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-02-20T00:00:00+07:00","datePublished":"2025-02-20T00:00:00+07:00","description":"Materi tentang Instalasi Ruby dan Jekyll","headline":"Ruby and Jekyll installation","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/en/ruby-and-jekyll-installation/"},"url":"http://localhost:4000/en/ruby-and-jekyll-installation/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-02-20T00:00:00+07:00","datePublished":"2025-02-20T00:00:00+07:00","description":"A guide on installing Ruby and Jekyll","headline":"Ruby and Jekyll installation","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/en/ruby-and-jekyll-installation/"},"url":"http://localhost:4000/en/ruby-and-jekyll-installation/"}</script>
 <!-- End Jekyll SEO tag -->
 
   </head>
   <body>
     <nav class="navbar">
   <div class="nav-container">
-    <!-- Logo -->
-    <div class="logo">
-      <img src="/assets/images/shp-clear.png" alt="SHP" class="logo-img">
-      <span>OnlyJack</span>
-    </div>
-
+    
+    <!-- Hamburger menu di ujung kiri -->
+    <i class="fas fa-bars hamburger" id="menu-toggle"></i>
+    
     <!-- Navigasi -->
     <div class="nav-links">
       
@@ -72,8 +70,6 @@
       <i class="fa fa-search" onclick="openSearch()"></i>
       <i id="theme-toggle" class="fa fa-water"></i>
       <i class="fa-solid fa-clock" onclick="openSidebar()"></i>
-
-      <!-- Language Switcher -->
       <div class="language-switcher">
         <select id="languageSelect" onchange="switchLanguage()">
           <option value="id">ID</option>
@@ -81,37 +77,38 @@
         </select>
       </div>
     </div>
+
   </div>
 </nav>
  <h1>Ruby and Jekyll installation</h1>
 <p>20 Feb 2025 </p>
 
-<main class="blog-container"><p>Materi tentang Instalasi Ruby dan Jekyll</p>
+<main class="blog-container"><p>A guide on installing Ruby and Jekyll</p>
 
-<h1 id="-panduan-instalasi-jekyll-dan-ruby">📘 Panduan Instalasi Jekyll dan Ruby</h1>
+<h1 id="-ruby-and-jekyll-installation-guide">📘 Ruby and Jekyll Installation Guide</h1>
 
-<h2 id="-apa-itu-ruby--jekyll">💎 Apa Itu Ruby &amp; Jekyll?</h2>
+<h2 id="-what-are-ruby--jekyll">💎 What Are Ruby &amp; Jekyll?</h2>
 
 <ul>
-  <li><strong>Ruby</strong> adalah bahasa pemrograman yang digunakan Jekyll.</li>
-  <li><strong>Jekyll</strong> adalah static site generator berbasis Ruby, populer untuk membuat blog atau dokumentasi (seperti GitHub Pages).</li>
+  <li><strong>Ruby</strong> is a programming language used by Jekyll.</li>
+  <li><strong>Jekyll</strong> is a Ruby-based static site generator, popular for creating blogs and documentation (like GitHub Pages).</li>
 </ul>
 
 <hr />
 
-<h2 id="-persiapan-awal">🔧 Persiapan Awal</h2>
+<h2 id="-initial-setup">🔧 Initial Setup</h2>
 
 <h3 id="1-install-ruby">1. Install Ruby</h3>
 
 <h4 id="-windows">▶ Windows</h4>
 
 <ol>
-  <li>Download dari: <a href="https://rubyinstaller.org">https://rubyinstaller.org</a></li>
-  <li>Pilih versi <strong>Ruby + DevKit</strong>, contoh: <code class="language-plaintext highlighter-rouge">Ruby 3.1.4-1 (x64)</code></li>
-  <li>Setelah instalasi:
+  <li>Download from: <a href="https://rubyinstaller.org">https://rubyinstaller.org</a></li>
+  <li>Choose the <strong>Ruby + DevKit</strong> version, for example: <code class="language-plaintext highlighter-rouge">Ruby 3.1.4-1 (x64)</code></li>
+  <li>After installation:
     <ul>
-      <li>Centang opsi “Run <code class="language-plaintext highlighter-rouge">ridk install</code>”</li>
-      <li>Pilih semua komponen (1, 2, dan 3)</li>
+      <li>Check the option “Run <code class="language-plaintext highlighter-rouge">ridk install</code>”</li>
+      <li>Select all components (1, 2, and 3)</li>
     </ul>
   </li>
 </ol>
@@ -126,53 +123,54 @@ brew install ruby</p>
 <h4 id="-linux">▶ Linux</h4>
 
 <p>sudo apt update
-sudo apt install ruby-full build-essential zlib1g-dev
-Tambahkan RubyGems ke PATH:
+sudo apt install ruby-full build-essential zlib1g-dev</p>
+
+<p>Add RubyGems to your PATH:
 echo ‘# Install Ruby Gems to ~/gems’ » ~/.bashrc
 echo ‘export GEM_HOME=”$HOME/gems”’ » ~/.bashrc
 echo ‘export PATH=”$HOME/gems/bin:$PATH”’ » ~/.bashrc
 source ~/.bashrc</p>
 
-<p>🌟 Instalasi Jekyll
-Setelah Ruby terinstal, jalankan:
+<p>🌟 Install Jekyll
+Once Ruby is installed, run:
 gem install jekyll bundler</p>
 
-<p>🚀 Membuat dan Menjalankan Proyek Jekyll</p>
+<p>🚀 Create and Run a Jekyll Project</p>
 
 <ol>
   <li>
-    <p>Membuat proyek baru:
+    <p>Create a new project:
 jekyll new nama-proyek
 cd nama-proyek</p>
   </li>
   <li>
-    <p>Menjalankan server lokal:
+    <p>Start the local server:
 bundle exec jekyll serve
-Buka di browser:
+Open in your browser:
 http://localhost:4000</p>
   </li>
 </ol>
 
-<p>🧪 Cek Versi
+<p>🧪 Check Versions
 ruby -v # versi Ruby
 jekyll -v # versi Jekyll</p>
 
 <hr />
 
-<h2 id="-kesimpulan">✅ Kesimpulan</h2>
+<h2 id="-conclusion">✅ Conclusion</h2>
 
-<p>Instalasi Jekyll membutuhkan beberapa langkah utama, yaitu:</p>
+<p>Installing Jekyll involves a few key steps:</p>
 
 <ol>
-  <li><strong>Menginstal Ruby</strong> – sebagai fondasi karena Jekyll dibangun dengan Ruby.</li>
-  <li><strong>Menginstal Jekyll dan Bundler</strong> – menggunakan perintah <code class="language-plaintext highlighter-rouge">gem install</code>.</li>
-  <li><strong>Membuat dan menjalankan proyek Jekyll</strong> – dengan <code class="language-plaintext highlighter-rouge">jekyll new</code> dan <code class="language-plaintext highlighter-rouge">bundle exec jekyll serve</code>.</li>
+  <li><strong>install Ruby</strong> – the foundation, since Jekyll is built with Ruby.</li>
+  <li><strong>install Jekyll and Bundler</strong> – using the <code class="language-plaintext highlighter-rouge">gem install</code> command.</li>
+  <li><strong>Create and run a Jekyll project</strong> – using <code class="language-plaintext highlighter-rouge">jekyll new</code> and <code class="language-plaintext highlighter-rouge">bundle exec jekyll serve</code>.</li>
 </ol>
 
-<p>Dengan mengikuti langkah-langkah ini, kamu sudah siap membangun situs statis menggunakan Jekyll di berbagai sistem operasi (Windows, macOS, atau Linux). Pastikan kamu juga melakukan pengecekan versi dan menyesuaikan jika menggunakan layanan seperti GitHub Pages.</p>
+<p>By following these steps, you’re ready to build a static website using Jekyll on any operating system (Windows, macOS, or Linux). Make sure to check your installed versions and adjust configurations when deploying to services like GitHub Pages.</p>
 
 <blockquote>
-  <p>Selamat berkarya dengan Jekyll! 🚀</p>
+  <p>Happy building with Jekyll! 🚀</p>
 </blockquote>
 </main>
  <div class="footer">

@@ -5,70 +5,73 @@ lang: en
 date: 2025-04-17
 ---
 
-Materi tentang link dan lists pada HTML
+Material on YAML configuration files
 
-Materi pengenalan tentang file konfigurasi `.yml` (YAML), sering digunakan dalam proyek web seperti Jekyll, GitHub Actions, dan banyak tools lainnya.
+An introductory guide to `.yml` (YAML) configuration files, commonly used in web projects like Jekyll, GitHub Actions, and many other tools.
 
-# ⚙️ Apa Itu File YML?
+# ⚙️ What Is a YML File?
 
-**YML (atau YAML)** adalah singkatan dari **YAML Ain’t Markup Language**, yaitu format file konfigurasi yang digunakan untuk menyimpan data dengan struktur yang rapi dan mudah dibaca manusia.
+**YML (or YAML)** stands for **YAML Ain’t Markup Language**, a configuration file format designed to be human-readable and neatly structured.
 
-Biasanya digunakan untuk mengatur **setting**, **data konfigurasi**, atau **pipeline deployment** di berbagai aplikasi dan framework.
-
----
-
-## 🧩 Ciri Khas Format YML
-
-- Berbasis indentasi (menggunakan spasi, **bukan tab**)
-- Tidak menggunakan tanda kurung `{}` atau `[]`
-- Menggunakan tanda `:` untuk memisahkan key dan value
-- Mendukung struktur **array**, **object**, dan **nested data**
+It is often used for **settings**, **configuration data**, or **deployment pipelines** in various apps and frameworks.
 
 ---
 
-## 📘 Contoh Dasar Config `.yml`
+## 🧩 Key Features of YML Format
 
+- Based on indentation (uses spaces, **not tabs**)
+- No use of `{}` or `[]` for structure
+- Uses `:` to separate keys and values
+- Supports **arrays**, **objects**, and **nested data**
+
+---
+
+## 📘 Basic Example of a `.yml` Config
+
+```yml
 title: My Blog
-description: Belajar Web Development
+description: Learning Web Development
 author: Zaki
 theme: minima
+```
 
-
-Pada contoh di atas:
-- `title`, `description`, `author`, dan `theme` adalah **key**
-- Setelah tanda `:` adalah **value**
+In the example above:
+- `title`, `description`, `author`, and `theme` are **keys**
+- The part after the `:` is the **value**
 
 ---
 
-## 🧱 Nested (Data Bertingkat)
+## 🧱 Nested (Hierarchical Data)
 
+```yml
 user:
   name: Zaki
   email: zaki@example.com
+```
 
-
-Struktur ini artinya ada object `user` yang punya 2 properti: `name` dan `email`.
+This structure means the object `user` has two properties: `name` and `email`.
 
 ---
 
-## 📚 Contoh Array/List dalam YML
+## 📚 Example of Array/List in YML
 
-
+```yml
 skills:
   - HTML
   - CSS
   - JavaScript
   - Python
+```
 
-
-List ini berisi beberapa item dalam satu key `skills`.
+This list contains multiple items under the `skills` key.
 
 ---
 
-## 🔧 Contoh pada `_config.yml` Jekyll
+## 🔧 Example from Jekyll `_config.yml`
 
-Dalam proyek Jekyll (seperti website portofolio), file `config.yml` biasanya berisi pengaturan berikut:
+In a Jekyll project (like a portfolio website), the `config.yml` file typically contains settings like:
 
+```yml
 title: Home
 baseurl: ""  
 url: "https://m-zakifahrezi.github.io/"
@@ -78,26 +81,26 @@ sass:
   style: compressed
 
 theme: null
+```
 
-
-- `baseurl` biasanya dibiarkan `/` jika di-root.
-- `url` adalah alamat web GitHub Pages-mu.
-- `plugins` bisa ditambahkan sesuai fitur yang ingin kamu aktifkan.
-
----
-
-## ⚠️ Tips Penting Menggunakan YML
-
-- Gunakan **spasi 2** atau **4** secara konsisten untuk indentasi.
-- Hindari tab, karena bisa menyebabkan error parsing.
-- Periksa ulang posisi key dan value, karena satu kesalahan kecil bisa bikin konfigurasi gagal terbaca.
+- `baseurl` is usually left empty if the site is at root.
+- `url` is your GitHub Pages site address.
+- `plugins` can be added depending on the features you want to enable.
 
 ---
 
-## ✅ Kesimpulan
+## ⚠️ Important Tips When Using YML
 
-- `.yml` adalah file konfigurasi penting yang digunakan di banyak proyek modern.
-- Strukturnya mudah dibaca dan ditulis, tapi sangat sensitif terhadap indentasi.
-- Memahami YML akan sangat membantu saat bekerja dengan Jekyll, GitHub Actions, Netlify, dan tools lainnya.
+- Use **2 or 4 spaces** consistently for indentation.
+- Avoid tabs, as they can cause parsing errors.
+- Double-check the position of keys and values — a small mistake can make the config unreadable.
 
-> 💡 Pastikan kamu memahami cara menulis key-value, array, dan nested structure dalam YML agar konfigurasi website-mu berjalan lancar!
+---
+
+## ✅ Conclusion
+
+- `.yml` is an important configuration file format used in many modern projects.
+- It is easy to read and write, but very sensitive to indentation.
+- Understanding YAML will help you when working with Jekyll, GitHub Actions, Netlify, and other tools.
+
+> 💡 Learn how to write key-value pairs, arrays, and nested structures in YML to ensure your site configurations work smoothly!

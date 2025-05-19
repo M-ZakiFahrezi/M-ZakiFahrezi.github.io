@@ -90,4 +90,15 @@ function updateClock() {
 setInterval(updateClock, 1000);
 updateClock();
 
-// bolg-search
+// hamburger menu
+const menuToggle = document.getElementById("menu-toggle");
+const navLinks = document.querySelector(".nav-links");
+
+menuToggle.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+  // Optional: toggle icon style (e.g., change to 'X')
+  menuToggle.classList.toggle("fa-bars");
+  menuToggle.classList.toggle("fa-times");
+});
+
+// search overlay

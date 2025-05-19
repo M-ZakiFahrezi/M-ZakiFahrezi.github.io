@@ -17,7 +17,7 @@
 
     <!-- JavaScript -->
     <script src="/assets/js/script.js" defer></script>
-   
+
     <!-- language -->
     <script src="/assets/js/lang.js"></script>
 
@@ -27,8 +27,8 @@
 <meta name="generator" content="Jekyll v4.4.1" />
 <meta property="og:title" content="Layout and Navigation" />
 <meta property="og:locale" content="en" />
-<meta name="description" content="Materi tentang Layout dan Navigasi" />
-<meta property="og:description" content="Materi tentang Layout dan Navigasi" />
+<meta name="description" content="Material on Layout and Navigation" />
+<meta property="og:description" content="Material on Layout and Navigation" />
 <link rel="canonical" href="http://localhost:4000/en/layout-and-navigation/" />
 <meta property="og:url" content="http://localhost:4000/en/layout-and-navigation/" />
 <meta property="og:site_name" content="Home" />
@@ -37,19 +37,17 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Layout and Navigation" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-03-13T00:00:00+07:00","datePublished":"2025-03-13T00:00:00+07:00","description":"Materi tentang Layout dan Navigasi","headline":"Layout and Navigation","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/en/layout-and-navigation/"},"url":"http://localhost:4000/en/layout-and-navigation/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-03-13T00:00:00+07:00","datePublished":"2025-03-13T00:00:00+07:00","description":"Material on Layout and Navigation","headline":"Layout and Navigation","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/en/layout-and-navigation/"},"url":"http://localhost:4000/en/layout-and-navigation/"}</script>
 <!-- End Jekyll SEO tag -->
 
   </head>
   <body>
     <nav class="navbar">
   <div class="nav-container">
-    <!-- Logo -->
-    <div class="logo">
-      <img src="/assets/images/shp-clear.png" alt="SHP" class="logo-img">
-      <span>OnlyJack</span>
-    </div>
-
+    
+    <!-- Hamburger menu di ujung kiri -->
+    <i class="fas fa-bars hamburger" id="menu-toggle"></i>
+    
     <!-- Navigasi -->
     <div class="nav-links">
       
@@ -72,8 +70,6 @@
       <i class="fa fa-search" onclick="openSearch()"></i>
       <i id="theme-toggle" class="fa fa-water"></i>
       <i class="fa-solid fa-clock" onclick="openSidebar()"></i>
-
-      <!-- Language Switcher -->
       <div class="language-switcher">
         <select id="languageSelect" onchange="switchLanguage()">
           <option value="id">ID</option>
@@ -81,139 +77,144 @@
         </select>
       </div>
     </div>
+
   </div>
 </nav>
  <h1>Layout and Navigation</h1>
 <p>13 Mar 2025 </p>
 
-<main class="blog-container"><p>Materi tentang Layout dan Navigasi</p>
+<main class="blog-container"><p>Material on Layout and Navigation</p>
 
-<p>Panduan dasar tentang layout dan navigasi dalam pengembangan web.</p>
+<p>A basic guide on layout and navigation in web development.</p>
 
-<h1 id="-belajar-layout--navigasi-web">🧭 Belajar Layout &amp; Navigasi Web</h1>
+<h1 id="-learning-web-layout--navigation">🧭 Learning Web Layout &amp; Navigation</h1>
 
-<h2 id="-apa-itu-layout">🧱 Apa Itu Layout?</h2>
+<h2 id="-what-is-layout">🧱 What Is Layout?</h2>
 
-<p><strong>Layout</strong> adalah cara menyusun elemen-elemen di halaman web agar tampilannya rapi, terstruktur, dan mudah dibaca oleh pengguna.</p>
+<p><strong>Layout</strong> is the way elements are arranged on a web page to make the content structured, neat, and user-friendly.</p>
 
-<p>Layout penting untuk:</p>
+<p>A good layout helps:</p>
+
 <ul>
-  <li>Meningkatkan pengalaman pengguna (UX)</li>
-  <li>Menyampaikan informasi dengan jelas</li>
-  <li>Menyesuaikan tampilan di berbagai perangkat (responsif)</li>
+  <li>Improve user experience (UX)</li>
+  <li>Deliver information clearly</li>
+  <li>Adapt to different devices (responsive design)</li>
 </ul>
 
-<h3 id="-contoh-struktur-layout-umum">📐 Contoh Struktur Layout Umum</h3>
+<h3 id="-common-layout-structure-example">📐 Common Layout Structure Example</h3>
 
-<header>
-  <nav>Menu Navigasi</nav>
-</header>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;header&gt;</span>
+  <span class="nt">&lt;nav&gt;</span>Navigation Menu<span class="nt">&lt;/nav&gt;</span>
+<span class="nt">&lt;/header&gt;</span>
 
-<main>
-  <section>Konten Utama</section>
-  <aside>Sidebar</aside>
-</main>
+<span class="nt">&lt;main&gt;</span>
+  <span class="nt">&lt;section&gt;</span>Main Content<span class="nt">&lt;/section&gt;</span>
+  <span class="nt">&lt;aside&gt;</span>Sidebar<span class="nt">&lt;/aside&gt;</span>
+<span class="nt">&lt;/main&gt;</span>
 
-<footer>
-  Hak Cipta &copy; 2025
-</footer>
+<span class="nt">&lt;footer&gt;</span>
+  Copyright <span class="ni">&amp;copy;</span> 2025
+<span class="nt">&lt;/footer&gt;</span>
+</code></pre></div></div>
 
 <hr />
 
-<h2 id="-jenis-layout-populer">📑 Jenis Layout Populer</h2>
+<h2 id="-popular-layout-types">📑 Popular Layout Types</h2>
 
 <table>
   <thead>
     <tr>
-      <th>Jenis Layout</th>
-      <th>Keterangan</th>
+      <th>Layout Type</th>
+      <th>Description</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td><strong>Single Column</strong></td>
-      <td>Umum untuk blog dan mobile</td>
+      <td>Common for blogs and mobile screens</td>
     </tr>
     <tr>
       <td><strong>Two Column</strong></td>
-      <td>Konten dan sidebar</td>
+      <td>Main content and sidebar</td>
     </tr>
     <tr>
       <td><strong>Three Column</strong></td>
-      <td>Navigasi, konten, dan sidebar</td>
+      <td>Navigation, main content, and sidebar</td>
     </tr>
     <tr>
       <td><strong>Grid Layout</strong></td>
-      <td>Digunakan untuk galeri dan aplikasi modern</td>
+      <td>Used for galleries and modern applications</td>
     </tr>
   </tbody>
 </table>
 
 <hr />
 
-<h2 id="-apa-itu-navigasi">🔗 Apa Itu Navigasi?</h2>
+<h2 id="-what-is-navigation">🔗 What Is Navigation?</h2>
 
-<p><strong>Navigasi</strong> adalah cara pengguna berpindah dari satu halaman atau bagian ke bagian lain dalam situs web.</p>
+<p><strong>Navigation</strong> is how users move from one page or section to another within a website.</p>
 
-<p>Navigasi yang baik memudahkan pengguna menemukan informasi dengan cepat.</p>
+<p>Good navigation helps users find information quickly and efficiently.</p>
 
-<h3 id="-contoh-navigasi-sederhana">📌 Contoh Navigasi Sederhana</h3>
+<h3 id="-simple-navigation-example">📌 Simple Navigation Example</h3>
 
-<nav>
-  <ul>
-    <li><a href="/">Beranda</a></li>
-    <li><a href="/tentang">Tentang</a></li>
-    <li><a href="/kontak">Kontak</a></li>
-  </ul>
-</nav>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;nav&gt;</span>
+  <span class="nt">&lt;ul&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"/"</span><span class="nt">&gt;</span>Home<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"/about"</span><span class="nt">&gt;</span>About<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"/contact"</span><span class="nt">&gt;</span>Contact<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/nav&gt;</span>
+</code></pre></div></div>
 
 <hr />
 
-<h2 id="-tips-membuat-navigasi-yang-efektif">🎯 Tips Membuat Navigasi yang Efektif</h2>
+<h2 id="-tips-for-effective-navigation">🎯 Tips for Effective Navigation</h2>
 
 <ul>
-  <li>Gunakan menu horizontal di bagian atas</li>
-  <li>Tambahkan menu di bagian footer sebagai alternatif</li>
-  <li>Gunakan warna atau gaya untuk menandai halaman aktif</li>
-  <li>Navigasi harus konsisten di semua halaman</li>
-  <li>Responsif: bisa diakses di perangkat mobile</li>
+  <li>Use a horizontal menu at the top of the page</li>
+  <li>Add a footer menu as an alternative</li>
+  <li>Highlight the active page using colors or styles</li>
+  <li>Keep navigation consistent across all pages</li>
+  <li>Make it responsive: accessible on mobile devices</li>
 </ul>
 
 <hr />
 
-<h2 id="-tools--css-terkait">🧰 Tools &amp; CSS Terkait</h2>
+<h2 id="-related-tools--css">🧰 Related Tools &amp; CSS</h2>
 
 <ul>
-  <li>Gunakan <strong>Flexbox</strong> atau <strong>CSS Grid</strong> untuk layout modern:</li>
+  <li>Use <strong>Flexbox</strong> or <strong>CSS Grid</strong> for modern layouts:</li>
 </ul>
 
-<p>/* Contoh layout dua kolom dengan Flexbox */
-.container {
-  display: flex;
-}</p>
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">/* Two-column layout using Flexbox */</span>
+<span class="nc">.container</span> <span class="p">{</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="n">flex</span><span class="p">;</span>
+<span class="p">}</span>
 
-<p>aside {
-  width: 30%;
-}</p>
+<span class="nt">aside</span> <span class="p">{</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">30%</span><span class="p">;</span>
+<span class="p">}</span>
 
-<p>section {
-  width: 70%;
-}</p>
+<span class="nt">section</span> <span class="p">{</span>
+  <span class="nl">width</span><span class="p">:</span> <span class="m">70%</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
 
 <hr />
 
-<h2 id="-kesimpulan">✅ Kesimpulan</h2>
+<h2 id="-conclusion">✅ Conclusion</h2>
 
 <ul>
-  <li><strong>Layout</strong> adalah kerangka visual dari halaman web, membantu menyusun konten agar mudah dipahami dan enak dilihat.</li>
-  <li><strong>Navigasi</strong> adalah peta situs web, memandu pengguna menjelajahi isi situs dengan mudah dan efisien.</li>
-  <li>Tata letak dan navigasi yang baik akan meningkatkan kenyamanan dan pengalaman pengguna.</li>
-  <li>Gunakan teknik seperti <strong>Flexbox</strong> atau <strong>Grid CSS</strong> untuk menciptakan layout modern dan responsif.</li>
-  <li>Selalu utamakan <strong>kesederhanaan dan konsistensi</strong> dalam desain navigasi dan layout.</li>
+  <li><strong>Layout</strong> is the visual structure of a web page, helping to organize content in a clear and pleasant way.</li>
+  <li><strong>Navigation</strong> is the website’s roadmap, guiding users through the site’s content smoothly.</li>
+  <li>Good layout and navigation improve user comfort and experience.</li>
+  <li>Use modern CSS tools like <strong>Flexbox</strong> or <strong>Grid</strong> to create responsive layouts.</li>
+  <li>Always prioritize <strong>simplicity and consistency</strong> in your layout and navigation design.</li>
 </ul>
 
 <blockquote>
-  <p>💡 Layout membentuk struktur, navigasi menggerakkan pengguna — keduanya kunci dari web yang baik!</p>
+  <p>💡 Layout builds the structure, navigation drives the users — both are essential for a good website!</p>
 </blockquote>
 </main>
  <div class="footer">

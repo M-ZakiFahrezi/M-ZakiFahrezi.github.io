@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "SASS dan SCSS"
+title: "Layout dengan SASS dan SCSS"
 lang: id
 date: 2025-05-07
 ---

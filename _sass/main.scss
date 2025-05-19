@@ -94,17 +94,47 @@ body::after {
   flex-wrap: wrap;
 }
 
-/* Logo */
-.logo {
-  display: flex;
-  align-items: center;
-  font-size: 1.5rem;
-  font-weight: bold;
+/* hamburger */
+/* Sembunyikan hamburger di layar besar */
+.hamburger {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: white;
+  margin-right: 15px;
 }
 
-.logo-img {
-  height: 40px;
-  margin-right: 10px;
+
+/* Tampilkan hamburger dan sembunyikan nav-links saat di layar kecil */
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: inline-block;
+  }
+  
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: rgba(15, 32, 39, 0.98);
+    padding: 10px 20px;
+    z-index: 998;
+  }
+  
+  .nav-links.active {
+    display: flex;
+  }
+  
+  .nav-container {
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.nav-links {
+  transition: all 0.3s ease-in-out;
 }
 
 /* Link Navigasi */
@@ -158,6 +188,7 @@ body::after {
   gap: 15px;
 }
 
+// language switcher
 .language-switcher {
   margin-left: 10px;
 }
@@ -603,6 +634,38 @@ body.volcano-mode .nav-icons i:hover {
   color: #ffc0a0;
 }
 
+body.volcano-mode .language-switcher {
+  margin-left: 10px;
+}
+
+body.volcano-mode .language-switcher select {
+  background: transparent;
+  border: 1px solid #ffc0a0;
+  color: white;
+  padding: 4px 6px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+}
+
+body.volcano-mode .language-switcher select option {
+  background-color: #0f172a;
+  color: white;
+}
+
+
+body.volcano-mode #theme-toggle {
+  font-size: 20px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  color: #ffffff;
+}
+
+body.volcano-mode #theme-toggle:hover {
+  color: #ffc0a0;
+}
+
 body.volcano-mode .footer {
   background-color: rgba(54, 20, 38, 0.9);
 }
@@ -662,6 +725,33 @@ body.volcano-mode .footer,
 body.volcano-mode .friends-container {
   text-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
 }
+
+body.volcano-mode .search-input {
+  background-color: rgba(255, 240, 230, 0.8);
+  color: #222;
+  border: 1px solid #ff8a65;
+}
+
+body.volcano-mode .search-input::placeholder {
+  color: rgba(34, 34, 34, 0.5);
+}
+
+body.volcano-mode .search-input:focus {
+  background-color: rgba(255, 230, 215, 0.9);
+  border-color: #ff7043;
+}
+
+body.volcano-mode .search-button {
+  background: rgba(255, 200, 180, 0.7);
+  border: 1px solid #ff7043;
+  color: #222;
+}
+
+body.volcano-mode .search-button:hover {
+  background: #ff7043;
+  color: #fff;
+}
+
 
 @media (max-width: 768px) {
   body.volcano-mode .nav-links {

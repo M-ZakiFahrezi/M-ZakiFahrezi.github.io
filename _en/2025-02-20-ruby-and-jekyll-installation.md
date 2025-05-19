@@ -5,28 +5,28 @@ lang: en
 date: 2025-02-20
 ---
 
-Materi tentang Instalasi Ruby dan Jekyll
+A guide on installing Ruby and Jekyll
 
-# 📘 Panduan Instalasi Jekyll dan Ruby
+# 📘 Ruby and Jekyll Installation Guide
 
-## 💎 Apa Itu Ruby & Jekyll?
+## 💎 What Are Ruby & Jekyll?
 
-- **Ruby** adalah bahasa pemrograman yang digunakan Jekyll.
-- **Jekyll** adalah static site generator berbasis Ruby, populer untuk membuat blog atau dokumentasi (seperti GitHub Pages).
+- **Ruby** is a programming language used by Jekyll.
+- **Jekyll** is a Ruby-based static site generator, popular for creating blogs and documentation (like GitHub Pages).
 
 ---
 
-## 🔧 Persiapan Awal
+## 🔧 Initial Setup
 
 ### 1. Install Ruby
 
 #### ▶ Windows
 
-1. Download dari: [https://rubyinstaller.org](https://rubyinstaller.org)
-2. Pilih versi **Ruby + DevKit**, contoh: `Ruby 3.1.4-1 (x64)`
-3. Setelah instalasi:
-   - Centang opsi “Run `ridk install`”
-   - Pilih semua komponen (1, 2, dan 3)
+1. Download from: [https://rubyinstaller.org](https://rubyinstaller.org)
+2. Choose the **Ruby + DevKit** version, for example: `Ruby 3.1.4-1 (x64)`
+3. After installation:
+   - Check the option “Run `ridk install`”
+   - Select all components (1, 2, and 3)
 
 #### ▶ macOS
 
@@ -39,41 +39,42 @@ brew install ruby
 
 sudo apt update
 sudo apt install ruby-full build-essential zlib1g-dev
-Tambahkan RubyGems ke PATH:
+
+Add RubyGems to your PATH:
 echo '# Install Ruby Gems to ~/gems' >> ~/.bashrc
 echo 'export GEM_HOME="$HOME/gems"' >> ~/.bashrc
 echo 'export PATH="$HOME/gems/bin:$PATH"' >> ~/.bashrc
 source ~/.bashrc
 
-🌟 Instalasi Jekyll
-Setelah Ruby terinstal, jalankan:
+🌟 Install Jekyll
+Once Ruby is installed, run:
 gem install jekyll bundler
 
-🚀 Membuat dan Menjalankan Proyek Jekyll
+🚀 Create and Run a Jekyll Project
 
-1. Membuat proyek baru:
+1. Create a new project:
    jekyll new nama-proyek
    cd nama-proyek
 
-2. Menjalankan server lokal:
+2. Start the local server:
    bundle exec jekyll serve
-   Buka di browser:
+   Open in your browser:
    http://localhost:4000
 
-🧪 Cek Versi
+🧪 Check Versions
 ruby -v # versi Ruby
 jekyll -v # versi Jekyll
 
 ---
 
-## ✅ Kesimpulan
+## ✅ Conclusion
 
-Instalasi Jekyll membutuhkan beberapa langkah utama, yaitu:
+Installing Jekyll involves a few key steps:
 
-1. **Menginstal Ruby** – sebagai fondasi karena Jekyll dibangun dengan Ruby.
-2. **Menginstal Jekyll dan Bundler** – menggunakan perintah `gem install`.
-3. **Membuat dan menjalankan proyek Jekyll** – dengan `jekyll new` dan `bundle exec jekyll serve`.
+1. **install Ruby** – the foundation, since Jekyll is built with Ruby.
+2. **install Jekyll and Bundler** – using the `gem install` command.
+3. **Create and run a Jekyll project** – using `jekyll new` and `bundle exec jekyll serve`.
 
-Dengan mengikuti langkah-langkah ini, kamu sudah siap membangun situs statis menggunakan Jekyll di berbagai sistem operasi (Windows, macOS, atau Linux). Pastikan kamu juga melakukan pengecekan versi dan menyesuaikan jika menggunakan layanan seperti GitHub Pages.
+By following these steps, you’re ready to build a static website using Jekyll on any operating system (Windows, macOS, or Linux). Make sure to check your installed versions and adjust configurations when deploying to services like GitHub Pages.
 
-> Selamat berkarya dengan Jekyll! 🚀
+> Happy building with Jekyll! 🚀

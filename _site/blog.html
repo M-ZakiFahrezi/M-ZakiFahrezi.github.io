@@ -17,7 +17,7 @@
 
     <!-- JavaScript -->
     <script src="/assets/js/script.js" defer></script>
-   
+
     <!-- language -->
     <script src="/assets/js/lang.js"></script>
 
@@ -41,12 +41,10 @@
   <body>
     <nav class="navbar">
   <div class="nav-container">
-    <!-- Logo -->
-    <div class="logo">
-      <img src="/assets/images/shp-clear.png" alt="SHP" class="logo-img">
-      <span>OnlyJack</span>
-    </div>
-
+    
+    <!-- Hamburger menu di ujung kiri -->
+    <i class="fas fa-bars hamburger" id="menu-toggle"></i>
+    
     <!-- Navigasi -->
     <div class="nav-links">
       
@@ -69,8 +67,6 @@
       <i class="fa fa-search" onclick="openSearch()"></i>
       <i id="theme-toggle" class="fa fa-water"></i>
       <i class="fa-solid fa-clock" onclick="openSidebar()"></i>
-
-      <!-- Language Switcher -->
       <div class="language-switcher">
         <select id="languageSelect" onchange="switchLanguage()">
           <option value="id">ID</option>
@@ -78,6 +74,7 @@
         </select>
       </div>
     </div>
+
   </div>
 </nav>
  <div class="blog-container">
@@ -114,7 +111,7 @@
         <li class="blog-item" data-lang="id">
           <div class="blog-header">
             <span class="blog-icon">📝</span>
-            <a href="/id/SASS-dan-SCSS/" class="blog-title">SASS dan SCSS</a>
+            <a href="/id/SASS-dan-SCSS/" class="blog-title">Layout dengan SASS dan SCSS</a>
           </div>
           <span class="blog-date">07 May 2025</span>
           <p class="blog-excerpt">
@@ -126,11 +123,11 @@
         <li class="blog-item" data-lang="en">
           <div class="blog-header">
             <span class="blog-icon">📝</span>
-            <a href="/en/SASS-and-SCSS/" class="blog-title">SASS and SCSS</a>
+            <a href="/en/SASS-and-SCSS/" class="blog-title">Layout with SASS and SCSS</a>
           </div>
           <span class="blog-date">07 May 2025</span>
           <p class="blog-excerpt">
-            Materi mengenai SASS dan SCSS
+            Content about SASS and SCSS
 
           </p>
         </li>
@@ -142,7 +139,7 @@
           </div>
           <span class="blog-date">24 Apr 2025</span>
           <p class="blog-excerpt">
-            Materi mengenai Plugins dalam jekyll
+            Content about Plugins in Jekyll
 
           </p>
         </li>
@@ -166,7 +163,7 @@
           </div>
           <span class="blog-date">17 Apr 2025</span>
           <p class="blog-excerpt">
-            Materi tentang link dan lists pada HTML
+            Material on YAML configuration files
 
           </p>
         </li>
@@ -202,7 +199,7 @@
           </div>
           <span class="blog-date">20 Mar 2025</span>
           <p class="blog-excerpt">
-            Materi tentang link dan lists pada HTML
+            Material on links and lists in HTML
 
           </p>
         </li>
@@ -214,7 +211,7 @@
           </div>
           <span class="blog-date">13 Mar 2025</span>
           <p class="blog-excerpt">
-            Materi tentang Layout dan Navigasi
+            Material on Layout and Navigation
 
           </p>
         </li>
@@ -238,7 +235,7 @@
           </div>
           <span class="blog-date">06 Mar 2025</span>
           <p class="blog-excerpt">
-            Materi tentang Markdown dan HTML
+            A guide to Markdown and HTML
 
           </p>
         </li>
@@ -262,7 +259,7 @@
           </div>
           <span class="blog-date">20 Feb 2025</span>
           <p class="blog-excerpt">
-            Materi tentang Instalasi Ruby dan Jekyll
+            A guide on installing Ruby and Jekyll
 
           </p>
         </li>

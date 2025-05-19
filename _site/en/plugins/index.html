@@ -17,7 +17,7 @@
 
     <!-- JavaScript -->
     <script src="/assets/js/script.js" defer></script>
-   
+
     <!-- language -->
     <script src="/assets/js/lang.js"></script>
 
@@ -27,8 +27,8 @@
 <meta name="generator" content="Jekyll v4.4.1" />
 <meta property="og:title" content="Plugins" />
 <meta property="og:locale" content="en" />
-<meta name="description" content="Materi mengenai Plugins dalam jekyll" />
-<meta property="og:description" content="Materi mengenai Plugins dalam jekyll" />
+<meta name="description" content="Content about Plugins in Jekyll" />
+<meta property="og:description" content="Content about Plugins in Jekyll" />
 <link rel="canonical" href="http://localhost:4000/en/plugins/" />
 <meta property="og:url" content="http://localhost:4000/en/plugins/" />
 <meta property="og:site_name" content="Home" />
@@ -37,19 +37,17 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Plugins" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-04-24T00:00:00+07:00","datePublished":"2025-04-24T00:00:00+07:00","description":"Materi mengenai Plugins dalam jekyll","headline":"Plugins","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/en/plugins/"},"url":"http://localhost:4000/en/plugins/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-04-24T00:00:00+07:00","datePublished":"2025-04-24T00:00:00+07:00","description":"Content about Plugins in Jekyll","headline":"Plugins","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/en/plugins/"},"url":"http://localhost:4000/en/plugins/"}</script>
 <!-- End Jekyll SEO tag -->
 
   </head>
   <body>
     <nav class="navbar">
   <div class="nav-container">
-    <!-- Logo -->
-    <div class="logo">
-      <img src="/assets/images/shp-clear.png" alt="SHP" class="logo-img">
-      <span>OnlyJack</span>
-    </div>
-
+    
+    <!-- Hamburger menu di ujung kiri -->
+    <i class="fas fa-bars hamburger" id="menu-toggle"></i>
+    
     <!-- Navigasi -->
     <div class="nav-links">
       
@@ -72,8 +70,6 @@
       <i class="fa fa-search" onclick="openSearch()"></i>
       <i id="theme-toggle" class="fa fa-water"></i>
       <i class="fa-solid fa-clock" onclick="openSidebar()"></i>
-
-      <!-- Language Switcher -->
       <div class="language-switcher">
         <select id="languageSelect" onchange="switchLanguage()">
           <option value="id">ID</option>
@@ -81,82 +77,83 @@
         </select>
       </div>
     </div>
+
   </div>
 </nav>
  <h1>Plugins</h1>
 <p>24 Apr 2025 </p>
 
-<main class="blog-container"><p>Materi mengenai Plugins dalam jekyll</p>
+<main class="blog-container"><p>Content about Plugins in Jekyll</p>
 
-<h1 id="-plugin-penting-untuk-jekyll-blog">📦 Plugin Penting untuk Jekyll Blog</h1>
+<h1 id="-essential-plugins-for-jekyll-blog">📦 Essential Plugins for Jekyll Blog</h1>
 
-<p>Jekyll adalah generator static site yang ringan dan powerful. Dengan menambahkan beberapa plugin, kita bisa memperluas kemampuannya untuk SEO, feed RSS, dan sitemap otomatis. Berikut adalah tiga plugin penting yang sering digunakan dalam pengembangan blog dengan Jekyll.</p>
+<p>Jekyll is a lightweight and powerful static site generator. By adding a few plugins, we can extend its capabilities for SEO, RSS feed, and automatic sitemap generation. Here are three essential plugins commonly used in Jekyll blog development.</p>
 
 <hr />
 
 <h2 id="-1-jekyll-sitemap">🔗 1. <code class="language-plaintext highlighter-rouge">jekyll-sitemap</code></h2>
 
-<p><strong>Deskripsi:</strong><br />
-Plugin ini secara otomatis membuat sitemap.xml yang berguna untuk membantu mesin pencari (seperti Google) mengindeks halaman-halaman di blog kamu.</p>
+<p><strong>Description:</strong><br />
+This plugin automatically generates a sitemap.xml file, which helps search engines (like Google) index your blog’s pages.</p>
 
-<p><strong>Manfaat:</strong></p>
+<p><strong>Benefits:</strong></p>
 <ul>
-  <li>Meningkatkan SEO (Search Engine Optimization)</li>
-  <li>Mempermudah crawler mesin pencari menelusuri struktur situs</li>
-  <li>Tidak perlu membuat sitemap secara manual</li>
+  <li>Enhances SEO (Search Engine Optimization)</li>
+  <li>Helps search engine crawlers explore your site structure</li>
+  <li>No need to manually create a sitemap</li>
 </ul>
 
-<p><strong>Cara Kerja:</strong>
-Setelah plugin ini aktif, file <code class="language-plaintext highlighter-rouge">sitemap.xml</code> akan otomatis dibuat di root directory saat kamu menjalankan <code class="language-plaintext highlighter-rouge">jekyll build</code>.</p>
+<p><strong>How It Works:</strong>
+Once this plugin is active, a <code class="language-plaintext highlighter-rouge">sitemap.xml</code> file is automatically created in the root directory when you run <code class="language-plaintext highlighter-rouge">jekyll build</code>.</p>
 
-<p><strong>Contoh Output:</strong></p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://namadomainmu.com/sitemap.xml
+<p><strong>Example Output:</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://yourdomain.com/sitemap.xml
 </code></pre></div></div>
 
 <hr />
 
 <h2 id="-2-jekyll-feed">📡 2. <code class="language-plaintext highlighter-rouge">jekyll-feed</code></h2>
 
-<p><strong>Deskripsi:</strong><br />
-Plugin ini membuat feed RSS 2.0 otomatis untuk blog kamu. RSS feed penting agar orang bisa berlangganan konten blog kamu lewat RSS reader.</p>
+<p><strong>Description:</strong><br />
+This plugin automatically generates an RSS 2.0 feed for your blog. RSS feeds are useful for letting people subscribe to your blog content via RSS readers.</p>
 
-<p><strong>Manfaat:</strong></p>
+<p><strong>Benefits:</strong></p>
 <ul>
-  <li>Mempermudah pengguna mengikuti blog kamu</li>
-  <li>Bisa digunakan untuk integrasi dengan layanan newsletter atau aplikasi RSS</li>
+  <li>Makes it easier for users to follow your blog</li>
+  <li>Can be integrated with newsletter services or RSS applications</li>
 </ul>
 
-<p><strong>Cara Kerja:</strong>
-Secara otomatis membuat file <code class="language-plaintext highlighter-rouge">feed.xml</code> yang tersedia di root website.</p>
+<p><strong>How It Works:</strong>
+Automatically creates a <code class="language-plaintext highlighter-rouge">feed.xml</code> file available at the root of your website.</p>
 
-<p><strong>Contoh Output:</strong></p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://namadomainmu.com/feed.xml
+<p><strong>Example Output:</strong></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://yourdomain.com/feed.xml
 </code></pre></div></div>
 
 <hr />
 
 <h2 id="-3-jekyll-seo-tag">🔍 3. <code class="language-plaintext highlighter-rouge">jekyll-seo-tag</code></h2>
 
-<p><strong>Deskripsi:</strong><br />
-Plugin ini membantu meningkatkan SEO blog kamu dengan menambahkan tag meta SEO secara otomatis di <code class="language-plaintext highlighter-rouge">&lt;head&gt;</code> HTML.</p>
+<p><strong>Description:</strong><br />
+This plugin helps improve your blog’s SEO by automatically adding SEO meta tags in the HTML <code class="language-plaintext highlighter-rouge">&lt;head&gt;</code>.</p>
 
-<p><strong>Manfaat:</strong></p>
+<p><strong>Benefits:</strong></p>
 <ul>
-  <li>Menambahkan meta title, description, canonical URL, dan lain-lain</li>
-  <li>Mendukung Open Graph (untuk Facebook), Twitter Cards, dll</li>
-  <li>Otomatis mengikuti data dari <code class="language-plaintext highlighter-rouge">_config.yml</code></li>
+  <li>Adds meta title, description, canonical URL, and more</li>
+  <li>Supports Open Graph (for Facebook), Twitter Cards, etc.</li>
+  <li>Automatically pulls data from <code class="language-plaintext highlighter-rouge">_config.yml</code></li>
 </ul>
 
-<p><strong>Cara Penggunaan:</strong>
-Pastikan kamu sudah menyertakan tag berikut di file layout HTML (biasanya di <code class="language-plaintext highlighter-rouge">default.html</code>):</p>
+<p><strong>How to Use:</strong>
+Make sure you include the following tag in your layout HTML file (typically in <code class="language-plaintext highlighter-rouge">default.html</code>):</p>
 
 <div class="language-liquid highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!-- Begin Jekyll SEO tag v2.8.0 --&gt;
 &lt;title&gt;Plugins | Home&lt;/title&gt;
 &lt;meta name="generator" content="Jekyll v4.4.1" /&gt;
 &lt;meta property="og:title" content="Plugins" /&gt;
 &lt;meta property="og:locale" content="en" /&gt;
-&lt;meta name="description" content="Materi mengenai Plugins dalam jekyll" /&gt;
-&lt;meta property="og:description" content="Materi mengenai Plugins dalam jekyll" /&gt;
+&lt;meta name="description" content="Content about Plugins in Jekyll" /&gt;
+&lt;meta property="og:description" content="Content about Plugins in Jekyll" /&gt;
 &lt;link rel="canonical" href="http://localhost:4000/en/plugins/" /&gt;
 &lt;meta property="og:url" content="http://localhost:4000/en/plugins/" /&gt;
 &lt;meta property="og:site_name" content="Home" /&gt;
@@ -165,18 +162,18 @@ Pastikan kamu sudah menyertakan tag berikut di file layout HTML (biasanya di <co
 &lt;meta name="twitter:card" content="summary" /&gt;
 &lt;meta property="twitter:title" content="Plugins" /&gt;
 &lt;script type="application/ld+json"&gt;
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-04-24T00:00:00+07:00","datePublished":"2025-04-24T00:00:00+07:00","description":"Materi mengenai Plugins dalam jekyll","headline":"Plugins","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/en/plugins/"},"url":"http://localhost:4000/en/plugins/"}&lt;/script&gt;
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-04-24T00:00:00+07:00","datePublished":"2025-04-24T00:00:00+07:00","description":"Content about Plugins in Jekyll","headline":"Plugins","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/en/plugins/"},"url":"http://localhost:4000/en/plugins/"}&lt;/script&gt;
 &lt;!-- End Jekyll SEO tag --&gt;
 
 </code></pre></div></div>
 
-<p>Dan pastikan informasi penting seperti <code class="language-plaintext highlighter-rouge">title</code>, <code class="language-plaintext highlighter-rouge">description</code>, dan <code class="language-plaintext highlighter-rouge">url</code> sudah didefinisikan di <code class="language-plaintext highlighter-rouge">_config.yml</code>.</p>
+<p>And ensure important information such as <code class="language-plaintext highlighter-rouge">title</code>, <code class="language-plaintext highlighter-rouge">description</code>, and <code class="language-plaintext highlighter-rouge">url</code> is defined in <code class="language-plaintext highlighter-rouge">_config.yml</code>.</p>
 
 <hr />
 
-<h2 id="-cara-menambahkan-plugin">🚀 Cara Menambahkan Plugin</h2>
+<h2 id="-how-to-add-plugins">🚀 How to Add Plugins</h2>
 
-<p>Tambahkan kode ini di file <code class="language-plaintext highlighter-rouge">Gemfile</code>:</p>
+<p>Add the following to your <code class="language-plaintext highlighter-rouge">Gemfile</code>:</p>
 
 <div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">group</span> <span class="ss">:jekyll_plugins</span> <span class="k">do</span>
     <span class="n">gem</span> <span class="s2">"jekyll-sitemap"</span>
@@ -185,12 +182,12 @@ Pastikan kamu sudah menyertakan tag berikut di file layout HTML (biasanya di <co
 <span class="k">end</span>
 </code></pre></div></div>
 
-<p>Kemudian jalankan perintah:</p>
+<p>Then run:</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle install
 </code></pre></div></div>
 
-<p>Dan pastikan <code class="language-plaintext highlighter-rouge">plugins</code> sudah didaftarkan di <code class="language-plaintext highlighter-rouge">_config.yml</code>:</p>
+<p>And make sure the plugins are listed in <code class="language-plaintext highlighter-rouge">_config.yml</code>:</p>
 
 <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">plugins</span><span class="pi">:</span>
   <span class="pi">-</span> <span class="s">jekyll-sitemap</span>
@@ -200,14 +197,14 @@ Pastikan kamu sudah menyertakan tag berikut di file layout HTML (biasanya di <co
 
 <hr />
 
-<h2 id="-kesimpulan">📝 Kesimpulan</h2>
+<h2 id="-conclusion">📝 Conclusion</h2>
 
-<p>Menggunakan plugin seperti <code class="language-plaintext highlighter-rouge">jekyll-sitemap</code>, <code class="language-plaintext highlighter-rouge">jekyll-feed</code>, dan <code class="language-plaintext highlighter-rouge">jekyll-seo-tag</code> adalah langkah tepat untuk membuat blog Jekyll kamu lebih ramah mesin pencari dan pengguna. Dengan konfigurasi yang sederhana, kamu bisa mendapatkan fitur yang profesional!</p>
+<p>Using plugins like <code class="language-plaintext highlighter-rouge">jekyll-sitemap</code>, <code class="language-plaintext highlighter-rouge">jekyll-feed</code>, and <code class="language-plaintext highlighter-rouge">jekyll-seo-tag</code> is a smart step to make your Jekyll blog more search engine- and user-friendly. With simple configuration, you can achieve professional features!</p>
 
 <hr />
 
 <blockquote>
-  <p>Selamat ngeblog! 🚀</p>
+  <p>Happy blogging! 🚀</p>
 </blockquote>
 </main>
  <div class="footer">

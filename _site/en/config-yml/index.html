@@ -17,7 +17,7 @@
 
     <!-- JavaScript -->
     <script src="/assets/js/script.js" defer></script>
-   
+
     <!-- language -->
     <script src="/assets/js/lang.js"></script>
 
@@ -27,8 +27,8 @@
 <meta name="generator" content="Jekyll v4.4.1" />
 <meta property="og:title" content="Config YML" />
 <meta property="og:locale" content="en" />
-<meta name="description" content="Materi tentang link dan lists pada HTML" />
-<meta property="og:description" content="Materi tentang link dan lists pada HTML" />
+<meta name="description" content="Material on YAML configuration files" />
+<meta property="og:description" content="Material on YAML configuration files" />
 <link rel="canonical" href="http://localhost:4000/en/config-yml/" />
 <meta property="og:url" content="http://localhost:4000/en/config-yml/" />
 <meta property="og:site_name" content="Home" />
@@ -37,19 +37,17 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Config YML" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-04-17T00:00:00+07:00","datePublished":"2025-04-17T00:00:00+07:00","description":"Materi tentang link dan lists pada HTML","headline":"Config YML","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/en/config-yml/"},"url":"http://localhost:4000/en/config-yml/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-04-17T00:00:00+07:00","datePublished":"2025-04-17T00:00:00+07:00","description":"Material on YAML configuration files","headline":"Config YML","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/en/config-yml/"},"url":"http://localhost:4000/en/config-yml/"}</script>
 <!-- End Jekyll SEO tag -->
 
   </head>
   <body>
     <nav class="navbar">
   <div class="nav-container">
-    <!-- Logo -->
-    <div class="logo">
-      <img src="/assets/images/shp-clear.png" alt="SHP" class="logo-img">
-      <span>OnlyJack</span>
-    </div>
-
+    
+    <!-- Hamburger menu di ujung kiri -->
+    <i class="fas fa-bars hamburger" id="menu-toggle"></i>
+    
     <!-- Navigasi -->
     <div class="nav-links">
       
@@ -72,8 +70,6 @@
       <i class="fa fa-search" onclick="openSearch()"></i>
       <i id="theme-toggle" class="fa fa-water"></i>
       <i class="fa-solid fa-clock" onclick="openSidebar()"></i>
-
-      <!-- Language Switcher -->
       <div class="language-switcher">
         <select id="languageSelect" onchange="switchLanguage()">
           <option value="id">ID</option>
@@ -81,115 +77,118 @@
         </select>
       </div>
     </div>
+
   </div>
 </nav>
  <h1>Config YML</h1>
 <p>17 Apr 2025 </p>
 
-<main class="blog-container"><p>Materi tentang link dan lists pada HTML</p>
+<main class="blog-container"><p>Material on YAML configuration files</p>
 
-<p>Materi pengenalan tentang file konfigurasi <code class="language-plaintext highlighter-rouge">.yml</code> (YAML), sering digunakan dalam proyek web seperti Jekyll, GitHub Actions, dan banyak tools lainnya.</p>
+<p>An introductory guide to <code class="language-plaintext highlighter-rouge">.yml</code> (YAML) configuration files, commonly used in web projects like Jekyll, GitHub Actions, and many other tools.</p>
 
-<h1 id="️-apa-itu-file-yml">⚙️ Apa Itu File YML?</h1>
+<h1 id="️-what-is-a-yml-file">⚙️ What Is a YML File?</h1>
 
-<p><strong>YML (atau YAML)</strong> adalah singkatan dari <strong>YAML Ain’t Markup Language</strong>, yaitu format file konfigurasi yang digunakan untuk menyimpan data dengan struktur yang rapi dan mudah dibaca manusia.</p>
+<p><strong>YML (or YAML)</strong> stands for <strong>YAML Ain’t Markup Language</strong>, a configuration file format designed to be human-readable and neatly structured.</p>
 
-<p>Biasanya digunakan untuk mengatur <strong>setting</strong>, <strong>data konfigurasi</strong>, atau <strong>pipeline deployment</strong> di berbagai aplikasi dan framework.</p>
+<p>It is often used for <strong>settings</strong>, <strong>configuration data</strong>, or <strong>deployment pipelines</strong> in various apps and frameworks.</p>
 
 <hr />
 
-<h2 id="-ciri-khas-format-yml">🧩 Ciri Khas Format YML</h2>
+<h2 id="-key-features-of-yml-format">🧩 Key Features of YML Format</h2>
 
 <ul>
-  <li>Berbasis indentasi (menggunakan spasi, <strong>bukan tab</strong>)</li>
-  <li>Tidak menggunakan tanda kurung <code class="language-plaintext highlighter-rouge">{}</code> atau <code class="language-plaintext highlighter-rouge">[]</code></li>
-  <li>Menggunakan tanda <code class="language-plaintext highlighter-rouge">:</code> untuk memisahkan key dan value</li>
-  <li>Mendukung struktur <strong>array</strong>, <strong>object</strong>, dan <strong>nested data</strong></li>
+  <li>Based on indentation (uses spaces, <strong>not tabs</strong>)</li>
+  <li>No use of <code class="language-plaintext highlighter-rouge">{}</code> or <code class="language-plaintext highlighter-rouge">[]</code> for structure</li>
+  <li>Uses <code class="language-plaintext highlighter-rouge">:</code> to separate keys and values</li>
+  <li>Supports <strong>arrays</strong>, <strong>objects</strong>, and <strong>nested data</strong></li>
 </ul>
 
 <hr />
 
-<h2 id="-contoh-dasar-config-yml">📘 Contoh Dasar Config <code class="language-plaintext highlighter-rouge">.yml</code></h2>
+<h2 id="-basic-example-of-a-yml-config">📘 Basic Example of a <code class="language-plaintext highlighter-rouge">.yml</code> Config</h2>
 
-<p>title: My Blog
-description: Belajar Web Development
-author: Zaki
-theme: minima</p>
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">title</span><span class="pi">:</span> <span class="s">My Blog</span>
+<span class="na">description</span><span class="pi">:</span> <span class="s">Learning Web Development</span>
+<span class="na">author</span><span class="pi">:</span> <span class="s">Zaki</span>
+<span class="na">theme</span><span class="pi">:</span> <span class="s">minima</span>
+</code></pre></div></div>
 
-<p>Pada contoh di atas:</p>
+<p>In the example above:</p>
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">title</code>, <code class="language-plaintext highlighter-rouge">description</code>, <code class="language-plaintext highlighter-rouge">author</code>, dan <code class="language-plaintext highlighter-rouge">theme</code> adalah <strong>key</strong></li>
-  <li>Setelah tanda <code class="language-plaintext highlighter-rouge">:</code> adalah <strong>value</strong></li>
+  <li><code class="language-plaintext highlighter-rouge">title</code>, <code class="language-plaintext highlighter-rouge">description</code>, <code class="language-plaintext highlighter-rouge">author</code>, and <code class="language-plaintext highlighter-rouge">theme</code> are <strong>keys</strong></li>
+  <li>The part after the <code class="language-plaintext highlighter-rouge">:</code> is the <strong>value</strong></li>
 </ul>
 
 <hr />
 
-<h2 id="-nested-data-bertingkat">🧱 Nested (Data Bertingkat)</h2>
+<h2 id="-nested-hierarchical-data">🧱 Nested (Hierarchical Data)</h2>
 
-<p>user:
-  name: Zaki
-  email: zaki@example.com</p>
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">user</span><span class="pi">:</span>
+  <span class="na">name</span><span class="pi">:</span> <span class="s">Zaki</span>
+  <span class="na">email</span><span class="pi">:</span> <span class="s">zaki@example.com</span>
+</code></pre></div></div>
 
-<p>Struktur ini artinya ada object <code class="language-plaintext highlighter-rouge">user</code> yang punya 2 properti: <code class="language-plaintext highlighter-rouge">name</code> dan <code class="language-plaintext highlighter-rouge">email</code>.</p>
-
-<hr />
-
-<h2 id="-contoh-arraylist-dalam-yml">📚 Contoh Array/List dalam YML</h2>
-
-<p>skills:</p>
-<ul>
-  <li>HTML</li>
-  <li>CSS</li>
-  <li>JavaScript</li>
-  <li>Python</li>
-</ul>
-
-<p>List ini berisi beberapa item dalam satu key <code class="language-plaintext highlighter-rouge">skills</code>.</p>
+<p>This structure means the object <code class="language-plaintext highlighter-rouge">user</code> has two properties: <code class="language-plaintext highlighter-rouge">name</code> and <code class="language-plaintext highlighter-rouge">email</code>.</p>
 
 <hr />
 
-<h2 id="-contoh-pada-_configyml-jekyll">🔧 Contoh pada <code class="language-plaintext highlighter-rouge">_config.yml</code> Jekyll</h2>
+<h2 id="-example-of-arraylist-in-yml">📚 Example of Array/List in YML</h2>
 
-<p>Dalam proyek Jekyll (seperti website portofolio), file <code class="language-plaintext highlighter-rouge">config.yml</code> biasanya berisi pengaturan berikut:</p>
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">skills</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s">HTML</span>
+  <span class="pi">-</span> <span class="s">CSS</span>
+  <span class="pi">-</span> <span class="s">JavaScript</span>
+  <span class="pi">-</span> <span class="s">Python</span>
+</code></pre></div></div>
 
-<p>title: Home
-baseurl: “”<br />
-url: “https://m-zakifahrezi.github.io/”</p>
-
-<p>sass:
-  sass_dir: _sass
-  style: compressed</p>
-
-<p>theme: null</p>
-
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">baseurl</code> biasanya dibiarkan <code class="language-plaintext highlighter-rouge">/</code> jika di-root.</li>
-  <li><code class="language-plaintext highlighter-rouge">url</code> adalah alamat web GitHub Pages-mu.</li>
-  <li><code class="language-plaintext highlighter-rouge">plugins</code> bisa ditambahkan sesuai fitur yang ingin kamu aktifkan.</li>
-</ul>
+<p>This list contains multiple items under the <code class="language-plaintext highlighter-rouge">skills</code> key.</p>
 
 <hr />
 
-<h2 id="️-tips-penting-menggunakan-yml">⚠️ Tips Penting Menggunakan YML</h2>
+<h2 id="-example-from-jekyll-_configyml">🔧 Example from Jekyll <code class="language-plaintext highlighter-rouge">_config.yml</code></h2>
+
+<p>In a Jekyll project (like a portfolio website), the <code class="language-plaintext highlighter-rouge">config.yml</code> file typically contains settings like:</p>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">title</span><span class="pi">:</span> <span class="s">Home</span>
+<span class="na">baseurl</span><span class="pi">:</span> <span class="s2">"</span><span class="s">"</span>  
+<span class="na">url</span><span class="pi">:</span> <span class="s2">"</span><span class="s">https://m-zakifahrezi.github.io/"</span>
+
+<span class="na">sass</span><span class="pi">:</span>
+  <span class="na">sass_dir</span><span class="pi">:</span> <span class="s">_sass</span>
+  <span class="na">style</span><span class="pi">:</span> <span class="s">compressed</span>
+
+<span class="na">theme</span><span class="pi">:</span> <span class="kc">null</span>
+</code></pre></div></div>
 
 <ul>
-  <li>Gunakan <strong>spasi 2</strong> atau <strong>4</strong> secara konsisten untuk indentasi.</li>
-  <li>Hindari tab, karena bisa menyebabkan error parsing.</li>
-  <li>Periksa ulang posisi key dan value, karena satu kesalahan kecil bisa bikin konfigurasi gagal terbaca.</li>
+  <li><code class="language-plaintext highlighter-rouge">baseurl</code> is usually left empty if the site is at root.</li>
+  <li><code class="language-plaintext highlighter-rouge">url</code> is your GitHub Pages site address.</li>
+  <li><code class="language-plaintext highlighter-rouge">plugins</code> can be added depending on the features you want to enable.</li>
 </ul>
 
 <hr />
 
-<h2 id="-kesimpulan">✅ Kesimpulan</h2>
+<h2 id="️-important-tips-when-using-yml">⚠️ Important Tips When Using YML</h2>
 
 <ul>
-  <li><code class="language-plaintext highlighter-rouge">.yml</code> adalah file konfigurasi penting yang digunakan di banyak proyek modern.</li>
-  <li>Strukturnya mudah dibaca dan ditulis, tapi sangat sensitif terhadap indentasi.</li>
-  <li>Memahami YML akan sangat membantu saat bekerja dengan Jekyll, GitHub Actions, Netlify, dan tools lainnya.</li>
+  <li>Use <strong>2 or 4 spaces</strong> consistently for indentation.</li>
+  <li>Avoid tabs, as they can cause parsing errors.</li>
+  <li>Double-check the position of keys and values — a small mistake can make the config unreadable.</li>
+</ul>
+
+<hr />
+
+<h2 id="-conclusion">✅ Conclusion</h2>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">.yml</code> is an important configuration file format used in many modern projects.</li>
+  <li>It is easy to read and write, but very sensitive to indentation.</li>
+  <li>Understanding YAML will help you when working with Jekyll, GitHub Actions, Netlify, and other tools.</li>
 </ul>
 
 <blockquote>
-  <p>💡 Pastikan kamu memahami cara menulis key-value, array, dan nested structure dalam YML agar konfigurasi website-mu berjalan lancar!</p>
+  <p>💡 Learn how to write key-value pairs, arrays, and nested structures in YML to ensure your site configurations work smoothly!</p>
 </blockquote>
 </main>
  <div class="footer">

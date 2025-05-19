@@ -17,7 +17,7 @@
 
     <!-- JavaScript -->
     <script src="/assets/js/script.js" defer></script>
-   
+
     <!-- language -->
     <script src="/assets/js/lang.js"></script>
 
@@ -27,8 +27,8 @@
 <meta name="generator" content="Jekyll v4.4.1" />
 <meta property="og:title" content="Learn Markdown &amp; HTML" />
 <meta property="og:locale" content="en" />
-<meta name="description" content="Materi tentang Markdown dan HTML" />
-<meta property="og:description" content="Materi tentang Markdown dan HTML" />
+<meta name="description" content="A guide to Markdown and HTML" />
+<meta property="og:description" content="A guide to Markdown and HTML" />
 <link rel="canonical" href="http://localhost:4000/en/markdown-html/" />
 <meta property="og:url" content="http://localhost:4000/en/markdown-html/" />
 <meta property="og:site_name" content="Home" />
@@ -37,19 +37,17 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Learn Markdown &amp; HTML" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-03-06T00:00:00+07:00","datePublished":"2025-03-06T00:00:00+07:00","description":"Materi tentang Markdown dan HTML","headline":"Learn Markdown &amp; HTML","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/en/markdown-html/"},"url":"http://localhost:4000/en/markdown-html/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-03-06T00:00:00+07:00","datePublished":"2025-03-06T00:00:00+07:00","description":"A guide to Markdown and HTML","headline":"Learn Markdown &amp; HTML","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/en/markdown-html/"},"url":"http://localhost:4000/en/markdown-html/"}</script>
 <!-- End Jekyll SEO tag -->
 
   </head>
   <body>
     <nav class="navbar">
   <div class="nav-container">
-    <!-- Logo -->
-    <div class="logo">
-      <img src="/assets/images/shp-clear.png" alt="SHP" class="logo-img">
-      <span>OnlyJack</span>
-    </div>
-
+    
+    <!-- Hamburger menu di ujung kiri -->
+    <i class="fas fa-bars hamburger" id="menu-toggle"></i>
+    
     <!-- Navigasi -->
     <div class="nav-links">
       
@@ -72,8 +70,6 @@
       <i class="fa fa-search" onclick="openSearch()"></i>
       <i id="theme-toggle" class="fa fa-water"></i>
       <i class="fa-solid fa-clock" onclick="openSidebar()"></i>
-
-      <!-- Language Switcher -->
       <div class="language-switcher">
         <select id="languageSelect" onchange="switchLanguage()">
           <option value="id">ID</option>
@@ -81,116 +77,115 @@
         </select>
       </div>
     </div>
+
   </div>
 </nav>
  <h1>Learn Markdown & HTML</h1>
 <p>06 Mar 2025 </p>
 
-<main class="blog-container"><p>Materi tentang Markdown dan HTML</p>
+<main class="blog-container"><p>A guide to Markdown and HTML</p>
 
-<h1 id="-belajar-markdown-dan-html">📘 Belajar Markdown dan HTML</h1>
+<h1 id="-learning-markdown-and-html">📘 Learning Markdown and HTML</h1>
 
-<h2 id="-apa-itu-markdown">📝 Apa Itu Markdown?</h2>
+<h2 id="-what-is-markdown">📝 What is Markdown?</h2>
 
-<p><strong>Markdown</strong> adalah bahasa markup ringan yang digunakan untuk memformat teks dengan cara yang mudah dibaca dan ditulis.</p>
+<p><strong>Markdown</strong> is a lightweight markup language used to format text in an easy-to-read and easy-to-write way.</p>
 
-<p>Markdown banyak digunakan untuk:</p>
+<p>Markdown is commonly used for:</p>
 <ul>
-  <li>README file di GitHub</li>
-  <li>Dokumentasi</li>
-  <li>Blog berbasis Jekyll atau Hugo</li>
+  <li>README files on GitHub</li>
+  <li>Documentation</li>
+  <li>Blogs using Jekyll or Hugo</li>
 </ul>
 
 <hr />
 
-<h3 id="-contoh-penulisan-markdown">📌 Contoh Penulisan Markdown</h3>
+<h3 id="-markdown-syntax-examples">📌 Markdown Syntax Examples</h3>
 
-<h4 id="1-heading">1. Heading</h4>
+<h4 id="1-headings">1. Headings</h4>
 
-<h1 id="judul-h1">Judul H1</h1>
-<h2 id="subjudul-h2">Subjudul H2</h2>
-<h3 id="sub-subjudul-h3">Sub-subjudul H3</h3>
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh"># Heading H1</span>
+<span class="gu">## Subheading H2</span>
+<span class="gu">### Sub-subheading H3</span>
+</code></pre></div></div>
 
-<h4 id="2-teks">2. Teks</h4>
+<h4 id="2-text-formatting">2. Text Formatting</h4>
 
-<p><strong>Tebal</strong><br />
-<em>Miring</em><br />
-<del>Coret</del><br />
-<code class="language-plaintext highlighter-rouge">Code</code></p>
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gs">**Bold**</span>  
+<span class="ge">_Italic_</span>  
+~~Strikethrough~~  
+<span class="sb">`Inline Code`</span>
+</code></pre></div></div>
 
-<h4 id="3-list">3. List</h4>
+<h4 id="3-lists">3. Lists</h4>
 
-<ul>
-  <li>Item 1</li>
-  <li>Item 2
-    <ul>
-      <li>Sub-item</li>
-    </ul>
-  </li>
-</ul>
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">-</span> Item 1
+<span class="p">-</span> Item 2
+<span class="p">  -</span> Sub-item
+<span class="p">
+1.</span> First
+<span class="p">2.</span> Second
+</code></pre></div></div>
 
-<ol>
-  <li>Pertama</li>
-  <li>Kedua</li>
-</ol>
+<h4 id="4-links-and-images">4. Links and Images</h4>
 
-<h4 id="4-link-dan-gambar">4. Link dan Gambar</h4>
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[</span><span class="nv">Click This Link</span><span class="p">](</span><span class="sx">https://m-zakifahrezi.github.io/OnlyJack.com/</span><span class="p">)</span>
 
-<p><a href="https://m-zakifahrezi.github.io/OnlyJack.com/">Klik Link Ini</a></p>
+<span class="p">![</span><span class="nv">Image</span><span class="p">](</span><span class="sx">/assets/images/coding.png</span><span class="p">)</span>
+</code></pre></div></div>
 
-<p><img src="/assets/images/coding.png" alt="Gambar" /></p>
+<h4 id="5-code-blocks">5. Code Blocks</h4>
 
-<h4 id="5-code-block">5. Code Block</h4>
-
-<h1>Hello World</h1>
+<pre><code>&lt;h1&gt;Hello World&lt;/h1&gt;</code></pre>
 
 <hr />
 
-<h2 id="-apa-itu-html">🌐 Apa Itu HTML?</h2>
+<h2 id="-what-is-html">🌐 What is HTML?</h2>
 
-<p><strong>HTML (HyperText Markup Language)</strong> adalah bahasa standar untuk membuat dan menyusun halaman web.</p>
+<p><strong>HTML (HyperText Markup Language)</strong> is the standard language used to create and structure web pages.</p>
 
-<p>HTML digunakan untuk:</p>
+<p>HTML is used for:</p>
 <ul>
-  <li>Struktur konten halaman web</li>
-  <li>Menampilkan teks, gambar, link, video, dan elemen lainnya</li>
+  <li>Structuring webpage content</li>
+  <li>Displaying text, images, links, videos, and other elements</li>
 </ul>
 
 <hr />
 
-<h3 id="-struktur-dasar-html">📌 Struktur Dasar HTML</h3>
+<h3 id="-basic-html-structure">📌 Basic HTML Structure</h3>
 
-<p>&lt;!DOCTYPE html&gt;</p>
-<html>
-  <head>
-    <title>Judul Halaman</title>
-  </head>
-  <body>
-    <h1>Halo Dunia</h1>
-    <p>Ini paragraf pertama saya.</p>
-    <a href="https://www.instagram.com/zkyy.frezy?igsh=MXB3N21zbm44ZjdwNw==">Kunjungi media sosial saya</a>
-  </body>
-</html>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+  <span class="nt">&lt;head&gt;</span>
+    <span class="nt">&lt;title&gt;</span>Page Title<span class="nt">&lt;/title&gt;</span>
+  <span class="nt">&lt;/head&gt;</span>
+  <span class="nt">&lt;body&gt;</span>
+    <span class="nt">&lt;h1&gt;</span>Hello World<span class="nt">&lt;/h1&gt;</span>
+    <span class="nt">&lt;p&gt;</span>This is my first paragraph.<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"https://www.instagram.com/zkyy.frezy?igsh=MXB3N21zbm44ZjdwNw=="</span><span class="nt">&gt;</span>Visit my social media<span class="nt">&lt;/a&gt;</span>
+  <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></div>
 
 <hr />
 
-<h3 id="-elemen-html-umum">🧩 Elemen HTML Umum</h3>
+<h3 id="-common-html-elements">🧩 Common HTML Elements</h3>
 
 <table>
   <thead>
     <tr>
       <th>Tag</th>
-      <th>Fungsi</th>
+      <th>Function</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">&lt;h1&gt;</code> - <code class="language-plaintext highlighter-rouge">&lt;h6&gt;</code></td>
-      <td>Heading</td>
+      <td>Headings</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">&lt;p&gt;</code></td>
-      <td>Paragraf</td>
+      <td>Paragraph</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">&lt;a&gt;</code></td>
@@ -198,15 +193,15 @@
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">&lt;img&gt;</code></td>
-      <td>Gambar</td>
+      <td>Image</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">&lt;ul&gt;</code>, <code class="language-plaintext highlighter-rouge">&lt;ol&gt;</code>, <code class="language-plaintext highlighter-rouge">&lt;li&gt;</code></td>
-      <td>Daftar</td>
+      <td>Lists</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">&lt;div&gt;</code></td>
-      <td>Container umum</td>
+      <td>General container</td>
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">&lt;span&gt;</code></td>
@@ -214,7 +209,7 @@
     </tr>
     <tr>
       <td><code class="language-plaintext highlighter-rouge">&lt;br&gt;</code></td>
-      <td>Baris baru</td>
+      <td>Line break</td>
     </tr>
   </tbody>
 </table>
@@ -232,33 +227,33 @@
   </thead>
   <tbody>
     <tr>
-      <td>Lebih mudah dibaca</td>
-      <td>Lebih fleksibel dan powerful</td>
+      <td>Easier to read</td>
+      <td>More flexible and powerful</td>
     </tr>
     <tr>
-      <td>Ringkas dan cepat</td>
-      <td>Cocok untuk kontrol penuh layout</td>
+      <td>Short and quick to write</td>
+      <td>Ideal for full layout control</td>
     </tr>
     <tr>
-      <td>Sering dipakai di GitHub</td>
-      <td>Digunakan di semua halaman web</td>
+      <td>Popular on GitHub</td>
+      <td>Used on all web pages</td>
     </tr>
   </tbody>
 </table>
 
 <hr />
 
-<h2 id="-kesimpulan">✅ Kesimpulan</h2>
+<h2 id="-conclusion">✅ Conclusion</h2>
 
 <ul>
-  <li><strong>Markdown</strong> cocok untuk menulis teks dengan format sederhana seperti dokumentasi, catatan, dan blog post.</li>
-  <li><strong>HTML</strong> memberikan kontrol penuh atas struktur dan tampilan halaman web.</li>
-  <li>Keduanya saling melengkapi: Markdown cepat dan simpel, HTML fleksibel dan lengkap.</li>
-  <li>Belajar keduanya akan sangat membantu saat membuat konten web atau proyek open source.</li>
+  <li><strong>Markdown</strong> is great for writing simple formatted text like documentation, notes, and blog posts.</li>
+  <li><strong>HTML</strong> provides full control over the structure and appearance of a web page.</li>
+  <li>Both are complementary: Markdown is quick and simple, HTML is flexible and complete.</li>
+  <li>Learning both will be a great asset when creating web content or working on open-source projects.</li>
 </ul>
 
 <blockquote>
-  <p>💡 Mulailah dari Markdown, lalu perdalam HTML untuk kontrol yang lebih menyeluruh! 🚀</p>
+  <p>💡 Start with Markdown, then dive into HTML for more advanced control! 🚀</p>
 </blockquote>
 </main>
  <div class="footer">

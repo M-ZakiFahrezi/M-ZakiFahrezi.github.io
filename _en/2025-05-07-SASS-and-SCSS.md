@@ -1,30 +1,30 @@
 ---
 layout: post
-title: "SASS and SCSS"
+title: "Layout with SASS and SCSS"
 lang: en
 date: 2025-05-07
 ---
 
-Materi mengenai SASS dan SCSS
+Content about SASS and SCSS
 
-# 🧩 Membuat Layout Menggunakan SASS/SCSS
+# 🧩 Creating Layouts Using SASS/SCSS
 
-SASS dan SCSS adalah dua sintaks dari preprocessor SASS (Syntactically Awesome Stylesheets). Keduanya meningkatkan kemampuan CSS tradisional dengan fitur seperti **variabel**, **nesting (penyusunan bertingkat)**, dan **mixin**. Walaupun memiliki fitur yang sama, perbedaan terletak pada gaya penulisannya yang disesuaikan dengan preferensi developer.
+SASS and SCSS are two syntaxes of the SASS (Syntactically Awesome Stylesheets) preprocessor. Both enhance traditional CSS with features like **variables**, **nesting**, and **mixins**. While they share the same features, the difference lies in their syntax style, which is based on developer preference.
 
 ---
 
-## 🔍 Apa itu SCSS?
+## 🔍 What is SCSS?
 
-**SCSS (Sassy CSS)** adalah salah satu sintaks dari SASS yang sangat mirip dengan CSS biasa. Karena itu, SCSS lebih mudah dipahami oleh developer yang sudah terbiasa dengan CSS.
+**SCSS (Sassy CSS)** is a syntax of SASS that closely resembles standard CSS. Because of this, SCSS is easier to understand for developers familiar with CSS.
 
-### Fitur Utama:
-- **Variabel**: Menyimpan nilai yang dapat digunakan ulang (seperti warna atau font).
-- **Nesting**: Menyusun selector secara hierarkis.
-- **Mixin**: Blok gaya yang dapat digunakan kembali untuk menghindari duplikasi.
-- **Inheritance**: Berbagi gaya antar selector dengan `@extend`.
-- **Partial & Import**: Memecah kode ke dalam bagian-bagian kecil dan modular dengan `@import`.
+### Key Features:
+- **Variables**: Store reusable values (like colors or fonts).
+- **Nesting**: Organize selectors hierarchically.
+- **Mixins**: Reusable blocks of styles to avoid duplication.
+- **Inheritance**: Share styles across selectors using `@extend`.
+- **Partials & Import**: Break code into smaller, modular pieces using `@import`.
 
-**Contoh Output SCSS:**
+**SCSS Output Example:**
 
 ````css
 body {
@@ -32,23 +32,23 @@ body {
   color: red;
   font-size: 25px;
 }
-/* Ini akan diterapkan pada HTML hasil */
+/* This will be applied in the resulting HTML */
 ````
 
 ---
 
-## 🧵 Apa itu SASS?
+## 🧵 What is SASS?
 
-**SASS** adalah sintaks asli dari preprocessor SASS. Berbeda dengan SCSS, SASS menggunakan indentasi (spasi) alih-alih tanda kurung kurawal `{}` dan titik koma `;`.
+**SASS** is the original syntax of the SASS preprocessor. Unlike SCSS, SASS uses indentation instead of curly braces `{}` and semicolons `;`.
 
-### Fitur Utama:
-- **Variabel**: Menyimpan nilai yang dapat digunakan ulang.
-- **Nesting**: Menyusun CSS dengan cara yang lebih bersih.
-- **Partials**: Membagi gaya ke dalam file kecil.
-- **Mixin**: Menggunakan ulang blok kode antar selector.
-- **Inheritance**: Menggunakan `@extend` untuk berbagi gaya.
+### Key Features:
+- **Variables**: Store reusable values.
+- **Nesting**: Write cleaner CSS.
+- **Partials**: Split styles into smaller files.
+- **Mixins**: Reuse style blocks across selectors.
+- **Inheritance**: Share styles using `@extend`.
 
-**Contoh Output SASS:**
+**SASS Output Example:**
 
 ````css
 body {
@@ -56,62 +56,61 @@ body {
   color: red;
   font-size: 25px;
 }
-/* Ini akan diterapkan pada HTML hasil */
+/* This will be applied in the resulting HTML */
 ````
 
 ---
 
-## ⚖️ Perbedaan SCSS dan SASS
+## ⚖️ Differences Between SCSS and SASS
 
-| Fitur         | SCSS                                 | SASS                                  |
-|---------------|---------------------------------------|----------------------------------------|
-| Sintaks       | Mirip CSS (menggunakan `{}` dan `;`)  | Berdasarkan indentasi (tanpa `{}` dan `;`) |
-| Ekstensi File | `.scss`                               | `.sass`                                |
-| Kompatibilitas| Sepenuhnya kompatibel dengan CSS      | Tidak langsung kompatibel dengan CSS   |
-| Fleksibilitas | Familiar bagi pengguna CSS            | Lebih ringkas dan bersih               |
-| Penggunaan    | Cocok bagi yang transisi dari CSS     | Cocok bagi yang suka penulisan minimal |
-
----
-
-## ✅ Kapan Menggunakan SCSS?
-
-SCSS cocok digunakan ketika:
-- Kamu sudah terbiasa menulis CSS
-- Membuat proyek berskala besar dan butuh struktur jelas
-- Ingin kompatibilitas penuh dengan CSS standar
+| Feature        | SCSS                                 | SASS                                  |
+|----------------|---------------------------------------|----------------------------------------|
+| Syntax         | CSS-like (uses `{}` and `;`)          | Indentation-based (no `{}` and `;`)    |
+| File Extension | `.scss`                               | `.sass`                                |
+| Compatibility  | Fully compatible with CSS             | Not directly compatible with CSS       |
+| Flexibility    | Familiar for CSS users                | More concise and clean                 |
+| Usage          | Great for those transitioning from CSS| Great for those who prefer minimal syntax |
 
 ---
 
-## ✅ Kapan Menggunakan SASS?
+## ✅ When to Use SCSS?
 
-SASS cocok digunakan ketika:
-- Kamu menyukai sintaks yang lebih ringkas dan minimal
-- Proyek kamu kecil atau sedang
-- Kamu tidak terlalu bergantung pada penulisan CSS standar
-
----
-
-## 🎨 Gunakan SCSS untuk Styling Layout
-
-Pada sesi lab kali ini, kamu akan menyusun ulang layout website menggunakan SCSS agar tampil lebih rapi dan menarik.
-
-### Langkah-langkah:
-1. Perbarui file `navigation.html` yang ada di folder `_includes`.
-2. Tambahkan atau ubah kode SCSS di file `main.scss`.
-3. Sesuaikan file `default.html` di folder `_layouts` untuk mengintegrasikan gaya layout baru.
-
-Pastikan semua perubahan sesuai dengan struktur SCSS agar mudah dipelihara dan dibaca.
+SCSS is ideal when:
+- You're already familiar with writing CSS
+- You're working on a large-scale project that needs clear structure
+- You want full compatibility with standard CSS
 
 ---
 
-## 📝 Kesimpulan
+## ✅ When to Use SASS?
 
-SCSS dan SASS sama-sama menawarkan fitur canggih yang memperluas kemampuan CSS, seperti **variabel, mixin, nesting**, dan **struktur modular**. Pilihan antara SCSS atau SASS tergantung pada kenyamanan kamu terhadap sintaks:
+SASS is ideal when:
+- You prefer minimal and clean syntax
+- You're working on small or medium-sized projects
+- You're not heavily reliant on standard CSS writing
 
-- Gunakan **SCSS** jika kamu lebih terbiasa dengan penulisan CSS.
-- Gunakan **SASS** jika kamu ingin penulisan yang lebih minimal dan bersih.
+---
 
-Keduanya dapat meningkatkan pengalaman dan efisiensi dalam menulis stylesheet modern.
+## 🎨 Use SCSS for Layout Styling
 
-> 🔗 Sumber: GeeksforGeeks — What is the difference between SCSS and SASS
+In this lab session, you'll restructure a website layout using SCSS for a cleaner and more appealing design.
 
+### Steps:
+1. Update the `navigation.html` file in the `_includes` folder.
+2. Add or modify SCSS code in the `main.scss` file.
+3. Adjust the `default.html` file in the `_layouts` folder to integrate the new layout styles.
+
+Ensure all changes follow SCSS structure for better readability and maintainability.
+
+---
+
+## 📝 Conclusion
+
+Both SCSS and SASS offer advanced features that enhance CSS, such as **variables, mixins, nesting**, and **modular structure**. The choice between SCSS and SASS depends on your syntax comfort:
+
+- Use **SCSS** if you're more comfortable with CSS-like syntax.
+- Use **SASS** if you prefer a cleaner, minimal style.
+
+Both improve the experience and efficiency of writing modern stylesheets.
+
+> 🔗 Source: GeeksforGeeks — What is the difference between SCSS and SASS

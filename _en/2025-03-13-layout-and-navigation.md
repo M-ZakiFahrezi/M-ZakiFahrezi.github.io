@@ -5,85 +5,88 @@ lang: en
 date: 2025-03-13
 ---
 
-Materi tentang Layout dan Navigasi
+Material on Layout and Navigation
 
-Panduan dasar tentang layout dan navigasi dalam pengembangan web.
+A basic guide on layout and navigation in web development.
 
-# 🧭 Belajar Layout & Navigasi Web
+# 🧭 Learning Web Layout & Navigation
 
-## 🧱 Apa Itu Layout?
+## 🧱 What Is Layout?
 
-**Layout** adalah cara menyusun elemen-elemen di halaman web agar tampilannya rapi, terstruktur, dan mudah dibaca oleh pengguna.
+**Layout** is the way elements are arranged on a web page to make the content structured, neat, and user-friendly.
 
-Layout penting untuk:
-- Meningkatkan pengalaman pengguna (UX)
-- Menyampaikan informasi dengan jelas
-- Menyesuaikan tampilan di berbagai perangkat (responsif)
+A good layout helps:
 
-### 📐 Contoh Struktur Layout Umum
+* Improve user experience (UX)
+* Deliver information clearly
+* Adapt to different devices (responsive design)
 
+### 📐 Common Layout Structure Example
 
+```html
 <header>
-  <nav>Menu Navigasi</nav>
+  <nav>Navigation Menu</nav>
 </header>
 
 <main>
-  <section>Konten Utama</section>
+  <section>Main Content</section>
   <aside>Sidebar</aside>
 </main>
 
 <footer>
-  Hak Cipta &copy; 2025
+  Copyright &copy; 2025
 </footer>
+```
 
 ---
 
-## 📑 Jenis Layout Populer
+## 📑 Popular Layout Types
 
-| Jenis Layout | Keterangan |
-|--------------|------------|
-| **Single Column** | Umum untuk blog dan mobile |
-| **Two Column** | Konten dan sidebar |
-| **Three Column** | Navigasi, konten, dan sidebar |
-| **Grid Layout** | Digunakan untuk galeri dan aplikasi modern |
+| Layout Type       | Description                                  |
+| ----------------- | -------------------------------------------- |
+| **Single Column** | Common for blogs and mobile screens          |
+| **Two Column**    | Main content and sidebar                     |
+| **Three Column**  | Navigation, main content, and sidebar        |
+| **Grid Layout**   | Used for galleries and modern applications   |
 
 ---
 
-## 🔗 Apa Itu Navigasi?
+## 🔗 What Is Navigation?
 
-**Navigasi** adalah cara pengguna berpindah dari satu halaman atau bagian ke bagian lain dalam situs web.
+**Navigation** is how users move from one page or section to another within a website.
 
-Navigasi yang baik memudahkan pengguna menemukan informasi dengan cepat.
+Good navigation helps users find information quickly and efficiently.
 
-### 📌 Contoh Navigasi Sederhana
+### 📌 Simple Navigation Example
 
-
+```html
 <nav>
   <ul>
-    <li><a href="/">Beranda</a></li>
-    <li><a href="/tentang">Tentang</a></li>
-    <li><a href="/kontak">Kontak</a></li>
+    <li><a href="/">Home</a></li>
+    <li><a href="/about">About</a></li>
+    <li><a href="/contact">Contact</a></li>
   </ul>
 </nav>
+```
 
 ---
 
-## 🎯 Tips Membuat Navigasi yang Efektif
+## 🎯 Tips for Effective Navigation
 
-- Gunakan menu horizontal di bagian atas
-- Tambahkan menu di bagian footer sebagai alternatif
-- Gunakan warna atau gaya untuk menandai halaman aktif
-- Navigasi harus konsisten di semua halaman
-- Responsif: bisa diakses di perangkat mobile
+* Use a horizontal menu at the top of the page
+* Add a footer menu as an alternative
+* Highlight the active page using colors or styles
+* Keep navigation consistent across all pages
+* Make it responsive: accessible on mobile devices
 
 ---
 
-## 🧰 Tools & CSS Terkait
+## 🧰 Related Tools & CSS
 
-- Gunakan **Flexbox** atau **CSS Grid** untuk layout modern:
-  
+* Use **Flexbox** or **CSS Grid** for modern layouts:
 
-/* Contoh layout dua kolom dengan Flexbox */
+```css
+/* Two-column layout using Flexbox */
 .container {
   display: flex;
 }
@@ -95,15 +98,16 @@ aside {
 section {
   width: 70%;
 }
+```
 
 ---
 
-## ✅ Kesimpulan
+## ✅ Conclusion
 
-- **Layout** adalah kerangka visual dari halaman web, membantu menyusun konten agar mudah dipahami dan enak dilihat.
-- **Navigasi** adalah peta situs web, memandu pengguna menjelajahi isi situs dengan mudah dan efisien.
-- Tata letak dan navigasi yang baik akan meningkatkan kenyamanan dan pengalaman pengguna.
-- Gunakan teknik seperti **Flexbox** atau **Grid CSS** untuk menciptakan layout modern dan responsif.
-- Selalu utamakan **kesederhanaan dan konsistensi** dalam desain navigasi dan layout.
+* **Layout** is the visual structure of a web page, helping to organize content in a clear and pleasant way.
+* **Navigation** is the website's roadmap, guiding users through the site's content smoothly.
+* Good layout and navigation improve user comfort and experience.
+* Use modern CSS tools like **Flexbox** or **Grid** to create responsive layouts.
+* Always prioritize **simplicity and consistency** in your layout and navigation design.
 
-> 💡 Layout membentuk struktur, navigasi menggerakkan pengguna — keduanya kunci dari web yang baik!
+> 💡 Layout builds the structure, navigation drives the users — both are essential for a good website!

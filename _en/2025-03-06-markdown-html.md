@@ -5,127 +5,123 @@ lang: en
 date: 2025-03-06
 ---
 
-Materi tentang Markdown dan HTML
+A guide to Markdown and HTML
 
-# 📘 Belajar Markdown dan HTML
+# 📘 Learning Markdown and HTML
 
-## 📝 Apa Itu Markdown?
+## 📝 What is Markdown?
 
-**Markdown** adalah bahasa markup ringan yang digunakan untuk memformat teks dengan cara yang mudah dibaca dan ditulis.
+**Markdown** is a lightweight markup language used to format text in an easy-to-read and easy-to-write way.
 
-Markdown banyak digunakan untuk:
-- README file di GitHub
-- Dokumentasi
-- Blog berbasis Jekyll atau Hugo
+Markdown is commonly used for:
+- README files on GitHub
+- Documentation
+- Blogs using Jekyll or Hugo
 
 ---
 
-### 📌 Contoh Penulisan Markdown
+### 📌 Markdown Syntax Examples
 
-#### 1. Heading
+#### 1. Headings
 
+```markdown
+# Heading H1
+## Subheading H2
+### Sub-subheading H3
+```
 
-# Judul H1
-## Subjudul H2
-### Sub-subjudul H3 
+#### 2. Text Formatting
 
+```markdown
+**Bold**  
+_Italic_  
+~~Strikethrough~~  
+`Inline Code`
+```
 
-#### 2. Teks
+#### 3. Lists
 
-
-**Tebal**  
-_Miring_  
-~~Coret~~  
-`Code`
-
-
-#### 3. List
-
-
+```markdown
 - Item 1
 - Item 2
   - Sub-item
 
-1. Pertama
-2. Kedua
+1. First
+2. Second
+```
 
+#### 4. Links and Images
 
-#### 4. Link dan Gambar
+```markdown
+[Click This Link](https://m-zakifahrezi.github.io/OnlyJack.com/)
 
+![Image](/assets/images/coding.png)
+```
 
-[Klik Link Ini](https://m-zakifahrezi.github.io/OnlyJack.com/)
+#### 5. Code Blocks
 
-![Gambar](/assets/images/coding.png)
-
-
-#### 5. Code Block
-
-
-
-<h1>Hello World</h1>
-
-
+<pre><code>&lt;h1&gt;Hello World&lt;/h1&gt;</code></pre>
 
 ---
 
-## 🌐 Apa Itu HTML?
+## 🌐 What is HTML?
 
-**HTML (HyperText Markup Language)** adalah bahasa standar untuk membuat dan menyusun halaman web.
+**HTML (HyperText Markup Language)** is the standard language used to create and structure web pages.
 
-HTML digunakan untuk:
-- Struktur konten halaman web
-- Menampilkan teks, gambar, link, video, dan elemen lainnya
+HTML is used for:
+- Structuring webpage content
+- Displaying text, images, links, videos, and other elements
 
 ---
 
-### 📌 Struktur Dasar HTML
+### 📌 Basic HTML Structure
 
-
+```html
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Judul Halaman</title>
+    <title>Page Title</title>
   </head>
   <body>
-    <h1>Halo Dunia</h1>
-    <p>Ini paragraf pertama saya.</p>
-    <a href="https://www.instagram.com/zkyy.frezy?igsh=MXB3N21zbm44ZjdwNw==">Kunjungi media sosial saya</a>
+    <h1>Hello World</h1>
+    <p>This is my first paragraph.</p>
+    <a href="https://www.instagram.com/zkyy.frezy?igsh=MXB3N21zbm44ZjdwNw==">Visit my social media</a>
   </body>
 </html>
-
+```
 
 ---
 
-### 🧩 Elemen HTML Umum
+### 🧩 Common HTML Elements
 
-| Tag              | Fungsi               |
-|------------------|----------------------|
-| `<h1>` - `<h6>`  | Heading              |
-| `<p>`            | Paragraf             |
-| `<a>`            | Link                 |
-| `<img>`          | Gambar               |
-| `<ul>`, `<ol>`, `<li>` | Daftar        |
-| `<div>`          | Container umum       |
-| `<span>`         | Inline container     |
-| `<br>`           | Baris baru           |
+| Tag                   | Function               |
+|-----------------------|------------------------|
+| `<h1>` - `<h6>`       | Headings               |
+| `<p>`                 | Paragraph              |
+| `<a>`                 | Link                   |
+| `<img>`               | Image                  |
+| `<ul>`, `<ol>`, `<li>`| Lists                  |
+| `<div>`               | General container      |
+| `<span>`              | Inline container       |
+| `<br>`                | Line break             |
 
 ---
 
 ## 🤝 Markdown vs HTML
 
-| Markdown               | HTML                              |
-|------------------------|-----------------------------------|
-| Lebih mudah dibaca     | Lebih fleksibel dan powerful      |
-| Ringkas dan cepat      | Cocok untuk kontrol penuh layout  |
-| Sering dipakai di GitHub | Digunakan di semua halaman web |
+| Markdown                    | HTML                                |
+|-----------------------------|-------------------------------------|
+| Easier to read              | More flexible and powerful          |
+| Short and quick to write    | Ideal for full layout control       |
+| Popular on GitHub           | Used on all web pages               |
 
 ---
 
-## ✅ Kesimpulan
+## ✅ Conclusion
 
-- **Markdown** cocok untuk menulis teks dengan format sederhana seperti dokumentasi, catatan, dan blog post.
-- **HTML** memberikan kontrol penuh atas struktur dan tampilan halaman web.
-- Keduanya saling melengkapi: Markdown cepat dan simpel, HTML fleksibel dan lengkap.
-- Belajar keduanya akan sangat membantu saat membuat konten web atau proyek open source.
+- **Markdown** is great for writing simple formatted text like documentation, notes, and blog posts.
+- **HTML** provides full control over the structure and appearance of a web page.
+- Both are complementary: Markdown is quick and simple, HTML is flexible and complete.
+- Learning both will be a great asset when creating web content or working on open-source projects.
 
-> 💡 Mulailah dari Markdown, lalu perdalam HTML untuk kontrol yang lebih menyeluruh! 🚀
+> 💡 Start with Markdown, then dive into HTML for more advanced control! 🚀
