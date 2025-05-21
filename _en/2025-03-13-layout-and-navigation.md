@@ -1,8 +1,10 @@
 ---
 layout: post
 title: "Layout and Navigation"
+slug: pertemuan-3
 lang: en
 date: 2025-03-13
+permalink: /en/pertemuan-3.html
 ---
 
 Material on Layout and Navigation
@@ -17,9 +19,9 @@ A basic guide on layout and navigation in web development.
 
 A good layout helps:
 
-* Improve user experience (UX)
-* Deliver information clearly
-* Adapt to different devices (responsive design)
+- Improve user experience (UX)
+- Deliver information clearly
+- Adapt to different devices (responsive design)
 
 ### 📐 Common Layout Structure Example
 
@@ -33,21 +35,19 @@ A good layout helps:
   <aside>Sidebar</aside>
 </main>
 
-<footer>
-  Copyright &copy; 2025
-</footer>
+<footer>Copyright &copy; 2025</footer>
 ```
 
 ---
 
 ## 📑 Popular Layout Types
 
-| Layout Type       | Description                                  |
-| ----------------- | -------------------------------------------- |
-| **Single Column** | Common for blogs and mobile screens          |
-| **Two Column**    | Main content and sidebar                     |
-| **Three Column**  | Navigation, main content, and sidebar        |
-| **Grid Layout**   | Used for galleries and modern applications   |
+| Layout Type       | Description                                |
+| ----------------- | ------------------------------------------ |
+| **Single Column** | Common for blogs and mobile screens        |
+| **Two Column**    | Main content and sidebar                   |
+| **Three Column**  | Navigation, main content, and sidebar      |
+| **Grid Layout**   | Used for galleries and modern applications |
 
 ---
 
@@ -73,17 +73,17 @@ Good navigation helps users find information quickly and efficiently.
 
 ## 🎯 Tips for Effective Navigation
 
-* Use a horizontal menu at the top of the page
-* Add a footer menu as an alternative
-* Highlight the active page using colors or styles
-* Keep navigation consistent across all pages
-* Make it responsive: accessible on mobile devices
+- Use a horizontal menu at the top of the page
+- Add a footer menu as an alternative
+- Highlight the active page using colors or styles
+- Keep navigation consistent across all pages
+- Make it responsive: accessible on mobile devices
 
 ---
 
 ## 🧰 Related Tools & CSS
 
-* Use **Flexbox** or **CSS Grid** for modern layouts:
+- Use **Flexbox** or **CSS Grid** for modern layouts:
 
 ```css
 /* Two-column layout using Flexbox */
@@ -104,10 +104,10 @@ section {
 
 ## ✅ Conclusion
 
-* **Layout** is the visual structure of a web page, helping to organize content in a clear and pleasant way.
-* **Navigation** is the website's roadmap, guiding users through the site's content smoothly.
-* Good layout and navigation improve user comfort and experience.
-* Use modern CSS tools like **Flexbox** or **Grid** to create responsive layouts.
-* Always prioritize **simplicity and consistency** in your layout and navigation design.
+- **Layout** is the visual structure of a web page, helping to organize content in a clear and pleasant way.
+- **Navigation** is the website's roadmap, guiding users through the site's content smoothly.
+- Good layout and navigation improve user comfort and experience.
+- Use modern CSS tools like **Flexbox** or **Grid** to create responsive layouts.
+- Always prioritize **simplicity and consistency** in your layout and navigation design.
 
 > 💡 Layout builds the structure, navigation drives the users — both are essential for a good website!

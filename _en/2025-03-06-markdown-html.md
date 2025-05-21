@@ -1,8 +1,10 @@
 ---
 layout: post
 title: "Learn Markdown & HTML"
+slug: pertemuan-2
 lang: en
 date: 2025-03-06
+permalink: /en/pertemuan-2.html
 ---
 
 A guide to Markdown and HTML

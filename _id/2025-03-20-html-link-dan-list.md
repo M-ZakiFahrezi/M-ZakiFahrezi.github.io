@@ -1,8 +1,10 @@
 ---
 layout: post
 title: "HTML: Link dan List"
+slug: pertemuan-4
 lang: id
 date: 2025-03-20
+permalink: /id/pertemuan-4.html
 ---
 
 Materi tentang link dan lists pada HTML

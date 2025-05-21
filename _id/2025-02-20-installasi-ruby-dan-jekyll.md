@@ -1,8 +1,10 @@
 ---
 layout: post
 title: "Instalasi Ruby dan Jekyll"
+slug: pertemuan-1
 lang: id
 date: 2025-02-20
+permalink: /id/pertemuan-1.html
 ---
 
 Materi tentang Instalasi Ruby dan Jekyll

@@ -1,8 +1,10 @@
 ---
 layout: post
 title: "HTML: Links and Lists"
+slug: pertemuan-4
 lang: en
 date: 2025-03-20
+permalink: /en/pertemuan-4.html
 ---
 
 Material on links and lists in HTML
@@ -16,6 +18,7 @@ A basic guide on how to use links and lists in HTML.
 **Links** are used to connect one page to another, either within the same website or to an external site.
 
 ### 📌 Tags Used:
+
 - `<a>`: Anchor tag to create hyperlinks
 
 ### ✅ Link Usage Examples
@@ -42,11 +45,11 @@ A basic guide on how to use links and lists in HTML.
 
 ### 📌 Types of Lists in HTML:
 
-| Type            | Tag   | Description                          |
-|-----------------|--------|--------------------------------------|
-| Ordered List    | `<ol>` | A numbered list                      |
-| Unordered List  | `<ul>` | A bullet-point list                  |
-| Description List| `<dl>` | A list of terms and descriptions     |
+| Type             | Tag    | Description                      |
+| ---------------- | ------ | -------------------------------- |
+| Ordered List     | `<ol>` | A numbered list                  |
+| Unordered List   | `<ul>` | A bullet-point list              |
+| Description List | `<dl>` | A list of terms and descriptions |
 
 ---
 

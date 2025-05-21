@@ -8,6 +8,13 @@ function switchLanguage() {
   const lang = document.getElementById("languageSelect").value;
   localStorage.setItem("lang", lang);
   setLanguage(lang);
+
+  // Cek jika kita sedang di halaman post
+  const slug = document.body.dataset.slug;
+  if (slug) {
+    // Redirect ke versi bahasa lain
+    window.location.href = `/${lang}/${slug}.html`;
+  }
 }
 
 function setLanguage(lang) {
@@ -42,7 +49,7 @@ const translations = {
     maupun back-end dalam pengembangan aplikasi. Dengan tekad dan ketekunan,
         saya ingin terus belajar dan berkembang dalam dunia teknologi untuk
         memberikan kontribusi yang lebih besar di masa depan.`,
-        
+
     hobbiesTitle: "Hobi Saya",
     hobbiesDesc: `
     <li>🎮 Bermain game strategi & survival</li>
@@ -54,9 +61,9 @@ const translations = {
         <li>📖 Belajar bahasa pemrograman terutama pemrograman website</li>
         <li>📚 Membaca artikel teknologi dan pengembangan diri</li>
       `,
-      
-      goalTitle: "Tujuan Saya Belajar Web",
-      goalDesc: `Saya mulai belajar web karena saya sangat tertarik dengan bagaimana sebuah
+
+    goalTitle: "Tujuan Saya Belajar Web",
+    goalDesc: `Saya mulai belajar web karena saya sangat tertarik dengan bagaimana sebuah
       halaman bisa dirancang, dibangun, dan berjalan secara interaktif di browser.
       Tujuan utama saya adalah menjadi seorang Full Stack Developer, yaitu
       developer yang mampu membangun aplikasi dari sisi frontend hingga backend.
@@ -64,20 +71,20 @@ const translations = {
       bermanfaat, dan dapat memberikan pengalaman yang menyenangkan bagi pengguna.
       Saya percaya bahwa menguasai pengembangan web adalah langkah awal untuk
       mewujudkan impian saya di dunia teknologi.`,
-      
-      contact: "Kontak",
-      
-      // friends translations
+
+    contact: "Kontak",
+
+    // friends translations
     friendsTitle: "Halaman Teman",
     friendsDesc: "Berikut teman-teman saya di kelas:",
-    
+
     // blog translations
     blogTitle: "Blog",
     blogWelcome: "Selamat datang di blog saya, mari belajar bersama!!",
     searchPlaceholder: "Cari blog...",
     searchButton: "Cari",
   },
-  
+
   en: {
     // home translations
     homeTitle: "Hi, I'm Muhammad <span class='last_name'>Zaki Fahrezi</span>",
@@ -93,8 +100,8 @@ const translations = {
         determination and perseverance, I want to keep learning and growing in
         the tech world to make greater contributions in the future.`,
 
-        hobbiesTitle: "My Hobbies",
-        hobbiesDesc: `
+    hobbiesTitle: "My Hobbies",
+    hobbiesDesc: `
         <li>🎮 Playing strategy & survival games</li>
         <li>🎧 Listening to music</li>
         <li>📺 Watching football</li>
@@ -104,22 +111,22 @@ const translations = {
         <li>📖 Learning programming languages, especially web development</li>
         <li>📚 Reading tech and self-development articles</li>
         `,
-        
-        goalTitle: "My Goal to Learn Web",
-        goalDesc: `I started learning web because I'm very interested in how
+
+    goalTitle: "My Goal to Learn Web",
+    goalDesc: `I started learning web because I'm very interested in how
         a webpage can be designed, built, and run interactively in a browser.
         My main goal is to become a Full Stack Developer, a developer capable of
         building applications from the frontend to the backend. With this skill,
         I want to create complete, useful digital products that provide enjoyable
         experiences for users. I believe mastering web development is the first
         step toward realizing my dream in the tech world.`,
-        
-        contact: "Contact",
-        
+
+    contact: "Contact",
+
     // friends translations
     friendsTitle: "Friends Page",
     friendsDesc: "Here are my classmates:",
-    
+
     // blog translations
     blogTitle: "Blog",
     blogWelcome: "Welcome to my blog, let's learn together!",

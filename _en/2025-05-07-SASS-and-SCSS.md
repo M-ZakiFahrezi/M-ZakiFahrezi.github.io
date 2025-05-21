@@ -1,8 +1,10 @@
 ---
 layout: post
 title: "Layout with SASS and SCSS"
+slug: pertemuan-8
 lang: en
 date: 2025-05-07
+permalink: /en/pertemuan-8.html
 ---
 
 Content about SASS and SCSS

@@ -1,8 +1,10 @@
 ---
 layout: post
 title: "Ruby and Jekyll installation"
+slug: pertemuan-1
 lang: en
 date: 2025-02-20
+permalink: /en/pertemuan-1.html
 ---
 
 A guide on installing Ruby and Jekyll

@@ -1,8 +1,10 @@
 ---
 layout: post
 title: "Belajar Markdown & HTML"
+slug: pertemuan-2
 lang: id
 date: 2025-03-06
+permalink: /id/pertemuan-2.html
 ---
 
 Materi tentang Markdown dan HTML

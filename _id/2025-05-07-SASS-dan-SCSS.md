@@ -1,8 +1,10 @@
 ---
 layout: post
 title: "Layout dengan SASS dan SCSS"
+slug: pertemuan-8
 lang: id
 date: 2025-05-07
+permalink: /id/pertemuan-8.html
 ---
 
 Materi mengenai SASS dan SCSS

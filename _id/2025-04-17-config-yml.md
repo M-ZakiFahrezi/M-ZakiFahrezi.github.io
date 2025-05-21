@@ -1,8 +1,10 @@
 ---
 layout: post
 title: "Config YML"
+slug: pertemuan-5
 lang: id
 date: 2025-04-17
+permalink: /id/pertemuan-5.html
 ---
 
 Materi tentang link dan lists pada HTML

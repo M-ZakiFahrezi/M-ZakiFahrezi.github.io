@@ -1,8 +1,10 @@
 ---
 layout: post
 title: "Config YML"
+slug: pertemuan-5
 lang: en
 date: 2025-04-17
+permalink: /en/pertemuan-5.html
 ---
 
 Material on YAML configuration files
@@ -36,6 +38,7 @@ theme: minima
 ```
 
 In the example above:
+
 - `title`, `description`, `author`, and `theme` are **keys**
 - The part after the `:` is the **value**
 
@@ -73,7 +76,7 @@ In a Jekyll project (like a portfolio website), the `config.yml` file typically 
 
 ```yml
 title: Home
-baseurl: ""  
+baseurl: ""
 url: "https://m-zakifahrezi.github.io/"
 
 sass:

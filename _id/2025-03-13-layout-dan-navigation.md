@@ -1,8 +1,10 @@
 ---
 layout: post
 title: "Layout dan Navigasi"
+slug: pertemuan-3
 lang: id
 date: 2025-03-13
+permalink: /id/pertemuan-3.html
 ---
 
 Materi tentang Layout dan Navigasi
