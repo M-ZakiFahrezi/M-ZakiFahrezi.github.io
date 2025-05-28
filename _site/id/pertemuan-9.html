@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fitur Ganti Bahasa (i18n)</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="/assets/images/favicon.ico" />
+
+    <!-- JavaScript -->
+    <script src="/assets/js/script.js" defer></script>
+
+    <!-- language -->
+    <script src="/assets/js/lang.js"></script>
+
+    <!-- plugins -->
+    <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Home" /> <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Fitur Ganti Bahasa (i18n) | Home</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Fitur Ganti Bahasa (i18n)" />
+<meta property="og:locale" content="id" />
+<meta name="description" content="Apa itu i18n?" />
+<meta property="og:description" content="Apa itu i18n?" />
+<link rel="canonical" href="http://localhost:4000/id/pertemuan-9.html" />
+<meta property="og:url" content="http://localhost:4000/id/pertemuan-9.html" />
+<meta property="og:site_name" content="Home" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-05-15T00:00:00+07:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Fitur Ganti Bahasa (i18n)" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-05-15T00:00:00+07:00","datePublished":"2025-05-15T00:00:00+07:00","description":"Apa itu i18n?","headline":"Fitur Ganti Bahasa (i18n)","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/id/pertemuan-9.html"},"url":"http://localhost:4000/id/pertemuan-9.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+  <body  data-slug="pertemuan-9" >
+    <nav class="navbar">
+  <div class="nav-container">
+    
+    <!-- Hamburger menu di ujung kiri -->
+    <i class="fas fa-bars hamburger" id="menu-toggle"></i>
+    
+    <!-- Navigasi -->
+    <div class="nav-links">
+      
+        <a href="/" >
+          Home
+        </a>
+      
+        <a href="/friends.html" >
+          Friends
+        </a>
+      
+        <a href="/blog.html" >
+          Blog
+        </a>
+      
+    </div>
+
+    <!-- Ikon + Language Selector -->
+    <div class="nav-icons">
+      <i class="fa fa-search" onclick="openSearch()"></i>
+      <i id="theme-toggle" class="fa fa-water"></i>
+      <i class="fa-solid fa-clock" onclick="openSidebar()"></i>
+      <div class="language-switcher">
+        <select id="languageSelect" onchange="switchLanguage()">
+          <option value="id">ID</option>
+          <option value="en">EN</option>
+        </select>
+      </div>
+    </div>
+
+  </div>
+</nav>
+ <h1>Fitur Ganti Bahasa (i18n)</h1>
+<p>15 May 2025 </p>
+
+<main class="blog-container"><h2 id="apa-itu-i18n">Apa itu i18n?</h2>
+
+<p><strong>Internationalization</strong> (sering disingkat <code class="language-plaintext highlighter-rouge">i18n</code>) adalah proses mendesain dan mengembangkan aplikasi sehingga dapat dengan mudah diadaptasi ke berbagai bahasa dan wilayah tanpa perubahan kode besar.</p>
+
+<h2 id="tujuan">Tujuan</h2>
+
+<p>Fitur ganti bahasa membantu:</p>
+
+<ul>
+  <li>Menjangkau audiens internasional.</li>
+  <li>Meningkatkan pengalaman pengguna (UX).</li>
+  <li>Mempermudah pembelajaran atau dokumentasi multibahasa.</li>
+</ul>
+
+<h2 id="struktur-folder">Struktur Folder</h2>
+
+<p>Pisahkan post atau konten berdasarkan bahasa:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/_id/      ← post dalam Bahasa Indonesia
+/_en/      ← post dalam Bahasa Inggris
+</code></pre></div></div>
+
+<h2 id="metadata-post">Metadata Post</h2>
+
+<p>Gunakan <code class="language-plaintext highlighter-rouge">slug</code> dan <code class="language-plaintext highlighter-rouge">lang</code> agar post lintas bahasa dapat saling dikenali.</p>
+
+<p>Contoh:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">slug</span><span class="pi">:</span> <span class="s">pertemuan-9</span>
+<span class="na">lang</span><span class="pi">:</span> <span class="s">id</span>
+</code></pre></div></div>
+
+<h2 id="simpan-pilihan-bahasa">Simpan Pilihan Bahasa</h2>
+
+<p>Gunakan JavaScript dan <code class="language-plaintext highlighter-rouge">localStorage</code> untuk menyimpan pilihan bahasa pengguna.</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">localStorage</span><span class="p">.</span><span class="nf">setItem</span><span class="p">(</span><span class="dl">"</span><span class="s2">lang</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">id</span><span class="dl">"</span><span class="p">);</span>
+</code></pre></div></div>
+
+<h2 id="deteksi-halaman-post">Deteksi Halaman Post</h2>
+
+<p>Tambahkan atribut <code class="language-plaintext highlighter-rouge">data-slug</code> di <code class="language-plaintext highlighter-rouge">&lt;body&gt;</code>:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;body</span> <span class="na">data-slug=</span><span class="s">"pertemuan-9"</span><span class="nt">&gt;&lt;/body&gt;</span>
+</code></pre></div></div>
+
+<p>Saat pengguna mengganti bahasa:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">slug</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nf">getAttribute</span><span class="p">(</span><span class="dl">"</span><span class="s2">data-slug</span><span class="dl">"</span><span class="p">);</span>
+<span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">href</span> <span class="o">=</span> <span class="s2">`/</span><span class="p">${</span><span class="nx">lang</span><span class="p">}</span><span class="s2">/</span><span class="p">${</span><span class="nx">slug</span><span class="p">}</span><span class="s2">.html`</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h2 id="penutup">Penutup</h2>
+
+<p>Dengan i18n, website kamu jadi lebih fleksibel dan inklusif untuk semua pengguna.</p>
+</main>
+ <div class="footer">
+  <p>
+    © 2025, Created <i class="fas fa-heart"></i> by <span>OnlyJack </span>
+    <a
+      href="https://www.instagram.com/zkyy.frezy?igsh=MXB3N21zbm44ZjdwNw=="
+      class="social-icon"
+      ><i class="fab fa-instagram"></i
+    ></a>
+    <a href="https://www.tiktok.com/@c.classsy" class="social-icon"
+      ><i class="fab fa-tiktok"></i
+    ></a>
+    <a href="https://github.com/M-ZakiFahrezi" class="social-icon"
+      ><i class="fab fa-github"></i
+    ></a>
+  </p>
+</div>
+
+
+    <!-- Search Overlay -->
+    <div id="searchOverlay" class="search-overlay">
+      <div class="search-box">
+        <input type="text" placeholder="Search..." />
+        <button onclick="closeSearch()">Close</button>
+        <p>Maaf, fitur ini masih dalam tahap pengembangan</p>
+      </div>
+    </div>
+
+    <!-- Sidebar Overlay -->
+    <!-- Sidebar Overlay -->
+    <div id="sidebarOverlay" class="sidebar-overlay">
+      <div class="sidebar-content">
+        <button class="close-btn" onclick="closeSidebar()">×</button>
+        <div class="datetime">
+          <div id="clock">--:--:--</div>
+          <div id="date">--, -- -- ----</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

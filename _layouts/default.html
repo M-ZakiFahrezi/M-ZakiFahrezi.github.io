@@ -24,7 +24,7 @@
     <!-- plugins -->
     {% feed_meta %} {% seo %}
   </head>
-  <body{% if page.slug %} data-slug="{{ page.slug }}"{% endif %}>
+  <body {% if page.slug %} data-slug="{{ page.slug }}" {% endif %}>
     {% include navigation.html %} {{ content }} {% include footer.html %}
 
     <!-- Search Overlay -->

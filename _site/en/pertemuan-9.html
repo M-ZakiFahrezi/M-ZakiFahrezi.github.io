@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Language Change Feature (i18n)</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="/assets/images/favicon.ico" />
+
+    <!-- JavaScript -->
+    <script src="/assets/js/script.js" defer></script>
+
+    <!-- language -->
+    <script src="/assets/js/lang.js"></script>
+
+    <!-- plugins -->
+    <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Home" /> <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Language Change Feature (i18n) | Home</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Language Change Feature (i18n)" />
+<meta property="og:locale" content="en" />
+<meta name="description" content="What is i18n?" />
+<meta property="og:description" content="What is i18n?" />
+<link rel="canonical" href="http://localhost:4000/en/pertemuan-9.html" />
+<meta property="og:url" content="http://localhost:4000/en/pertemuan-9.html" />
+<meta property="og:site_name" content="Home" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-05-15T00:00:00+07:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Language Change Feature (i18n)" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-05-15T00:00:00+07:00","datePublished":"2025-05-15T00:00:00+07:00","description":"What is i18n?","headline":"Language Change Feature (i18n)","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/en/pertemuan-9.html"},"url":"http://localhost:4000/en/pertemuan-9.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+  <body  data-slug="pertemuan-9" >
+    <nav class="navbar">
+  <div class="nav-container">
+    
+    <!-- Hamburger menu di ujung kiri -->
+    <i class="fas fa-bars hamburger" id="menu-toggle"></i>
+    
+    <!-- Navigasi -->
+    <div class="nav-links">
+      
+        <a href="/" >
+          Home
+        </a>
+      
+        <a href="/friends.html" >
+          Friends
+        </a>
+      
+        <a href="/blog.html" >
+          Blog
+        </a>
+      
+    </div>
+
+    <!-- Ikon + Language Selector -->
+    <div class="nav-icons">
+      <i class="fa fa-search" onclick="openSearch()"></i>
+      <i id="theme-toggle" class="fa fa-water"></i>
+      <i class="fa-solid fa-clock" onclick="openSidebar()"></i>
+      <div class="language-switcher">
+        <select id="languageSelect" onchange="switchLanguage()">
+          <option value="id">ID</option>
+          <option value="en">EN</option>
+        </select>
+      </div>
+    </div>
+
+  </div>
+</nav>
+ <h1>Language Change Feature (i18n)</h1>
+<p>15 May 2025 </p>
+
+<main class="blog-container"><h2 id="what-is-i18n">What is i18n?</h2>
+
+<p><strong>Internationalization</strong> (shortened as <code class="language-plaintext highlighter-rouge">i18n</code>) is the process of designing and developing applications so that they can be easily adapted to different languages and regions without major code changes.</p>
+
+<h2 id="purpose">Purpose</h2>
+
+<p>Language switch features help:</p>
+
+<ul>
+  <li>Reach international audiences.</li>
+  <li>Improve user experience (UX).</li>
+  <li>Support multilingual learning or documentation.</li>
+</ul>
+
+<h2 id="folder-structure">Folder Structure</h2>
+
+<p>Separate content based on language:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/_id/      ← posts in Indonesian
+/_en/      ← posts in English
+</code></pre></div></div>
+
+<h2 id="post-metadata">Post Metadata</h2>
+
+<p>Use <code class="language-plaintext highlighter-rouge">slug</code> and <code class="language-plaintext highlighter-rouge">lang</code> so both language versions can recognize each other.</p>
+
+<p>Example:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">slug</span><span class="pi">:</span> <span class="s">pertemuan-9</span>
+<span class="na">lang</span><span class="pi">:</span> <span class="s">en</span>
+</code></pre></div></div>
+
+<h2 id="store-language-preference">Store Language Preference</h2>
+
+<p>Use JavaScript and <code class="language-plaintext highlighter-rouge">localStorage</code>:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">localStorage</span><span class="p">.</span><span class="nf">setItem</span><span class="p">(</span><span class="dl">"</span><span class="s2">lang</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">en</span><span class="dl">"</span><span class="p">);</span>
+</code></pre></div></div>
+
+<h2 id="detect-post-page">Detect Post Page</h2>
+
+<p>Add <code class="language-plaintext highlighter-rouge">data-slug</code> to <code class="language-plaintext highlighter-rouge">&lt;body&gt;</code>:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;body</span> <span class="na">data-slug=</span><span class="s">"pertemuan-9"</span><span class="nt">&gt;&lt;/body&gt;</span>
+</code></pre></div></div>
+
+<p>Then redirect when language is switched:</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">slug</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nf">getAttribute</span><span class="p">(</span><span class="dl">"</span><span class="s2">data-slug</span><span class="dl">"</span><span class="p">);</span>
+<span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">href</span> <span class="o">=</span> <span class="s2">`/</span><span class="p">${</span><span class="nx">lang</span><span class="p">}</span><span class="s2">/</span><span class="p">${</span><span class="nx">slug</span><span class="p">}</span><span class="s2">.html`</span><span class="p">;</span>
+</code></pre></div></div>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>With i18n, your website becomes more accessible and adaptable for all users.</p>
+</main>
+ <div class="footer">
+  <p>
+    © 2025, Created <i class="fas fa-heart"></i> by <span>OnlyJack </span>
+    <a
+      href="https://www.instagram.com/zkyy.frezy?igsh=MXB3N21zbm44ZjdwNw=="
+      class="social-icon"
+      ><i class="fab fa-instagram"></i
+    ></a>
+    <a href="https://www.tiktok.com/@c.classsy" class="social-icon"
+      ><i class="fab fa-tiktok"></i
+    ></a>
+    <a href="https://github.com/M-ZakiFahrezi" class="social-icon"
+      ><i class="fab fa-github"></i
+    ></a>
+  </p>
+</div>
+
+
+    <!-- Search Overlay -->
+    <div id="searchOverlay" class="search-overlay">
+      <div class="search-box">
+        <input type="text" placeholder="Search..." />
+        <button onclick="closeSearch()">Close</button>
+        <p>Maaf, fitur ini masih dalam tahap pengembangan</p>
+      </div>
+    </div>
+
+    <!-- Sidebar Overlay -->
+    <!-- Sidebar Overlay -->
+    <div id="sidebarOverlay" class="sidebar-overlay">
+      <div class="sidebar-content">
+        <button class="close-btn" onclick="closeSidebar()">×</button>
+        <div class="datetime">
+          <div id="clock">--:--:--</div>
+          <div id="date">--, -- -- ----</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
