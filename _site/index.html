@@ -39,7 +39,8 @@
 
   </head>
   <body >
-    <nav class="navbar">
+    <div class="page-wrapper">
+      <nav class="navbar">
   <div class="nav-container">
     
     <!-- Hamburger menu di ujung kiri -->
@@ -64,7 +65,6 @@
 
     <!-- Ikon + Language Selector -->
     <div class="nav-icons">
-      <i class="fa fa-search" onclick="openSearch()"></i>
       <i id="theme-toggle" class="fa fa-water"></i>
       <i class="fa-solid fa-clock" onclick="openSidebar()"></i>
       <div class="language-switcher">
@@ -77,7 +77,9 @@
 
   </div>
 </nav>
- <div class="container">
+
+      <div class="content-wrapper">
+        <div class="container">
   <h1 data-i18n="homeTitle">Hii, Saya Muhammad <span class="last_name">Zaki Fahrezi</span></h1>
   <p data-i18n="homeIntro">
     Saya Muhammad Zaki Fahrezi, lahir di Lhokseumawe. Saya merupakan lulusan
@@ -131,7 +133,9 @@
     >
   </p>
 
-</div> <div class="footer">
+</div>
+      </div>
+      <div class="footer">
   <p>
     © 2025, Created <i class="fas fa-heart"></i> by <span>OnlyJack </span>
     <a
@@ -148,15 +152,8 @@
   </p>
 </div>
 
-
-    <!-- Search Overlay -->
-    <div id="searchOverlay" class="search-overlay">
-      <div class="search-box">
-        <input type="text" placeholder="Search..." />
-        <button onclick="closeSearch()">Close</button>
-        <p>Maaf, fitur ini masih dalam tahap pengembangan</p>
-      </div>
     </div>
+
 
     <!-- Sidebar Overlay -->
     <!-- Sidebar Overlay -->

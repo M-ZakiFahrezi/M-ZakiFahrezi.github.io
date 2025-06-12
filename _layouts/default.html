@@ -25,16 +25,14 @@
     {% feed_meta %} {% seo %}
   </head>
   <body {% if page.slug %} data-slug="{{ page.slug }}" {% endif %}>
-    {% include navigation.html %} {{ content }} {% include footer.html %}
-
-    <!-- Search Overlay -->
-    <div id="searchOverlay" class="search-overlay">
-      <div class="search-box">
-        <input type="text" placeholder="Search..." />
-        <button onclick="closeSearch()">Close</button>
-        <p>Maaf, fitur ini masih dalam tahap pengembangan</p>
+    <div class="page-wrapper">
+      {% include navigation.html %}
+      <div class="content-wrapper">
+        {{ content }}
       </div>
+      {% include footer.html %}
     </div>
+
 
     <!-- Sidebar Overlay -->
     <!-- Sidebar Overlay -->

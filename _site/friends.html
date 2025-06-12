@@ -39,7 +39,8 @@
 
   </head>
   <body >
-    <nav class="navbar">
+    <div class="page-wrapper">
+      <nav class="navbar">
   <div class="nav-container">
     
     <!-- Hamburger menu di ujung kiri -->
@@ -64,7 +65,6 @@
 
     <!-- Ikon + Language Selector -->
     <div class="nav-icons">
-      <i class="fa fa-search" onclick="openSearch()"></i>
       <i id="theme-toggle" class="fa fa-water"></i>
       <i class="fa-solid fa-clock" onclick="openSidebar()"></i>
       <div class="language-switcher">
@@ -77,9 +77,18 @@
 
   </div>
 </nav>
- <div class="friends-container">
+
+      <div class="content-wrapper">
+        <div class="friends-container">
   <h1 data-i18n="friendsTitle">Halaman teman</h1>
   <p data-i18n="friendsDesc">Berikut teman-teman saya di kelas:</p>
+  <div class="search-container">
+  <input type="text" id="friendSearchBox" class="search-input" placeholder="Cari teman..." data-i18n="searchFriendPlaceholder" />
+  <button class="search-button" data-i18n="searchButton" onclick="searchFriends()">
+    Cari
+  </button>
+</div>
+
   <ul class="friend-list">
     <li><a href="https://ahmadfayyadh.github.io/">Ahmad Fayyadh</a></li>
     <li><a href="https://alanisamaharani.github.io/">Al Anisa Maharani</a></li>
@@ -110,8 +119,43 @@
     <li><a href="https://syahanalfatih.github.io/">Syahan Alfatih</a></li>
     <li><a href="https://addairabi.github.io/">T. Ahmad Addairabi Asyafi'ie</a></li>
   </ul>
+  <div id="noResultsMessage" style="display: none; text-align: center; color: white; margin-top: 16px;" data-i18n="noFriendsFound">
+  Teman tidak ditemukan.
+  </div>
 </div>
- <div class="footer">
+
+<!-- search script -->
+<script>
+  function searchFriends() {
+    const input = document.getElementById("friendSearchBox");
+    const filter = input.value.toLowerCase();
+    const listItems = document.querySelectorAll(".friend-list li");
+    const noResultsMessage = document.getElementById("noResultsMessage");
+
+    let visibleCount = 0;
+
+    listItems.forEach(function (item) {
+      const text = item.textContent.toLowerCase();
+      const isVisible = text.includes(filter);
+      item.style.display = isVisible ? "" : "none";
+      if (isVisible) visibleCount++;
+    });
+
+    // Tampilkan pesan jika tidak ada hasil
+    noResultsMessage.style.display = visibleCount === 0 ? "block" : "none";
+  }
+
+  // Tekan Enter untuk cari
+  document.getElementById("friendSearchBox").addEventListener("keyup", function(event) {
+    if (event.key === "Enter") {
+      searchFriends();
+    }
+  });
+</script>
+
+
+      </div>
+      <div class="footer">
   <p>
     © 2025, Created <i class="fas fa-heart"></i> by <span>OnlyJack </span>
     <a
@@ -128,15 +172,8 @@
   </p>
 </div>
 
-
-    <!-- Search Overlay -->
-    <div id="searchOverlay" class="search-overlay">
-      <div class="search-box">
-        <input type="text" placeholder="Search..." />
-        <button onclick="closeSearch()">Close</button>
-        <p>Maaf, fitur ini masih dalam tahap pengembangan</p>
-      </div>
     </div>
+
 
     <!-- Sidebar Overlay -->
     <!-- Sidebar Overlay -->

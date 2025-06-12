@@ -42,7 +42,8 @@
 
   </head>
   <body  data-slug="pertemuan-8" >
-    <nav class="navbar">
+    <div class="page-wrapper">
+      <nav class="navbar">
   <div class="nav-container">
     
     <!-- Hamburger menu di ujung kiri -->
@@ -67,7 +68,6 @@
 
     <!-- Ikon + Language Selector -->
     <div class="nav-icons">
-      <i class="fa fa-search" onclick="openSearch()"></i>
       <i id="theme-toggle" class="fa fa-water"></i>
       <i class="fa-solid fa-clock" onclick="openSidebar()"></i>
       <div class="language-switcher">
@@ -80,7 +80,9 @@
 
   </div>
 </nav>
- <h1>Layout dengan SASS dan SCSS</h1>
+
+      <div class="content-wrapper">
+        <h1>Layout dengan SASS dan SCSS</h1>
 <p>07 May 2025 </p>
 
 <main class="blog-container"><p>Materi mengenai SASS dan SCSS</p>
@@ -239,7 +241,9 @@
   <p>🔗 Sumber: GeeksforGeeks — What is the difference between SCSS and SASS</p>
 </blockquote>
 </main>
- <div class="footer">
+
+      </div>
+      <div class="footer">
   <p>
     © 2025, Created <i class="fas fa-heart"></i> by <span>OnlyJack </span>
     <a
@@ -256,15 +260,8 @@
   </p>
 </div>
 
-
-    <!-- Search Overlay -->
-    <div id="searchOverlay" class="search-overlay">
-      <div class="search-box">
-        <input type="text" placeholder="Search..." />
-        <button onclick="closeSearch()">Close</button>
-        <p>Maaf, fitur ini masih dalam tahap pengembangan</p>
-      </div>
     </div>
+
 
     <!-- Sidebar Overlay -->
     <!-- Sidebar Overlay -->

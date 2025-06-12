@@ -27,14 +27,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// search click
-function openSearch() {
-  document.getElementById("searchOverlay").classList.add("active");
-}
-
-function closeSearch() {
-  document.getElementById("searchOverlay").classList.remove("active");
-}
 
 // clockbar menu
 function openSidebar() {

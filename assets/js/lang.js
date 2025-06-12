@@ -31,6 +31,17 @@ function setLanguage(lang) {
   });
 
   filterPostsByLanguage(lang); // <- Tambahan ini penting agar post langsung berubah
+
+  // Tambahan untuk search di halaman friends
+  const searchInput = document.getElementById("friendSearchBox");
+  if (searchInput && translations[lang]["searchFriendPlaceholder"]) {
+    searchInput.placeholder = translations[lang]["searchFriendPlaceholder"];
+  }
+
+  const noResult = document.getElementById("noResultsMessage");
+  if (noResult && translations[lang]["noFriendsFound"]) {
+    noResult.textContent = translations[lang]["noFriendsFound"];
+  }
 }
 
 const translations = {
@@ -77,6 +88,8 @@ const translations = {
     // friends translations
     friendsTitle: "Halaman Teman",
     friendsDesc: "Berikut teman-teman saya di kelas:",
+    searchFriendPlaceholder: "Cari teman...",
+    noFriendsFound: "Teman tidak ditemukan.",
 
     // blog translations
     blogTitle: "Blog",
@@ -126,6 +139,8 @@ const translations = {
     // friends translations
     friendsTitle: "Friends Page",
     friendsDesc: "Here are my classmates:",
+    searchFriendPlaceholder: "Search friends...",
+    noFriendsFound: "Friend not found.",
 
     // blog translations
     blogTitle: "Blog",

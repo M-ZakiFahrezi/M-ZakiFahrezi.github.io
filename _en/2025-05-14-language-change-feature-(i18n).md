@@ -1,67 +1,67 @@
 ---
 layout: post
-title: "Fitur Ganti Bahasa (i18n)"
+title: "Language Change Feature (i18n)"
 slug: pertemuan-9
-lang: id
+lang: en
 date: 2025-05-15
-permalink: /id/pertemuan-9.html
+permalink: /en/pertemuan-9.html
 ---
 
-## Apa itu i18n?
+## What is i18n?
 
-**Internationalization** (sering disingkat `i18n`) adalah proses mendesain dan mengembangkan aplikasi sehingga dapat dengan mudah diadaptasi ke berbagai bahasa dan wilayah tanpa perubahan kode besar.
+**Internationalization** (shortened as `i18n`) is the process of designing and developing applications so that they can be easily adapted to different languages and regions without major code changes.
 
-## Tujuan
+## Purpose
 
-Fitur ganti bahasa membantu:
+Language switch features help:
 
-- Menjangkau audiens internasional.
-- Meningkatkan pengalaman pengguna (UX).
-- Mempermudah pembelajaran atau dokumentasi multibahasa.
+- Reach international audiences.
+- Improve user experience (UX).
+- Support multilingual learning or documentation.
 
-## Struktur Folder
+## Folder Structure
 
-Pisahkan post atau konten berdasarkan bahasa:
+Separate content based on language:
 
 ```
-/_id/      ← post dalam Bahasa Indonesia
-/_en/      ← post dalam Bahasa Inggris
+/_id/      ← posts in Indonesian
+/_en/      ← posts in English
 ```
 
-## Metadata Post
+## Post Metadata
 
-Gunakan `slug` dan `lang` agar post lintas bahasa dapat saling dikenali.
+Use `slug` and `lang` so both language versions can recognize each other.
 
-Contoh:
+Example:
 
 ```yaml
 slug: pertemuan-9
-lang: id
+lang: en
 ```
 
-## Simpan Pilihan Bahasa
+## Store Language Preference
 
-Gunakan JavaScript dan `localStorage` untuk menyimpan pilihan bahasa pengguna.
+Use JavaScript and `localStorage`:
 
 ```js
-localStorage.setItem("lang", "id");
+localStorage.setItem("lang", "en");
 ```
 
-## Deteksi Halaman Post
+## Detect Post Page
 
-Tambahkan atribut `data-slug` di `<body>`:
+Add `data-slug` to `<body>`:
 
 ```html
 <body data-slug="{{ page.slug }}"></body>
 ```
 
-Saat pengguna mengganti bahasa:
+Then redirect when language is switched:
 
 ```js
 const slug = document.body.getAttribute("data-slug");
 window.location.href = `/${lang}/${slug}.html`;
 ```
 
-## Penutup
+## Conclusion
 
-Dengan i18n, website kamu jadi lebih fleksibel dan inklusif untuk semua pengguna.
+With i18n, your website becomes more accessible and adaptable for all users.

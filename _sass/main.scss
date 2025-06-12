@@ -40,35 +40,55 @@ button,
   font-weight: 600;
 }
 
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content-wrapper {
+  flex: 1;
+}
+
 body {
   font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
   position: relative;
-  background: linear-gradient(
-    to bottom,
-    #05161a,
-    #072e33,
-    #0c7076,
-    #0f908c,
-    #6da5c0,
-    #294d61
-  );
+
+  /* Gabungkan dua lapisan gradien */
+  background-image: linear-gradient(
+      to bottom,
+      #05161a,
+      #072e33,
+      #0c7076,
+      #0f908c,
+      #6da5c0,
+      #294d61
+    ),
+    repeating-linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.008) 0px,
+      rgba(0, 0, 0, 0.008) 2px
+    );
+
   background-attachment: fixed;
   background-size: cover;
-  color: #e0f7fa; /* warna teks utama */
-}
+  background-blend-mode: overlay;
 
-body::after {
-  content: "";
-  position: absolute;
-  bottom: 60px;
-  left: 0;
-  right: 0;
-  height: 100px;
-  background: linear-gradient(to bottom, transparent, #294d61);
-  z-index: -1;
+  color: #e0f7fa; /* warna teks utama */
 }
 
 /* Navbar styling */
@@ -104,13 +124,12 @@ body::after {
   margin-right: 15px;
 }
 
-
 /* Tampilkan hamburger dan sembunyikan nav-links saat di layar kecil */
 @media screen and (max-width: 768px) {
   .hamburger {
     display: inline-block;
   }
-  
+
   .nav-links {
     display: none;
     flex-direction: column;
@@ -122,11 +141,11 @@ body::after {
     padding: 10px 20px;
     z-index: 998;
   }
-  
+
   .nav-links.active {
     display: flex;
   }
-  
+
   .nav-container {
     justify-content: space-between;
     align-items: center;
@@ -209,7 +228,6 @@ body::after {
   color: white;
 }
 
-
 #theme-toggle {
   font-size: 20px;
   cursor: pointer;
@@ -274,7 +292,6 @@ body::after {
 }
 
 // Home Styling
-
 
 /* Container styling */
 .container,
@@ -567,21 +584,23 @@ body.volcano-mode .search-button {
 /* ======================== */
 /*       VOLCANO MODE      */
 /* ======================== */
-body.volcano-mode {
-  background: linear-gradient(
-    to bottom,
-    #1b1e2f,
-    #242f49,
-    #384358,
-    #ffa586,
-    #b51a2b,
-    #541a3e
-  );
-  color: #ffece6;
-}
 
-body.volcano-mode::after {
-  background: linear-gradient(to bottom, transparent, #541a3e);
+body.volcano-mode {
+  background-image: linear-gradient(
+      to bottom,
+      #1b1e2f,
+      #242f49,
+      #384358,
+      #ffa586,
+      #b51a2b,
+      #541a3e
+    ),
+    repeating-linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.01) 0px,
+      rgba(0, 0, 0, 0.01) 2px
+    );
+  background-blend-mode: overlay;
 }
 
 body.volcano-mode h1,
@@ -653,7 +672,6 @@ body.volcano-mode .language-switcher select option {
   background-color: #0f172a;
   color: white;
 }
-
 
 body.volcano-mode #theme-toggle {
   font-size: 20px;
@@ -752,7 +770,6 @@ body.volcano-mode .search-button:hover {
   color: #fff;
 }
 
-
 @media (max-width: 768px) {
   body.volcano-mode .nav-links {
     background-color: rgba(54, 20, 38, 0.9);
@@ -760,49 +777,6 @@ body.volcano-mode .search-button:hover {
 }
 
 ///* ========== icon click ============== */
-/* Search Overlay */
-.search-overlay {
-  position: fixed;
-  top: -100%;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background: rgba(10, 10, 10, 0.9);
-  backdrop-filter: blur(8px);
-  z-index: 999;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: top 0.5s ease;
-}
-
-.search-overlay.active {
-  top: 0;
-}
-
-.search-box {
-  text-align: center;
-}
-
-.search-box input {
-  padding: 12px 20px;
-  font-size: 18px;
-  border: none;
-  border-radius: 10px;
-  width: 60%;
-  max-width: 400px;
-  outline: none;
-}
-
-.search-box button {
-  margin-top: 20px;
-  padding: 10px 20px;
-  background: #ff5e5e;
-  border: none;
-  border-radius: 8px;
-  color: white;
-  cursor: pointer;
-}
 
 // clockbar menu
 /* Sidebar overlay */
@@ -854,4 +828,25 @@ body.volcano-mode .search-button:hover {
   font-size: 36px;
   margin-bottom: 10px;
   font-weight: bold;
+}
+
+/* === Sticky Footer Layout === */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+body > *:not(.sidebar-overlay) {
+  flex-shrink: 0;
+}
+
+body > .content-wrapper {
+  flex: 1 0 auto;
+}
+
+footer {
+  flex-shrink: 0;
 }

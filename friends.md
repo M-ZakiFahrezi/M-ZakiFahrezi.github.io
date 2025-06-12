@@ -6,6 +6,23 @@ title: Friends
 <div class="friends-container">
   <h1 data-i18n="friendsTitle">Halaman teman</h1>
   <p data-i18n="friendsDesc">Berikut teman-teman saya di kelas:</p>
+  <div class="search-container">
+  <input
+    type="text"
+    id="friendSearchBox"
+    class="search-input"
+    placeholder="Cari teman..."
+    data-i18n="searchFriendPlaceholder"
+  />
+  <button
+    class="search-button"
+    data-i18n="searchButton"
+    onclick="searchFriends()"
+  >
+    Cari
+  </button>
+</div>
+
   <ul class="friend-list">
     <li><a href="https://ahmadfayyadh.github.io/">Ahmad Fayyadh</a></li>
     <li><a href="https://alanisamaharani.github.io/">Al Anisa Maharani</a></li>
@@ -36,4 +53,36 @@ title: Friends
     <li><a href="https://syahanalfatih.github.io/">Syahan Alfatih</a></li>
     <li><a href="https://addairabi.github.io/">T. Ahmad Addairabi Asyafi'ie</a></li>
   </ul>
+  <div id="noResultsMessage" style="display: none; text-align: center; color: white; margin-top: 16px;" data-i18n="noFriendsFound">
+  Teman tidak ditemukan.
+  </div>
 </div>
+
+<!-- search script -->
+<script>
+  function searchFriends() {
+    const input = document.getElementById("friendSearchBox");
+    const filter = input.value.toLowerCase();
+    const listItems = document.querySelectorAll(".friend-list li");
+    const noResultsMessage = document.getElementById("noResultsMessage");
+
+    let visibleCount = 0;
+
+    listItems.forEach(function (item) {
+      const text = item.textContent.toLowerCase();
+      const isVisible = text.includes(filter);
+      item.style.display = isVisible ? "" : "none";
+      if (isVisible) visibleCount++;
+    });
+
+    // Tampilkan pesan jika tidak ada hasil
+    noResultsMessage.style.display = visibleCount === 0 ? "block" : "none";
+  }
+
+  // Tekan Enter untuk cari
+  document.getElementById("friendSearchBox").addEventListener("keyup", function(event) {
+    if (event.key === "Enter") {
+      searchFriends();
+    }
+  });
+</script>
