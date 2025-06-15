@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Koneksi Database MySQL dengan PHP</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="/assets/images/favicon.ico" />
+
+    <!-- JavaScript -->
+    <script src="/assets/js/script.js" defer></script>
+
+    <!-- language -->
+    <script src="/assets/js/lang.js"></script>
+
+    <!-- plugins -->
+    <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Home" /> <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Koneksi Database MySQL dengan PHP | Home</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Koneksi Database MySQL dengan PHP" />
+<meta property="og:locale" content="id" />
+<meta name="description" content="Koneksi Database MySQL dengan PHP" />
+<meta property="og:description" content="Koneksi Database MySQL dengan PHP" />
+<link rel="canonical" href="http://localhost:4000/id/pertemuan-12C.html" />
+<meta property="og:url" content="http://localhost:4000/id/pertemuan-12C.html" />
+<meta property="og:site_name" content="Home" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-06-12T00:00:00+07:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Koneksi Database MySQL dengan PHP" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-06-12T00:00:00+07:00","datePublished":"2025-06-12T00:00:00+07:00","description":"Koneksi Database MySQL dengan PHP","headline":"Koneksi Database MySQL dengan PHP","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/id/pertemuan-12C.html"},"url":"http://localhost:4000/id/pertemuan-12C.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+  <body  data-slug="pertemuan-12C" >
+    <div class="page-wrapper">
+      <nav class="navbar">
+  <div class="nav-container">
+    
+    <!-- Hamburger menu di ujung kiri -->
+    <i class="fas fa-bars hamburger" id="menu-toggle"></i>
+    
+    <!-- Navigasi -->
+    <div class="nav-links">
+      
+        <a href="/" >
+          Home
+        </a>
+      
+        <a href="/friends.html" >
+          Friends
+        </a>
+      
+        <a href="/blog.html" >
+          Blog
+        </a>
+      
+    </div>
+
+    <!-- Ikon + Language Selector -->
+    <div class="nav-icons">
+      <i id="theme-toggle" class="fa fa-water"></i>
+      <i class="fa-solid fa-clock" onclick="openSidebar()"></i>
+      <div class="language-switcher">
+        <select id="languageSelect" onchange="switchLanguage()">
+          <option value="id">ID</option>
+          <option value="en">EN</option>
+        </select>
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+      <div class="content-wrapper"><h1>Koneksi Database MySQL dengan PHP</h1>
+<p>12 Jun 2025 </p>
+
+<main class="blog-container"><h1 id="koneksi-database-mysql-dengan-php">Koneksi Database MySQL dengan PHP</h1>
+
+<p>Membuat koneksi antara PHP dan database MySQL adalah langkah dasar yang penting dalam pengembangan aplikasi web dinamis. PHP menyediakan fungsi <code class="language-plaintext highlighter-rouge">mysqli_connect()</code> untuk menghubungkan ke database MySQL.</p>
+
+<hr />
+
+<h2 id="-persiapan">🔧 Persiapan</h2>
+
+<p>Sebelum membuat koneksi, pastikan:</p>
+
+<ol>
+  <li>Anda memiliki server lokal seperti <strong>XAMPP</strong>, <strong>Laragon</strong>, atau <strong>WAMP</strong>.</li>
+  <li>Database sudah dibuat (contoh: database bernama <code class="language-plaintext highlighter-rouge">siswa</code>).</li>
+  <li>PHP dan MySQL sudah berjalan di server lokal.</li>
+</ol>
+
+<hr />
+
+<h2 id="-struktur-dasar-koneksi">💡 Struktur Dasar Koneksi</h2>
+
+<p>Berikut adalah contoh struktur dasar koneksi database menggunakan <code class="language-plaintext highlighter-rouge">mysqli</code>:</p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?php</span>
+
+<span class="nv">$host</span> <span class="o">=</span> <span class="s2">"localhost"</span><span class="p">;</span>         <span class="c1">// Nama host (biasanya 'localhost')</span>
+<span class="nv">$username</span> <span class="o">=</span> <span class="s2">"root"</span><span class="p">;</span>          <span class="c1">// Username MySQL (default: root di XAMPP)</span>
+<span class="nv">$password</span> <span class="o">=</span> <span class="s2">""</span><span class="p">;</span>              <span class="c1">// Password MySQL (kosong di XAMPP)</span>
+<span class="nv">$db_name</span> <span class="o">=</span> <span class="s2">"siswa"</span><span class="p">;</span>          <span class="c1">// Nama database</span>
+
+<span class="nv">$koneksi</span> <span class="o">=</span> <span class="nb">mysqli_connect</span><span class="p">(</span><span class="nv">$host</span><span class="p">,</span> <span class="nv">$username</span><span class="p">,</span> <span class="nv">$password</span><span class="p">,</span> <span class="nv">$db_name</span><span class="p">);</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nv">$koneksi</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">die</span><span class="p">(</span><span class="s2">"Koneksi gagal: "</span> <span class="mf">.</span> <span class="nf">mysqli_connect_error</span><span class="p">());</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="k">echo</span> <span class="s2">"Koneksi database berhasil"</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="cp">?&gt;</span>
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="-penjelasan-kode">🔍 Penjelasan Kode</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Bagian Kode</th>
+      <th>Penjelasan</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">$host = "localhost";</code></td>
+      <td>Server database. Biasanya “localhost” untuk server lokal.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">$username = "root";</code></td>
+      <td>Username untuk akses MySQL. Default di XAMPP adalah “root”.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">$password = "";</code></td>
+      <td>Password user. Biasanya kosong di server lokal.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">$db_name = "siswa";</code></td>
+      <td>Nama database yang ingin dihubungkan. Pastikan sudah dibuat sebelumnya.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mysqli_connect(...)</code></td>
+      <td>Fungsi PHP untuk membuka koneksi ke MySQL.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">!$koneksi</code></td>
+      <td>Mengecek apakah koneksi berhasil atau tidak.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mysqli_connect_error()</code></td>
+      <td>Menampilkan pesan error jika koneksi gagal.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">echo "Koneksi database berhasil";</code></td>
+      <td>Menampilkan pesan jika koneksi berhasil.</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="-tips-tambahan">🛠 Tips Tambahan</h2>
+
+<ul>
+  <li>Simpan file koneksi Anda sebagai <code class="language-plaintext highlighter-rouge">koneksi.php</code>, lalu <strong>include</strong> atau <strong>require</strong> file ini di halaman PHP lainnya:</li>
+</ul>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">include</span> <span class="s1">'koneksi.php'</span><span class="p">;</span>
+<span class="c1">// atau</span>
+<span class="k">require</span> <span class="s1">'koneksi.php'</span><span class="p">;</span>
+</code></pre></div></div>
+
+<ul>
+  <li>Gunakan <code class="language-plaintext highlighter-rouge">require_once</code> jika Anda ingin memastikan file hanya di-include sekali:</li>
+</ul>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">require_once</span> <span class="s1">'koneksi.php'</span><span class="p">;</span>
+</code></pre></div></div>
+
+<ul>
+  <li>Untuk keamanan di aplikasi nyata:
+    <ul>
+      <li>Jangan tampilkan pesan error langsung di halaman produksi.</li>
+      <li>Gunakan file <code class="language-plaintext highlighter-rouge">.env</code> atau konfigurasi tersembunyi untuk menyimpan kredensial.</li>
+      <li>Gunakan <code class="language-plaintext highlighter-rouge">PDO</code> atau <code class="language-plaintext highlighter-rouge">mysqli</code> dengan prepared statements untuk mencegah SQL Injection.</li>
+    </ul>
+  </li>
+</ul>
+
+<hr />
+
+<h2 id="-kesalahan-umum">❗ Kesalahan Umum</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Masalah</th>
+      <th>Solusi</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Koneksi gagal</td>
+      <td>Periksa kembali nama host, username, password, dan nama database.</td>
+    </tr>
+    <tr>
+      <td>Tidak ada tampilan sukses</td>
+      <td>Pastikan server Apache dan MySQL sudah dijalankan.</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">mysqli_connect()</code> undefined</td>
+      <td>PHP tidak memiliki ekstensi mysqli. Aktifkan di php.ini jika perlu.</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="-kesimpulan">📚 Kesimpulan</h2>
+
+<p>Koneksi ke database adalah dasar dari hampir semua aplikasi web dinamis. Pastikan Anda memahami struktur koneksi ini agar dapat membangun aplikasi yang menggunakan data dari MySQL. Setelah koneksi berhasil, Anda bisa menjalankan query untuk menampilkan, menyimpan, atau memanipulasi data di database Anda.</p>
+
+<hr />
+
+<h2 id="-langkah-selanjutnya">🚀 Langkah Selanjutnya</h2>
+
+<p>Setelah memahami koneksi database, pelajari topik berikut:</p>
+
+<ul>
+  <li>Menjalankan query SQL dengan PHP</li>
+  <li>Menampilkan data dari database</li>
+  <li>Input data menggunakan form HTML</li>
+  <li>Keamanan (validasi &amp; sanitasi data)</li>
+</ul>
+</main>
+</div>
+      <div class="footer">
+  <p>
+    © 2025, Created <i class="fas fa-heart"></i> by <span>OnlyJack </span>
+    <a
+      href="https://www.instagram.com/zkyy.frezy?igsh=MXB3N21zbm44ZjdwNw=="
+      class="social-icon"
+      ><i class="fab fa-instagram"></i
+    ></a>
+    <a href="https://www.tiktok.com/@c.classsy" class="social-icon"
+      ><i class="fab fa-tiktok"></i
+    ></a>
+    <a href="https://github.com/M-ZakiFahrezi" class="social-icon"
+      ><i class="fab fa-github"></i
+    ></a>
+  </p>
+</div>
+
+    </div>
+
+    <!-- Sidebar Overlay -->
+    <!-- Sidebar Overlay -->
+    <div id="sidebarOverlay" class="sidebar-overlay">
+      <div class="sidebar-content">
+        <button class="close-btn" onclick="closeSidebar()">×</button>
+        <div class="datetime">
+          <div id="clock">--:--:--</div>
+          <div id="date">--, -- -- ----</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
