@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "CRUD PHP"
-slug: pertemuan-12D
+title: "PHP: CRUD"
+slug: pertemuan-13
 lang: id
-date: 2025-06-18
-permalink: /id/pertemuan-12D.html
+date: 2025-06-19
+permalink: /id/pertemuan-13.html
 ---
 
 # CRUD PHP: Create, Read, Update, dan Delete

@@ -1,32 +1,32 @@
 ---
 layout: post
-title: "CRUD PHP"
-slug: pertemuan-12D
+title: "PHP: CRUD"
+slug: pertemuan-13
 lang: en
-date: 2025-06-18
-permalink: /en/pertemuan-12D.html
+date: 2025-06-19
+permalink: /en/pertemuan-13.html
 ---
 
 # CRUD PHP: Create, Read, Update, dan Delete
 
-CRUD adalah singkatan dari **Create, Read, Update, dan Delete**, yaitu empat operasi dasar yang biasa dilakukan dalam pengolahan data pada aplikasi berbasis web.
+CRUD stands for **Create, Read, Update, and Delete**, which are four basic operations that are commonly performed in data processing in web-based applications.
 
-Dalam tutorial ini, kita akan belajar membuat fitur CRUD menggunakan **PHP** dan **MySQL**.
+In this tutorial, we will learn to create CRUD features using **PHP** and **MySQL**.
 
-## 📌 Apa Itu CRUD?
+## 📌 What is CRUD?
 
 | Operasi | Fungsi                               |
 | ------- | ------------------------------------ |
-| Create  | Creating data baru ke dalam database |
-| Read    | Reading data dari database           |
-| Update  | Updating data yang sudah ada         |
-| Delete  | Deleting data dari database          |
+| Create  | Creating new data into the database  |
+| Read    | Reading data from database           |
+| Update  | Updating existing data               |
+| Delete  | Deleting data from database          |
 
-## 🛠️ Persiapan
+## 🛠️ Preparation
 
 1. Install **XAMPP**
-2. Buat database dengan nama `db_student`
-3. Buat tabel `student`:
+2. Create a database named `db_student`
+3. Create a table `student`:
 
 ```sql
 CREATE TABLE student (
@@ -39,7 +39,7 @@ CREATE TABLE student (
 );
 ```
 
-## 🧩 1. Koneksi ke Database (`koneksi.php`)
+## 🧩 1. Connection to Database (`connection.php`)
 
 ```php
 <?php
@@ -51,7 +51,7 @@ if (!$koneksi) {
 ?>
 ```
 
-## 📝 2. Create (Creating Data) - `tambah.php`
+## 📝 2. Create (Creating Data) - `add.php`
 
 ```php
 <?php
@@ -123,7 +123,7 @@ $row = mysqli_fetch_assoc($result);
 </form>
 ```
 
-**Proses Update - `update.php`:**
+**Update Process - `update.php`:**
 
 ```php
 <?php
@@ -152,7 +152,7 @@ if (mysqli_query($koneksi, $sql)) {
 ?>
 ```
 
-## 🗑️ 5. Delete (Deleting Data) - `hapus.php`
+## 🗑️ 5. Delete (Deleting Data) - `delete.php`
 
 ```php
 <?php
@@ -171,4 +171,4 @@ if (mysqli_query($koneksi, $sql)) {
 
 ## ✅ Conclusion
 
-Dengan memahami operasi CRUD di PHP dan MySQL, kamu sudah bisa membuat aplikasi web dasar yang menyimpan, menampilkan, mengedit, dan menghapus data.
+By understanding CRUD operations in PHP and MySQL, you can create basic web applications that store, display, edit, and delete data.

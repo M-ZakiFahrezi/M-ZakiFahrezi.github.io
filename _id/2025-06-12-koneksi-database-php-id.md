@@ -69,7 +69,8 @@ if (!$koneksi) {
 
 ```php
 include 'koneksi.php';
-// atau
+
+atau
 require 'koneksi.php';
 ```
 
